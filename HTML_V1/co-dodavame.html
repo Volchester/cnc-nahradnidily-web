@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Co dodáváme | cnc-nahradnidily.cz</title>
+  <meta name="description" content="Originální náhradní díly, repasy a výroba na zakázku pro CNC stroje. Tři typy dodávek pro každou situaci — od skladového dílu po kus vyrobený podle výkresu.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand-deep:       #042C53;
+      --brand-primary:    #0C447C;
+      --brand-accent:     #185FA5;
+      --accent-warm:      #EF9F27;
+      --accent-warm-text: #412402;
+      --surface-light:    #FFFFFF;
+      --surface-soft:     #F1EFE8;
+      --border-soft:      #E5E7EB;
+      --border-mid:       #D1D5DB;
+      --text-primary:     #2C2C2A;
+      --text-secondary:   #5F5E5A;
+      --text-tertiary:    #888780;
+      --success:          #639922;
+      --radius-card:      14px;
+      --radius-btn:       8px;
+      --max-w:            1200px;
+      --px:               24px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background: var(--surface-light);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1 { font-size: clamp(36px, 5.5vw, 56px); font-weight: 600; line-height: 1.08; letter-spacing: -0.025em; }
+    h2 { font-size: clamp(26px, 3.5vw, 36px); font-weight: 600; line-height: 1.15; letter-spacing: -0.015em; }
+    h3 { font-size: 18px; font-weight: 600; line-height: 1.3; letter-spacing: -0.01em; }
+    p  { text-wrap: pretty; }
+
+    .pretitle {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brand-accent);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pretitle::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 1.5px;
+      background: currentColor;
+      flex-shrink: 0;
+    }
+    .pretitle--light { color: rgba(255,255,255,0.5); }
+    .pretitle--warm  { color: var(--accent-warm); }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--px);
+    }
+
+    section { padding: 96px 0; }
+    section.alt  { background: var(--surface-soft); }
+    section.dark { background: var(--brand-deep); }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 26px;
+      border-radius: var(--radius-btn);
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all .18s ease;
+      letter-spacing: -0.01em;
+    }
+    .btn:focus-visible { outline: 2px solid var(--brand-primary); outline-offset: 3px; }
+
+    .btn-primary   { background: var(--accent-warm); color: var(--accent-warm-text); }
+    .btn-primary:hover { background: #f5a93a; }
+
+    .btn-outline { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.3); }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.07); }
+
+    .btn-outline-dark { background: transparent; color: var(--brand-primary); border: 1px solid currentColor; }
+    .btn-outline-dark:hover { background: var(--brand-primary); color: #fff; }
+
+    /* ── NAV ── */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--brand-deep);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      gap: 16px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 7px;
+      background: var(--brand-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 0.03em;
+    }
+    .logo-text { font-size: 14px; font-weight: 600; color: #fff; letter-spacing: -0.02em; }
+    .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
+    .nav-links a {
+      display: block;
+      padding: 8px 13px;
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      border-radius: 6px;
+      transition: color .15s, background .15s;
+    }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+    .nav-links a[aria-current="page"] { color: #fff; background: rgba(255,255,255,0.06); }
+    .nav-cta { margin-left: 8px; }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+    }
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: var(--brand-deep);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 16px var(--px) 24px;
+      gap: 4px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      display: block;
+      padding: 10px 12px;
+      font-size: 15px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    .mobile-menu a:hover { background: rgba(255,255,255,0.07); color: #fff; }
+    .mobile-menu .btn { margin-top: 8px; width: fit-content; }
+
+    /* ── PAGE HERO (slimmer than homepage hero) ── */
+    .page-hero {
+      background: var(--brand-deep);
+      position: relative;
+      overflow: hidden;
+      padding: 88px 0 96px;
+    }
+    .page-hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      opacity: 0.45;
+    }
+    .page-hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .page-hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(4,44,83,0.85) 0%,
+        rgba(4,44,83,0.95) 70%,
+        var(--brand-deep) 100%
+      );
+    }
+    .page-hero-grid {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 56px 56px;
+      pointer-events: none;
+    }
+    .page-hero-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 64px;
+      align-items: end;
+    }
+    .page-hero h1 { color: #fff; margin-bottom: 24px; }
+    .page-hero h1 em { font-style: normal; color: var(--accent-warm); }
+    .page-hero-lead {
+      font-size: 17px;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.7;
+      max-width: 560px;
+    }
+
+    /* Mini-anchor nav uvnitř hero */
+    .anchor-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 12px;
+    }
+    .anchor-nav-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      text-decoration: none;
+      transition: padding .2s;
+    }
+    .anchor-nav-row:last-child { border-bottom: none; }
+    .anchor-nav-row:hover { padding-left: 6px; }
+    .anchor-nav-num {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--accent-warm);
+      flex-shrink: 0;
+      min-width: 24px;
+    }
+    .anchor-nav-label {
+      font-size: 15px;
+      color: rgba(255,255,255,0.85);
+      font-weight: 500;
+      flex: 1;
+    }
+    .anchor-nav-arrow {
+      color: rgba(255,255,255,0.4);
+      flex-shrink: 0;
+      transition: color .15s, transform .15s;
+    }
+    .anchor-nav-row:hover .anchor-nav-arrow {
+      color: var(--accent-warm);
+      transform: translateX(3px);
+    }
+
+    /* ── INTRO PARAGRAPH ── */
+    .intro-section { padding: 80px 0 0; }
+    .intro-content {
+      max-width: 720px;
+    }
+    .intro-content p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+    .intro-content p strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* ── DELIVERY SECTION ── */
+    .delivery-section {
+      padding: 88px 0;
+      position: relative;
+    }
+    .delivery-section + .delivery-section {
+      border-top: 1px solid var(--border-soft);
+    }
+
+
+
+    .delivery-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    /* alternující layout — řízeno DOM pořadím, žádný order swap */
+
+    .delivery-text { max-width: 520px; }
+    .delivery-section .pretitle { margin-bottom: 18px; }
+
+    .delivery-num {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brand-accent);
+      margin-bottom: 14px;
+    }
+    .delivery-num-circle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--brand-deep);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+
+    .delivery-text h2 { margin-bottom: 14px; }
+    .delivery-subtitle {
+      font-size: 17px;
+      color: var(--brand-primary);
+      font-weight: 500;
+      margin-bottom: 22px;
+      line-height: 1.45;
+      letter-spacing: -0.01em;
+    }
+    .delivery-text > p {
+      color: var(--text-secondary);
+      font-size: 16px;
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .delivery-text > p:last-of-type { margin-bottom: 32px; }
+
+    .delivery-cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* Visual: list of items */
+    .delivery-visual {
+      background: var(--surface-soft);
+      border-radius: var(--radius-card);
+      padding: 36px;
+      position: relative;
+    }
+    .delivery-visual.dark {
+      background: var(--brand-deep);
+      color: #fff;
+    }
+
+    .delivery-visual-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 22px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .delivery-visual.dark .delivery-visual-header {
+      border-bottom-color: rgba(255,255,255,0.08);
+    }
+    .delivery-visual-title {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+    }
+    .delivery-visual.dark .delivery-visual-title {
+      color: rgba(255,255,255,0.45);
+    }
+    .delivery-visual-count {
+      font-size: 11px;
+      color: var(--text-tertiary);
+      font-family: 'Courier New', monospace;
+    }
+    .delivery-visual.dark .delivery-visual-count {
+      color: rgba(255,255,255,0.35);
+    }
+
+    .delivery-items {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+    }
+    .delivery-items li {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+      font-size: 15px;
+      color: var(--text-primary);
+    }
+    .delivery-items li:last-child { border-bottom: none; }
+    .delivery-visual.dark .delivery-items li {
+      color: rgba(255,255,255,0.85);
+      border-bottom-color: rgba(255,255,255,0.06);
+    }
+    .delivery-items li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--brand-accent);
+      flex-shrink: 0;
+    }
+    .delivery-visual.dark .delivery-items li::before {
+      background: var(--accent-warm);
+    }
+
+    .delivery-items-num {
+      font-size: 11px;
+      font-family: 'Courier New', monospace;
+      color: var(--text-tertiary);
+      margin-left: auto;
+      letter-spacing: 0.04em;
+    }
+    .delivery-visual.dark .delivery-items-num {
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* Process steps inside visual */
+    .process-steps {
+      list-style: none;
+      counter-reset: step;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .process-steps li {
+      counter-increment: step;
+      display: flex;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .process-steps li:last-child { border-bottom: none; }
+    .process-steps li::before {
+      content: counter(step, decimal-leading-zero);
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(239,159,39,0.15);
+      color: var(--accent-warm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 600;
+      font-family: 'Courier New', monospace;
+    }
+    .process-steps-text {
+      flex: 1;
+      padding-top: 4px;
+    }
+    .process-step-label {
+      font-size: 14px;
+      color: rgba(255,255,255,0.9);
+      font-weight: 500;
+      line-height: 1.5;
+    }
+    .process-step-meta {
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+      margin-top: 2px;
+    }
+
+    /* Card with photo + needs */
+    .needs-photo {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .needs-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .needs-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .needs-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      font-size: 14px;
+      color: var(--text-primary);
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .needs-list li:last-child { border-bottom: none; }
+    .needs-list svg {
+      flex-shrink: 0;
+      color: var(--brand-accent);
+    }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      background: var(--brand-deep);
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+    }
+    .final-cta-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      opacity: 0.35;
+    }
+    .final-cta-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .final-cta-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(4,44,83,0.7) 0%, rgba(4,44,83,0.95) 100%);
+    }
+    .final-cta-inner {
+      position: relative;
+      z-index: 2;
+      padding: 96px 0;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: center;
+    }
+    .final-cta-text h2 { color: #fff; margin-bottom: 10px; }
+    .final-cta-text p { color: rgba(255,255,255,0.6); font-size: 16px; max-width: 540px; }
+    .final-cta-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-end;
+    }
+    .final-cta-note { font-size: 12px; color: rgba(255,255,255,0.35); text-align: right; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      background: var(--brand-deep);
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 64px 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 56px;
+    }
+    .footer-tagline {
+      margin-top: 16px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.65;
+      max-width: 230px;
+    }
+    .footer-col h4 {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 18px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a {
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: color .15s;
+    }
+    .footer-col a:hover { color: #fff; }
+    .footer-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+    }
+    .footer-contact-item svg { flex-shrink: 0; opacity: 0.5; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .footer-bottom p { font-size: 13px; color: rgba(255,255,255,0.3); }
+    .footer-bottom-links { display: flex; gap: 20px; }
+    .footer-bottom-links a { font-size: 13px; color: rgba(255,255,255,0.3); text-decoration: none; }
+    .footer-bottom-links a:hover { color: rgba(255,255,255,0.65); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .page-hero-inner { grid-template-columns: 1fr; gap: 48px; }
+      .delivery-layout { grid-template-columns: 1fr; gap: 40px; }
+      .delivery-section:nth-of-type(even) .delivery-visual { order: 0; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .final-cta-inner { grid-template-columns: 1fr; }
+      .final-cta-actions { align-items: flex-start; }
+      .final-cta-note { text-align: left; }
+    }
+    @media (max-width: 768px) {
+      section { padding: 64px 0; }
+      .page-hero { padding: 56px 0 64px; }
+      .delivery-section { padding: 56px 0; }
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .delivery-visual { padding: 24px; }
+      .final-cta-inner { padding: 64px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-inner" role="navigation" aria-label="Hlavní navigace">
+        <a href="index.html" class="logo" aria-label="cnc-nahradnidily.cz — úvod">
+          <div class="logo-mark" aria-hidden="true">CN</div>
+          <span class="logo-text">cnc-nahradnidily.cz</span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Úvod</a></li>
+          <li><a href="co-dodavame.html" aria-current="page">Co dodáváme</a></li>
+          <li><a href="index.html#poptavka">Jak poptat</a></li>
+          <li><a href="index.html#ukazky">Ukázky dílů</a></li>
+          <li><a href="index.html#kontakt">Kontakt</a></li>
+        </ul>
+        <a href="#poptavka" class="btn btn-primary nav-cta">Poslat poptávku</a>
+        <button class="hamburger" aria-label="Otevřít menu" aria-expanded="false" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobilní navigace">
+      <a href="index.html">Úvod</a>
+      <a href="co-dodavame.html" aria-current="page">Co dodáváme</a>
+      <a href="index.html#poptavka">Jak poptat</a>
+      <a href="index.html#ukazky">Ukázky dílů</a>
+      <a href="index.html#kontakt">Kontakt</a>
+      <a href="#poptavka" class="btn btn-primary">Poslat poptávku</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="Co dodáváme">
+      <div class="page-hero-bg" aria-hidden="true">
+        <img src="https://c689ca28aa.clvaw-cdnwnd.com/cfce0d373eddee724ca66ecc02a42aea/200000106-df68ddf68f/CNC%20N%C3%A1hradn%C3%AD%20d%C3%ADly_kol%C3%A1%C5%BE.jpeg?ph=c689ca28aa" alt="" loading="eager">
+      </div>
+      <div class="page-hero-grid" aria-hidden="true"></div>
+      <div class="container">
+        <div class="page-hero-inner">
+          <div>
+            <span class="pretitle pretitle--light">Sortiment</span>
+            <h1>Tři typy dodávek<br><em>pro každou situaci.</em></h1>
+            <p class="page-hero-lead">Specializujeme se na tři typy dodávek. Pro většinu poptávek si vystačíte s první kategorií — originálními náhradními díly. Pokud je díl nedostupný, drahý nebo přímo nevyrobitelný v rozumném termínu, nabízíme ještě dvě další cesty.</p>
+          </div>
+
+          <nav class="anchor-nav" aria-label="Přejít na sekci">
+            <a href="#originalni" class="anchor-nav-row">
+              <span class="anchor-nav-num">01</span>
+              <span class="anchor-nav-label">Originální díly</span>
+              <svg class="anchor-nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="#repasy" class="anchor-nav-row">
+              <span class="anchor-nav-num">02</span>
+              <span class="anchor-nav-label">Repasy</span>
+              <svg class="anchor-nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="#vyroba" class="anchor-nav-row">
+              <span class="anchor-nav-num">03</span>
+              <span class="anchor-nav-label">Výroba na zakázku</span>
+              <svg class="anchor-nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEKCE 1: ORIGINÁLNÍ DÍLY -->
+    <section class="delivery-section" id="originalni" aria-labelledby="originalni-heading">
+      <div class="container">
+        <div class="delivery-layout">
+
+          <div class="delivery-text">
+            <span class="delivery-num">
+              <span class="delivery-num-circle">01</span>
+              Originální díly
+            </span>
+            <h2 id="originalni-heading">Originální díly</h2>
+            <p class="delivery-subtitle">Stejná kvalita, kterou znáte od výrobce stroje. Lepší cena.</p>
+            <p>Pracujeme s ověřenou sítí dodavatelů, kteří dodávají buď přímo do výroby strojů, nebo na nezávislý trh s dílově totožným zbožím. Velká část se nakupuje napřímo z Japonska, Tchaj-wanu, Indie a Číny — odtud pochází i většina dílů, které dnes výrobci CNC strojů kompletují do svých nových strojů.</p>
+            <p>Když vám pošleme nabídku, dostanete vždy konkrétní informaci, odkud díl pochází a jakou má záruku.</p>
+            <div class="delivery-cta-row">
+              <a href="#poptavka" class="btn btn-primary">Poptat originální díl →</a>
+            </div>
+          </div>
+
+          <div class="delivery-visual">
+            <div class="delivery-visual-header">
+              <span class="delivery-visual-title">Co typicky dodáváme</span>
+              <span class="delivery-visual-count">10 / kategorií</span>
+            </div>
+            <ul class="delivery-items">
+              <li>Ložiska (vřetenová, kuličková, kuželíková, lineární) <span class="delivery-items-num">01</span></li>
+              <li>Kuličkové šrouby a matice <span class="delivery-items-num">02</span></li>
+              <li>Lineární vedení a vozíky <span class="delivery-items-num">03</span></li>
+              <li>Ozubené řemeny a klínové řemeny <span class="delivery-items-num">04</span></li>
+              <li>Rotační průchodky <span class="delivery-items-num">05</span></li>
+              <li>Pneumatické a hydraulické komponenty <span class="delivery-items-num">06</span></li>
+              <li>Snímače, koncové spínače, enkodéry <span class="delivery-items-num">07</span></li>
+              <li>Servomotory a jejich díly <span class="delivery-items-num">08</span></li>
+              <li>Krycí plechy a teleskopické kryty <span class="delivery-items-num">09</span></li>
+              <li>Filtrační systémy a chladicí jednotky <span class="delivery-items-num">10</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SEKCE 2: REPASY -->
+    <section class="delivery-section alt" id="repasy" aria-labelledby="repasy-heading" style="background: var(--surface-soft); border-top: none;">
+      <div class="container">
+        <div class="delivery-layout">
+
+          <div class="delivery-visual dark">
+            <div class="delivery-visual-header">
+              <span class="delivery-visual-title">Jak repas probíhá</span>
+              <span class="delivery-visual-count">04 kroky · 2–4 týdny</span>
+            </div>
+            <ol class="process-steps">
+              <li>
+                <div class="process-steps-text">
+                  <div class="process-step-label">Pošlete nám díl k diagnostice</div>
+                  <div class="process-step-meta">poštou nebo přepravou</div>
+                </div>
+              </li>
+              <li>
+                <div class="process-steps-text">
+                  <div class="process-step-label">Dostanete kalkulaci</div>
+                  <div class="process-step-meta">rozsah prací a cena</div>
+                </div>
+              </li>
+              <li>
+                <div class="process-steps-text">
+                  <div class="process-step-label">Po odsouhlasení proběhne repas</div>
+                  <div class="process-step-meta">typicky do 2–4 týdnů</div>
+                </div>
+              </li>
+              <li>
+                <div class="process-steps-text">
+                  <div class="process-step-label">Vrátíme vám díl s protokolem</div>
+                  <div class="process-step-meta">včetně dokumentace o kontrole</div>
+                </div>
+              </li>
+            </ol>
+
+            <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08);">
+              <span class="delivery-visual-title" style="color: rgba(255,255,255,0.45); display: block; margin-bottom: 14px;">Co repasujeme</span>
+              <ul class="delivery-items" style="margin: 0;">
+                <li>Vřetena (mechanická i elektrovřetena)</li>
+                <li>Kuličkové šrouby</li>
+                <li>Pohony os</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="delivery-text">
+            <span class="delivery-num">
+              <span class="delivery-num-circle">02</span>
+              Repasy
+            </span>
+            <h2 id="repasy-heading">Repasy</h2>
+            <p class="delivery-subtitle">Funkční přesnost nového dílu za zlomek pořizovací ceny.</p>
+            <p>Repas je řešení pro situace, kdy je nový díl extrémně drahý nebo má dlouhou dodací lhůtu. O kvalitu se stará technik s desetiletími praxe v repasování CNC komponent — výsledek odpovídá novému dílu, často s lepší dohledatelností historie.</p>
+            <div class="delivery-cta-row">
+              <a href="#poptavka" class="btn btn-primary">Poptat repas →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SEKCE 3: VÝROBA NA ZAKÁZKU -->
+    <section class="delivery-section" id="vyroba" aria-labelledby="vyroba-heading" style="border-top: none;">
+      <div class="container">
+        <div class="delivery-layout">
+
+          <div class="delivery-text">
+            <span class="delivery-num">
+              <span class="delivery-num-circle">03</span>
+              Výroba na zakázku
+            </span>
+            <h2 id="vyroba-heading">Výroba na zakázku</h2>
+            <p class="delivery-subtitle">Když díl není v katalogu — vyrobíme ho podle vašeho výkresu nebo vzorku.</p>
+            <p>Pro starší stroje a speciální konfigurace je často jednodušší díl vyrobit než shánět. Spolupracujeme s výrobci, kteří umí pracovat podle vašeho výkresu, podle vzorku nebo podle 3D dat.</p>
+            <div class="delivery-cta-row">
+              <a href="#poptavka" class="btn btn-primary">Spočítat výrobu dílu →</a>
+            </div>
+          </div>
+
+          <div class="delivery-visual">
+            <div class="delivery-visual-header">
+              <span class="delivery-visual-title">Co vyrábíme na zakázku</span>
+              <span class="delivery-visual-count">04 / typů</span>
+            </div>
+            <ul class="delivery-items">
+              <li>Teleskopické kryty <span class="delivery-items-num">01</span></li>
+              <li>Kuličkové šrouby na míru <span class="delivery-items-num">02</span></li>
+              <li>Lineární vedení podle specifikace <span class="delivery-items-num">03</span></li>
+              <li>Speciální díly podle výkresu <span class="delivery-items-num">04</span></li>
+            </ul>
+
+            <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-soft);">
+              <span class="delivery-visual-title" style="display: block; margin-bottom: 14px;">Co od vás potřebujeme</span>
+              <ul class="needs-list">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  Výkres dílu
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                  Nebo 3D model
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  Pokud nemáte ani jedno — pošlete vzorek, zaměříme ho
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ZÁVĚREČNÉ CTA -->
+    <section class="final-cta" id="poptavka" aria-labelledby="cta-heading">
+      <div class="final-cta-bg" aria-hidden="true">
+        <img src="https://c689ca28aa.clvaw-cdnwnd.com/cfce0d373eddee724ca66ecc02a42aea/200000027-47d0147d03/deublin.jpeg?ph=c689ca28aa" alt="" loading="lazy">
+      </div>
+      <div class="container">
+        <div class="final-cta-inner">
+          <div class="final-cta-text">
+            <span class="pretitle pretitle--warm">Nejste si jisti?</span>
+            <h2 id="cta-heading">Nejste si jisti, do které kategorie váš díl patří?</h2>
+            <p>Napište nám — vyhodnotíme to za vás a doporučíme nejvýhodnější cestu.</p>
+          </div>
+          <div class="final-cta-actions">
+            <a href="/cdn-cgi/l/email-protection#cda4a3aba28daea3aee0a3aca5bfaca9a3a4a9a4a1b4e3aeb7" class="btn btn-primary">Napsat nám →</a>
+            <span class="final-cta-note">Odpovídáme do 24 hodin v pracovní dny</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="kontakt" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="cnc-nahradnidily.cz">
+            <div class="logo-mark" aria-hidden="true">CN</div>
+            <span class="logo-text">cnc-nahradnidily.cz</span>
+          </a>
+          <p class="footer-tagline">Náhradní díly pro CNC obráběcí stroje. Originální díly, repasy, výroba na zakázku.</p>
+        </div>
+
+        <nav class="footer-col" aria-label="Sortiment">
+          <h4>Sortiment</h4>
+          <ul>
+            <li><a href="#originalni">Originální díly</a></li>
+            <li><a href="#repasy">Repasované díly</a></li>
+            <li><a href="#vyroba">Výroba na zakázku</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-label="Pomoc">
+          <h4>Pomoc</h4>
+          <ul>
+            <li><a href="index.html#poptavka">Jak poptat</a></li>
+            <li><a href="index.html#ukazky">Ukázky dodaných dílů</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li>
+              <span class="footer-contact-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <a href="/cdn-cgi/l/email-protection#aac3c4ccc5eac9c4c987c4cbc2d8cbcec4c3cec3c6d384c9d0"><span class="__cf_email__" data-cfemail="264f484049664548450b48474e544742484f424f4a5f08455c">[email&#160;protected]</span></a>
+              </span>
+            </li>
+            <li>
+              <span class="footer-contact-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.2 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                <a href="tel:+420702805614">+420 702 805 614</a>
+              </span>
+            </li>
+            <li>
+              <span class="footer-contact-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+                <a href="https://wa.me/420702805614">WhatsApp</a>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 cnc-nahradnidily.cz</p>
+        <div class="footer-bottom-links">
+          <a href="#gdpr">Ochrana osobních údajů</a>
+          <a href="#cookies">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', function () {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
+</body>
+</html>

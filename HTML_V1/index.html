@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Náhradní díly pro CNC stroje | cnc-nahradnidily.cz</title>
+  <meta name="description" content="Originální díly, repasy a výroba na zakázku pro CNC stroje Hurco, Hermle, Mazak, DMG a další. Příjemné ceny díky přímému přístupu k dodavatelům. Dodáváme po celé EU.">
+  <meta property="og:title" content="Náhradní díly pro CNC stroje | cnc-nahradnidily.cz">
+  <meta property="og:description" content="Originální díly, repasy a výroba na zakázku pro CNC stroje Hurco, Hermle, Mazak, DMG a další.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand-deep:       #042C53;
+      --brand-primary:    #0C447C;
+      --brand-accent:     #185FA5;
+      --accent-warm:      #EF9F27;
+      --accent-warm-text: #412402;
+      --surface-light:    #FFFFFF;
+      --surface-soft:     #F1EFE8;
+      --border-soft:      #E5E7EB;
+      --border-mid:       #D1D5DB;
+      --text-primary:     #2C2C2A;
+      --text-secondary:   #5F5E5A;
+      --text-tertiary:    #888780;
+      --success:          #639922;
+      --radius-card:      14px;
+      --radius-btn:       8px;
+      --max-w:            1200px;
+      --px:               24px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background: var(--surface-light);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1 { font-size: clamp(36px, 5.5vw, 56px); font-weight: 600; line-height: 1.08; letter-spacing: -0.025em; }
+    h2 { font-size: clamp(26px, 3.5vw, 36px); font-weight: 600; line-height: 1.15; letter-spacing: -0.015em; }
+    h3 { font-size: 18px; font-weight: 600; line-height: 1.3; letter-spacing: -0.01em; }
+    p  { text-wrap: pretty; }
+
+    .pretitle {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brand-accent);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pretitle::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 1.5px;
+      background: currentColor;
+      flex-shrink: 0;
+    }
+    .pretitle--light { color: rgba(255,255,255,0.5); }
+    .pretitle--warm  { color: var(--accent-warm); }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--px);
+    }
+
+    section { padding: 96px 0; }
+    section.alt  { background: var(--surface-soft); }
+    section.dark { background: var(--brand-deep); }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 26px;
+      border-radius: var(--radius-btn);
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all .18s ease;
+      letter-spacing: -0.01em;
+    }
+    .btn:focus-visible { outline: 2px solid var(--brand-primary); outline-offset: 3px; }
+
+    .btn-primary   { background: var(--accent-warm); color: var(--accent-warm-text); }
+    .btn-primary:hover { background: #f5a93a; }
+
+    .btn-outline { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.3); }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.07); }
+
+    .btn-outline-dark { background: transparent; color: var(--brand-primary); border: 1px solid currentColor; }
+    .btn-outline-dark:hover { background: var(--brand-primary); color: #fff; }
+
+    /* ── NAV ── */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--brand-deep);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      gap: 16px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 7px;
+      background: var(--brand-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 0.03em;
+    }
+    .logo-text { font-size: 14px; font-weight: 600; color: #fff; letter-spacing: -0.02em; }
+
+    .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
+    .nav-links a {
+      display: block;
+      padding: 8px 13px;
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      border-radius: 6px;
+      transition: color .15s, background .15s;
+    }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+
+    .nav-cta { margin-left: 8px; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: transform .25s, opacity .25s;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: var(--brand-deep);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 16px var(--px) 24px;
+      gap: 4px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      display: block;
+      padding: 10px 12px;
+      font-size: 15px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    .mobile-menu a:hover { background: rgba(255,255,255,0.07); color: #fff; }
+    .mobile-menu .btn { margin-top: 8px; width: fit-content; }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--brand-deep);
+      position: relative;
+      overflow: hidden;
+      min-height: 640px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 55%;
+      display: block;
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        100deg,
+        rgba(4,44,83,0.97) 0%,
+        rgba(4,44,83,0.88) 42%,
+        rgba(4,44,83,0.45) 70%,
+        rgba(4,44,83,0.1) 100%
+      );
+    }
+
+    .hero-grid-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 56px 56px;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+      padding: 96px 0 88px;
+    }
+
+    .hero-content h1 { color: #fff; margin-bottom: 24px; }
+    .hero-content h1 em { font-style: normal; color: var(--accent-warm); }
+
+    .hero-subtitle {
+      font-size: 17px;
+      color: rgba(255,255,255,0.70);
+      line-height: 1.7;
+      margin-bottom: 40px;
+      max-width: 480px;
+    }
+
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    .hero-facts {
+      display: flex;
+      gap: 32px;
+      margin-top: 44px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      flex-wrap: wrap;
+    }
+    .hero-fact-value { font-size: 22px; font-weight: 600; color: #fff; letter-spacing: -0.02em; display: block; }
+    .hero-fact-label { font-size: 12px; color: rgba(255,255,255,0.4); letter-spacing: 0.02em; display: block; margin-top: 2px; }
+
+    /* Pravá část hero — jedna velká fotka */
+    .hero-visual {
+      position: relative;
+      align-self: stretch;
+      min-height: 420px;
+      border-radius: 14px 14px 0 0;
+      overflow: hidden;
+    }
+
+    .hero-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      display: block;
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-visual::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(4,44,83,0.05) 0%,
+        rgba(4,44,83,0.45) 100%
+      );
+    }
+
+    /* badge na foto */
+    .hero-img-badge {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      z-index: 2;
+      background: rgba(4,44,83,0.80);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8px;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .hero-img-badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--success);
+      flex-shrink: 0;
+    }
+    .hero-img-badge-text {
+      font-size: 13px;
+      color: rgba(255,255,255,0.92);
+      font-weight: 500;
+    }
+
+    /* ── VÝHODY ── */
+    .advantages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      margin-top: 56px;
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      background: var(--border-soft);
+    }
+
+    .advantage-card {
+      padding: 36px 32px;
+      background: var(--surface-light);
+      transition: background .2s;
+    }
+    .advantage-card:hover { background: #fafaf9; }
+
+    .advantage-num {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .advantage-icon-wrap {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(12,68,124,0.07);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      color: var(--brand-primary);
+    }
+
+    .advantage-card h3 { margin-bottom: 12px; font-size: 17px; }
+    .advantage-card p { font-size: 15px; color: var(--text-secondary); line-height: 1.65; }
+
+    /* ── JAK TO FUNGUJE ── */
+    .section-lead { max-width: 600px; }
+    .section-lead h2 { margin-bottom: 12px; }
+    .section-lead p { color: var(--text-secondary); }
+
+    /* Horizontální foto banner nad kroky */
+    .steps-banner {
+      margin-top: 48px;
+      height: 220px;
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      position: relative;
+    }
+    .steps-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 60%;
+      display: block;
+    }
+    .steps-banner::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(4,44,83,0.72) 0%,
+        rgba(4,44,83,0.2) 60%,
+        transparent 100%
+      );
+    }
+    .steps-banner-text {
+      position: absolute;
+      top: 50%;
+      left: 40px;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+    .steps-banner-text p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.75);
+      font-style: italic;
+      max-width: 380px;
+      line-height: 1.6;
+    }
+
+    .steps-wrap {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      position: relative;
+    }
+
+    .steps-wrap::before {
+      content: '';
+      position: absolute;
+      top: 28px;
+      left: 40px;
+      right: 40px;
+      height: 1px;
+      background: var(--border-soft);
+    }
+
+    .step { padding: 0 20px; position: relative; }
+
+    .step-circle {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--surface-soft);
+      border: 1.5px solid var(--border-mid);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--brand-primary);
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+      letter-spacing: -0.01em;
+    }
+
+    .step:first-child .step-circle {
+      background: var(--brand-deep);
+      border-color: var(--brand-deep);
+      color: #fff;
+    }
+
+    .step h3 { font-size: 16px; margin-bottom: 8px; }
+    .step p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+
+    /* ── SORTIMENT ── */
+    .sortiment-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+      margin-top: 56px;
+    }
+
+    .brands-group-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      margin-bottom: 14px;
+    }
+
+    /* Logo grid značek */
+    .brands-logo-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+
+    .brand-logo-card {
+      background: var(--surface-light);
+      border: 1px solid var(--border-soft);
+      border-radius: 8px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 12px;
+      transition: border-color .15s, background .15s;
+    }
+    .brand-logo-card:hover {
+      border-color: var(--brand-accent);
+      background: #f5f8fc;
+    }
+    .brand-logo-card svg {
+      max-width: 100%;
+      height: auto;
+    }
+    .brand-logo-card--more {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      font-weight: 500;
+      letter-spacing: 0.03em;
+    }
+
+    .system-tag {
+      padding: 5px 12px;
+      background: transparent;
+      border: 1px solid var(--border-soft);
+      border-radius: 6px;
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    .sortiment-text h2 { margin-bottom: 20px; }
+    .sortiment-text p { color: var(--text-secondary); font-size: 16px; line-height: 1.7; margin-bottom: 32px; }
+
+    .sortiment-cta-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+
+    /* ── SEKCE: PROČ VÍC INFO ── */
+    .dark-section-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .dark-text h2 { color: #fff; margin-bottom: 24px; }
+    .dark-text p {
+      color: rgba(255,255,255,0.65);
+      font-size: 16px;
+      line-height: 1.75;
+      margin-bottom: 18px;
+    }
+    .dark-text p:last-of-type { margin-bottom: 32px; }
+
+    .dark-visual {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-card);
+      padding: 32px;
+    }
+
+    .info-row {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .info-row:last-child { border-bottom: none; }
+
+    .info-row-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: rgba(24,95,165,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .info-row-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 3px;
+    }
+    .info-row-value {
+      font-size: 14px;
+      color: rgba(255,255,255,0.8);
+      font-weight: 500;
+    }
+
+    /* ── UKÁZKY DÍLŮ ── */
+    .parts-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .parts-header-left h2 { margin-bottom: 10px; }
+    .parts-header-left p { color: var(--text-secondary); font-size: 15px; max-width: 520px; }
+
+    .parts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .part-card {
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      background: var(--surface-light);
+      transition: border-color .2s;
+    }
+    .part-card:hover { border-color: var(--brand-accent); }
+
+    .part-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: var(--surface-soft);
+      overflow: hidden;
+      position: relative;
+    }
+    .part-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .4s ease;
+    }
+    .part-card:hover .part-img img { transform: scale(1.03); }
+
+    .part-img-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: var(--text-tertiary);
+      font-family: 'Courier New', monospace;
+      background: var(--surface-soft);
+      background-image:
+        linear-gradient(rgba(136,135,128,0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(136,135,128,0.07) 1px, transparent 1px);
+      background-size: 16px 16px;
+      letter-spacing: 0.04em;
+    }
+
+    .part-body { padding: 20px 20px 22px; }
+
+    .part-category {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brand-accent);
+      margin-bottom: 6px;
+    }
+
+    .part-body h3 { font-size: 16px; margin-bottom: 3px; }
+
+    .part-machine { font-size: 12px; color: var(--text-tertiary); margin-bottom: 16px; }
+
+    .part-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-soft);
+    }
+
+    .part-price { font-size: 18px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.02em; }
+
+    .part-delivery {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      color: var(--success);
+      font-weight: 500;
+    }
+    .part-delivery::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--success);
+      flex-shrink: 0;
+    }
+
+    .parts-footer-row { margin-top: 32px; text-align: center; }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      background: var(--brand-deep);
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .final-cta-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .final-cta-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      display: block;
+    }
+    .final-cta-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(4,44,83,0.88);
+    }
+
+    .final-cta-inner {
+      position: relative;
+      z-index: 2;
+      padding: 96px 0;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .final-cta-text h2 { color: #fff; margin-bottom: 10px; }
+    .final-cta-text p { color: rgba(255,255,255,0.55); font-size: 16px; }
+
+    .final-cta-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-end;
+      flex-shrink: 0;
+    }
+
+    .final-cta-note { font-size: 12px; color: rgba(255,255,255,0.35); text-align: right; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      background: var(--brand-deep);
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 64px 0 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 56px;
+    }
+
+    .footer-tagline {
+      margin-top: 16px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.65;
+      max-width: 230px;
+    }
+
+    .footer-col h4 {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 18px;
+    }
+
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+    .footer-col a {
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: color .15s;
+    }
+    .footer-col a:hover { color: #fff; }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+    }
+    .footer-contact-item svg { flex-shrink: 0; opacity: 0.5; }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .footer-bottom p { font-size: 13px; color: rgba(255,255,255,0.3); }
+    .footer-bottom-links { display: flex; gap: 20px; }
+    .footer-bottom-links a { font-size: 13px; color: rgba(255,255,255,0.3); text-decoration: none; }
+    .footer-bottom-links a:hover { color: rgba(255,255,255,0.65); }
+
+    /* ── COOKIE ── */
+    .cookie-banner {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 200;
+      background: #fff;
+      border-top: 1px solid var(--border-soft);
+      padding: 14px var(--px);
+    }
+    .cookie-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .cookie-text { font-size: 14px; color: var(--text-secondary); flex: 1; min-width: 240px; }
+    .cookie-text a { color: var(--brand-accent); text-decoration: underline; }
+    .cookie-actions { display: flex; gap: 8px; flex-shrink: 0; }
+
+    .btn-cookie-primary {
+      padding: 9px 18px; font-size: 14px;
+      background: var(--brand-primary); color: #fff;
+      border: none; border-radius: var(--radius-btn);
+      font-family: inherit; font-weight: 500; cursor: pointer;
+    }
+    .btn-cookie-secondary {
+      padding: 9px 18px; font-size: 14px;
+      background: transparent; color: var(--text-secondary);
+      border: 1px solid var(--border-soft); border-radius: var(--radius-btn);
+      font-family: inherit; font-weight: 500; cursor: pointer;
+    }
+    .btn-cookie-primary:hover { opacity: .88; }
+    .btn-cookie-secondary:hover { border-color: var(--text-secondary); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .advantages-grid { grid-template-columns: 1fr 1fr; }
+      .steps-wrap { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .steps-wrap::before { display: none; }
+      .sortiment-layout { grid-template-columns: 1fr; gap: 48px; }
+      .brands-logo-grid { grid-template-columns: repeat(3, 1fr); }
+      .dark-section-inner { grid-template-columns: 1fr; gap: 48px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .parts-grid { grid-template-columns: repeat(2, 1fr); }
+      .final-cta-inner { grid-template-columns: 1fr; }
+      .final-cta-actions { align-items: flex-start; }
+      .final-cta-note { text-align: left; }
+    }
+
+    @media (max-width: 768px) {
+      section { padding: 64px 0; }
+      .hero { min-height: auto; }
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; padding: 64px 0 56px; }
+      .hero-visual { display: none; }
+      .hero-subtitle { font-size: 16px; }
+      .hero-actions { flex-direction: column; }
+      .hero-actions .btn { width: 100%; justify-content: center; }
+      .hero-facts { gap: 20px; }
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .advantages-grid { grid-template-columns: 1fr; }
+      .brands-logo-grid { grid-template-columns: repeat(2, 1fr); }
+      .steps-wrap { grid-template-columns: 1fr; }
+      .steps-banner { height: 140px; }
+      .steps-banner-text { left: 24px; }
+      .parts-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .parts-header { flex-direction: column; align-items: flex-start; }
+      .final-cta-inner { padding: 64px 0; }
+    }
+
+    @media (max-width: 640px) {
+      .cookie-inner { flex-direction: column; align-items: flex-start; }
+      .cookie-actions { width: 100%; flex-direction: column; }
+      .btn-cookie-primary, .btn-cookie-secondary { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-inner" role="navigation" aria-label="Hlavní navigace">
+        <a href="/" class="logo" aria-label="cnc-nahradnidily.cz — úvod">
+          <div class="logo-mark" aria-hidden="true">CN</div>
+          <span class="logo-text">cnc-nahradnidily.cz</span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="/" aria-current="page">Úvod</a></li>
+          <li><a href="#sortiment">Co dodáváme</a></li>
+          <li><a href="#poptavka">Jak poptat</a></li>
+          <li><a href="#ukazky">Ukázky dílů</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+        <a href="#poptavka" class="btn btn-primary nav-cta">Poslat poptávku</a>
+        <button class="hamburger" aria-label="Otevřít menu" aria-expanded="false" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobilní navigace">
+      <a href="/">Úvod</a>
+      <a href="#sortiment">Co dodáváme</a>
+      <a href="#poptavka">Jak poptat</a>
+      <a href="#ukazky">Ukázky dílů</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#poptavka" class="btn btn-primary">Poslat poptávku</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO: fullbleed foto CNC frézky v pozadí, kartičky dílů vpravo -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg">
+        <!-- Foto: záběr zevnitř CNC obráběcího centra, vřeteno při práci -->
+        <img
+          src="https://c689ca28aa.clvaw-cdnwnd.com/cfce0d373eddee724ca66ecc02a42aea/200000106-df68ddf68f/CNC%20N%C3%A1hradn%C3%AD%20d%C3%ADly_kol%C3%A1%C5%BE.jpeg?ph=c689ca28aa"
+          alt=""
+          loading="eager"
+          aria-hidden="true"
+        >
+      </div>
+      <div class="hero-grid-overlay" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-content">
+            <span class="pretitle pretitle--light">Náhradní díly pro CNC stroje</span>
+            <h1>Stejné díly,<br><em>příjemnější cena.</em></h1>
+            <p class="hero-subtitle">Servisní technici se zkušenostmi z každodenní praxe. Originální díly, repasy i výroba na zakázku — pro Hurco, Hermle, Mazak, DMG Mori, Mikron, Kovosvit MAS a další. Dodáváme po celé Evropské unii.</p>
+            <div class="hero-actions">
+              <a href="#poptavka" class="btn btn-primary">Poslat poptávku</a>
+              <a href="#proc-vic-info" class="btn btn-outline">Co od vás budeme potřebovat</a>
+            </div>
+            <div class="hero-facts">
+              <div class="hero-fact">
+                <span class="hero-fact-value">24 h</span>
+                <span class="hero-fact-label">Odezva na poptávku</span>
+              </div>
+              <div class="hero-fact">
+                <span class="hero-fact-value">EU</span>
+                <span class="hero-fact-label">Celá Evropská unie</span>
+              </div>
+              <div class="hero-fact">
+                <span class="hero-fact-value">3×</span>
+                <span class="hero-fact-label">Typy dodávek</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Jedna velká fotka vpravo -->
+          <div class="hero-visual" aria-hidden="true">
+            <img
+              src="https://c689ca28aa.clvaw-cdnwnd.com/cfce0d373eddee724ca66ecc02a42aea/200000027-47d0147d03/deublin.jpeg?ph=c689ca28aa"
+              alt="Rotační průchodka CNC stroje"
+              loading="eager"
+            >
+            <div class="hero-img-badge">
+              <div class="hero-img-badge-dot"></div>
+              <span class="hero-img-badge-text">skladem · odeslání do 24 h</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- VÝHODY -->
+    <section aria-labelledby="vyhody-heading">
+      <div class="container">
+        <span class="pretitle">Proč u nás</span>
+        <h2 id="vyhody-heading">Proč u nás</h2>
+        <div class="advantages-grid">
+
+          <article class="advantage-card">
+            <span class="advantage-num">01</span>
+            <div class="advantage-icon-wrap" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+              </svg>
+            </div>
+            <h3>Nižší ceny bez ústupků v kvalitě</h3>
+            <p>Pracujeme s ověřenými dodavateli napřímo. Bez režie autorizovaných servisů a bez zbytečných mezičlánků. Stejný díl, výrazně lepší cena.</p>
+          </article>
+
+          <article class="advantage-card">
+            <span class="advantage-num">02</span>
+            <div class="advantage-icon-wrap" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <h3>Technicky podloženo</h3>
+            <p>Než cokoliv objednáme, ověříme, že díl skutečně pasuje do vašeho stroje, jeho generace a konfigurace. Nemontujte stejný díl dvakrát kvůli záměně typu.</p>
+          </article>
+
+          <article class="advantage-card">
+            <span class="advantage-num">03</span>
+            <div class="advantage-icon-wrap" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+              </svg>
+            </div>
+            <h3>Dodáváme po celé EU</h3>
+            <p>Česko, Slovensko a celá Evropská unie. Skladové díly odesíláme do 24 hodin, ostatní podle dostupnosti — vždy s reálným termínem, ne odhadem.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- JAK TO FUNGUJE -->
+    <section class="alt" aria-labelledby="jak-heading">
+      <div class="container">
+        <div class="section-lead">
+          <span class="pretitle">Jak to funguje</span>
+          <h2 id="jak-heading">Od poptávky k dodanému dílu</h2>
+        </div>
+
+        <!-- Foto banner — CNC dílna -->
+        <div class="steps-banner" aria-hidden="true">
+          <img
+            src="https://c689ca28aa.clvaw-cdnwnd.com/cfce0d373eddee724ca66ecc02a42aea/200000106-df68ddf68f/CNC%20N%C3%A1hradn%C3%AD%20d%C3%ADly_kol%C3%A1%C5%BE.jpeg?ph=c689ca28aa"
+            alt="CNC výrobní hala"
+            loading="lazy"
+          >
+          <div class="steps-banner-text">
+            <p>„Než cokoliv objednáme, ověříme, že to pasuje. Proto to funguje."</p>
+          </div>
+        </div>
+
+        <div class="steps-wrap">
+          <div class="step">
+            <div class="step-circle">01</div>
+            <h3>Pošlete poptávku</h3>
+            <p>Typ stroje, štítek, foto dílu, případně rozkres ze schématu.</p>
+          </div>
+          <div class="step">
+            <div class="step-circle">02</div>
+            <h3>Ověříme díl</h3>
+            <p>Dohledáme přesnou specifikaci a zkontrolujeme kompatibilitu s vaší konfigurací.</p>
+          </div>
+          <div class="step">
+            <div class="step-circle">03</div>
+            <h3>Pošleme nabídku</h3>
+            <p>Cena, termín, případné varianty — originál, repas nebo ověřená alternativa.</p>
+          </div>
+          <div class="step">
+            <div class="step-circle">04</div>
+            <h3>Dodáme</h3>
+            <p>Skladové díly do 24 hodin, ostatní dle dostupnosti. Doprava po celé EU.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SORTIMENT -->
+    <section id="sortiment" aria-labelledby="sortiment-heading">
+      <div class="container">
+        <div class="sortiment-layout">
+
+          <div class="sortiment-text">
+            <span class="pretitle">Sortiment</span>
+            <h2 id="sortiment-heading">Díly pro většinu CNC strojů na trhu</h2>
+            <p>Zajišťujeme náhradní díly pro frézovací centra, soustruhy i kombinované stroje předních evropských i asijských výrobců. Pokud si nejste jisti, jestli máte ten správný stroj v naší nabídce — zeptejte se. Zatím jsme nenarazili na typ, ke kterému bychom díl nedohledali.</p>
+            <div class="sortiment-cta-row">
+              <a href="#sortiment-detail" class="btn btn-outline-dark">Zobrazit kompletní nabídku →</a>
+            </div>
+          </div>
+
+          <div>
+            <p class="brands-group-label">Výrobci strojů</p>
+            <div class="brands-logo-grid" role="list" aria-label="Podporované značky strojů">
+
+              <!-- Hurco -->
+              <div class="brand-logo-card" role="listitem" title="Hurco">
+                <svg viewBox="0 0 80 24" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Hurco">
+                  <text x="0" y="19" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0C447C" letter-spacing="-0.5">HURCO</text>
+                </svg>
+              </div>
+
+              <!-- Hermle -->
+              <div class="brand-logo-card" role="listitem" title="Hermle">
+                <svg viewBox="0 0 88 24" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Hermle">
+                  <text x="0" y="19" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#2C2C2A" letter-spacing="0.5">HERMLE</text>
+                </svg>
+              </div>
+
+              <!-- Mazak -->
+              <div class="brand-logo-card" role="listitem" title="Mazak">
+                <svg viewBox="0 0 76 24" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Mazak">
+                  <text x="0" y="19" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#C8102E" letter-spacing="0">MAZAK</text>
+                </svg>
+              </div>
+
+              <!-- DMG Mori -->
+              <div class="brand-logo-card" role="listitem" title="DMG Mori">
+                <svg viewBox="0 0 90 24" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="DMG Mori">
+                  <text x="0" y="17" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" letter-spacing="0.5">DMG MORI</text>
+                </svg>
+              </div>
+
+              <!-- Mikron -->
+              <div class="brand-logo-card" role="listitem" title="Mikron">
+                <svg viewBox="0 0 80 24" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Mikron">
+                  <text x="0" y="19" font-family="Arial, sans-serif" font-size="17" font-weight="600" fill="#042C53" letter-spacing="0.3">MIKRON</text>
+                </svg>
+              </div>
+
+              <!-- Kovosvit MAS -->
+              <div class="brand-logo-card" role="listitem" title="Kovosvit MAS">
+                <svg viewBox="0 0 100 24" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Kovosvit MAS">
+                  <text x="0" y="17" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#1A3A6B" letter-spacing="0.4">KOVOSVIT MAS</text>
+                </svg>
+              </div>
+
+              <!-- Doosan -->
+              <div class="brand-logo-card" role="listitem" title="Doosan">
+                <svg viewBox="0 0 82 24" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Doosan">
+                  <text x="0" y="19" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#003087" letter-spacing="0.2">DOOSAN</text>
+                </svg>
+              </div>
+
+              <!-- Okuma -->
+              <div class="brand-logo-card" role="listitem" title="Okuma">
+                <svg viewBox="0 0 76 24" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Okuma">
+                  <text x="0" y="19" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0057A8" letter-spacing="0">OKUMA</text>
+                </svg>
+              </div>
+
+              <!-- Deckel Maho -->
+              <div class="brand-logo-card" role="listitem" title="Deckel Maho">
+                <svg viewBox="0 0 100 24" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Deckel Maho">
+                  <text x="0" y="17" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#2C2C2A" letter-spacing="0.3">DECKEL MAHO</text>
+                </svg>
+              </div>
+
+              <!-- ZPS Tajmac -->
+              <div class="brand-logo-card" role="listitem" title="ZPS Tajmac">
+                <svg viewBox="0 0 96 24" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="ZPS Tajmac">
+                  <text x="0" y="17" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#1A1A1A" letter-spacing="0.3">ZPS TAJMAC</text>
+                </svg>
+              </div>
+
+              <!-- Mori Seiki -->
+              <div class="brand-logo-card" role="listitem" title="Mori Seiki">
+                <svg viewBox="0 0 92 24" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Mori Seiki">
+                  <text x="0" y="17" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#003087" letter-spacing="0.3">MORI SEIKI</text>
+                </svg>
+              </div>
+
+              <!-- a další -->
+              <div class="brand-logo-card brand-logo-card--more" role="listitem">
+                + a další
+              </div>
+
+            </div>
+
+            <p class="brands-group-label">Řídicí systémy</p>
+            <div class="brands-grid" aria-label="Podporované řídicí systémy">
+              <span class="system-tag">Siemens Sinumerik</span>
+              <span class="system-tag">Heidenhain TNC</span>
+              <span class="system-tag">Fanuc</span>
+              <span class="system-tag">Hurco WinMax</span>
+              <span class="system-tag">Mitsubishi</span>
+              <span class="system-tag">Mazatrol</span>
+              <span class="system-tag">Heidenhain MillPlus</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROČ CHCEME VÍC INFO -->
+    <section class="dark" id="proc-vic-info" aria-labelledby="proc-heading">
+      <div class="container">
+        <div class="dark-section-inner">
+
+          <div class="dark-text">
+            <span class="pretitle pretitle--light">Proč se ptáme</span>
+            <h2 id="proc-heading">Proč po vás chceme víc než jen fotku dílu</h2>
+            <p>Označení dílu a údaje o stroji od vás vyžadujeme z jediného důvodu — abyste díl montovali jen jednou.</p>
+            <p>Jeden a tentýž stroj může mít napříč generacemi tři různá ložiska vřetene. Stejné označení řemenu se vyrábí ve čtyřech délkách podle roku výroby. Bez ověření vám můžeme poslat díl, který vypadá správně, ale do stroje nesedne — a vy budete řešit reklamaci místo poruchy.</p>
+            <p>Než cokoliv objednáme u dodavatele, ověříme to. Proto se ptáme. Proto to funguje.</p>
+            <a href="#poptavka" class="btn btn-outline">Co přesně potřebujeme vědět →</a>
+          </div>
+
+          <div class="dark-visual" aria-label="Co od vás potřebujeme">
+            <div class="info-row">
+              <div class="info-row-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+              </div>
+              <div>
+                <div class="info-row-label">Výrobce a typ stroje</div>
+                <div class="info-row-value">Hurco VMX24i, Hermle C 400, …</div>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-row-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+              <div>
+                <div class="info-row-label">Rok výroby</div>
+                <div class="info-row-value">Nebo sériové číslo stroje</div>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-row-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              </div>
+              <div>
+                <div class="info-row-label">Foto dílu + štítek</div>
+                <div class="info-row-value">Označení přímo na komponentě</div>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-row-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              </div>
+              <div>
+                <div class="info-row-label">Rozkres ze schématu</div>
+                <div class="info-row-value">Pokud máte manuál nebo katalog</div>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-row-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+              </div>
+              <div>
+                <div class="info-row-label">Řídicí systém</div>
+                <div class="info-row-value">Siemens, Heidenhain, Fanuc, …</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- UKÁZKY DÍLŮ -->
+    <section id="ukazky" class="alt" aria-labelledby="ukazky-heading">
+      <div class="container">
+        <div class="parts-header">
+          <div class="parts-header-left">
+            <span class="pretitle">Ukázky</span>
+            <h2 id="ukazky-heading">Co jsme nedávno řešili</h2>
+            <p>Vybrané díly za posledních pár měsíců. Ceny i termíny se vždy ověřují u konkrétní poptávky.</p>
+          </div>
+          <a href="#ukazky-vsechny" class="btn btn-outline-dark">Zobrazit všechny ukázky →</a>
+        </div>
+
+        <div class="parts-grid">
+
+          <!-- Karta 1: Rotační průchodka (CDN foto) -->
+          <article class="part-card">
+            <div class="part-img">
+              <img
+                src="https://c689ca28aa.clvaw-cdnwnd.com/cfce0d373eddee724ca66ecc02a42aea/200000159-1a1c31a1c5/Rotary%20Joint.png?ph=c689ca28aa"
+                alt="Rotační průchodka KJC 6314-20"
+                loading="lazy"
+              >
+            </div>
+            <div class="part-body">
+              <div class="part-category">Rotační průchodka</div>
+              <h3>KJC 6314-20</h3>
+              <div class="part-machine">Hurco VMX, Hermle C-série a kompatibilní</div>
+              <div class="part-footer">
+                <div class="part-price">od 3 200 Kč</div>
+                <div class="part-delivery">skladem · do 24 h</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Karta 2: Ložisko — Unsplash, detailní záběr na ložisko -->
+          <article class="part-card">
+            <div class="part-img">
+              <img
+                src="https://c689ca28aa.clvaw-cdnwnd.com/cfce0d373eddee724ca66ecc02a42aea/200000053-a2aeda2af0/Obr%C3%A1zek%20WhatsApp%2C%202025-05-18%20v%2022.21.14_0b0ff80d.jpeg?ph=c689ca28aa"
+                alt="Ložisko vřetene 20ATC47CSUHPN7C"
+                loading="lazy"
+              >
+            </div>
+            <div class="part-body">
+              <div class="part-category">Ložisko vřetene</div>
+              <h3>20ATC47CSUHPN7C</h3>
+              <div class="part-machine">Hurco VMX24 a kompatibilní</div>
+              <div class="part-footer">
+                <div class="part-price">od 1 480 Kč</div>
+                <div class="part-delivery">skladem · do 24 h</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Karta 3: Řemen — Unsplash, ozubený řemen průmyslový -->
+          <article class="part-card">
+            <div class="part-img">
+              <img
+                src="https://c689ca28aa.clvaw-cdnwnd.com/cfce0d373eddee724ca66ecc02a42aea/200000025-0924d0924f/teleskopick%C3%A9%20kryty.jpeg?ph=c689ca28aa"
+                alt="Ozubený řemen 420-5GT-40"
+                loading="lazy"
+              >
+            </div>
+            <div class="part-body">
+              <div class="part-category">Ozubený řemen</div>
+              <h3>420-5GT-40</h3>
+              <div class="part-machine">Mazak Variaxis, DMG a kompatibilní</div>
+              <div class="part-footer">
+                <div class="part-price">od 480 Kč</div>
+                <div class="part-delivery">skladem · do 24 h</div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ZÁVĚREČNÉ CTA — s foto pozadím -->
+    <section class="final-cta" id="poptavka" aria-labelledby="cta-heading">
+      <div class="final-cta-bg" aria-hidden="true">
+        <img
+          src="https://c689ca28aa.clvaw-cdnwnd.com/cfce0d373eddee724ca66ecc02a42aea/200000027-47d0147d03/deublin.jpeg?ph=c689ca28aa"
+          alt=""
+          loading="lazy"
+        >
+      </div>
+      <div class="container">
+        <div class="final-cta-inner">
+          <div class="final-cta-text">
+            <span class="pretitle pretitle--warm">Máte konkrétní díl?</span>
+            <h2 id="cta-heading">Sháníte specifický díl?</h2>
+            <p>Pošlete nám poptávku — ozveme se zpravidla do 24 hodin.</p>
+          </div>
+          <div class="final-cta-actions">
+            <a href="/cdn-cgi/l/email-protection#e1888f878ea1828f82cc8f80899380858f8885888d98cf829b" class="btn btn-primary">Poptávkový formulář →</a>
+            <span class="final-cta-note">Odpovídáme do 24 hodin v pracovní dny</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="kontakt" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="cnc-nahradnidily.cz">
+            <div class="logo-mark" aria-hidden="true">CN</div>
+            <span class="logo-text">cnc-nahradnidily.cz</span>
+          </a>
+          <p class="footer-tagline">Náhradní díly pro CNC obráběcí stroje. Originální díly, repasy, výroba na zakázku.</p>
+        </div>
+
+        <nav class="footer-col" aria-label="Sortiment">
+          <h4>Sortiment</h4>
+          <ul>
+            <li><a href="#originalni">Originální díly</a></li>
+            <li><a href="#repasy">Repasované díly</a></li>
+            <li><a href="#vyroba">Výroba na zakázku</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-label="Pomoc">
+          <h4>Pomoc</h4>
+          <ul>
+            <li><a href="#poptavka">Jak poptat</a></li>
+            <li><a href="#ukazky">Ukázky dodaných dílů</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li>
+              <span class="footer-contact-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <a href="/cdn-cgi/l/email-protection#452c2b232a05262b26682b242d3724212b2c212c293c6b263f"><span class="__cf_email__" data-cfemail="d7beb9b1b897b4b9b4fab9b6bfa5b6b3b9beb3bebbaef9b4ad">[email&#160;protected]</span></a>
+              </span>
+            </li>
+            <li>
+              <span class="footer-contact-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.2 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                <a href="tel:+420702805614">+420 702 805 614</a>
+              </span>
+            </li>
+            <li>
+              <span class="footer-contact-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+                <a href="https://wa.me/420702805614">WhatsApp</a>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 cnc-nahradnidily.cz</p>
+        <div class="footer-bottom-links">
+          <a href="#gdpr">Ochrana osobních údajů</a>
+          <a href="#cookies">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- COOKIE BANNER -->
+  <div class="cookie-banner" id="cookie-banner" role="region" aria-label="Souhlas s cookies">
+    <div class="cookie-inner">
+      <p class="cookie-text">
+        Používáme pouze technicky nezbytné cookies. Žádné sledování, žádná reklama.
+        <a href="#cookies">Více informací</a>
+      </p>
+      <div class="cookie-actions">
+        <button class="btn-cookie-primary" id="cookie-essential">Pouze nezbytné</button>
+        <button class="btn-cookie-secondary" id="cookie-all">Přijmout vše</button>
+      </div>
+    </div>
+  </div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', function () {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    const cookieBanner = document.getElementById('cookie-banner');
+    function dismissCookies() {
+      cookieBanner.style.display = 'none';
+      try { localStorage.setItem('cookies_accepted', '1'); } catch (e) {}
+    }
+    document.getElementById('cookie-essential').addEventListener('click', dismissCookies);
+    document.getElementById('cookie-all').addEventListener('click', dismissCookies);
+    try {
+      if (localStorage.getItem('cookies_accepted')) cookieBanner.style.display = 'none';
+    } catch (e) {}
+  </script>
+
+</body>
+</html>
