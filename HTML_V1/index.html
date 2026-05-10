@@ -159,6 +159,7 @@
       transition: color .15s, background .15s;
     }
     .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+    .nav-links a[aria-current="page"] { color: #fff; background: rgba(255,255,255,0.06); }
 
     .nav-cta { margin-left: 8px; }
 
@@ -912,25 +913,25 @@
           <span class="logo-text">cnc-nahradnidily.cz</span>
         </a>
         <ul class="nav-links" role="list">
-          <li><a href="/" aria-current="page">Úvod</a></li>
-          <li><a href="#sortiment">Co dodáváme</a></li>
-          <li><a href="#poptavka">Jak poptat</a></li>
-          <li><a href="#ukazky">Ukázky dílů</a></li>
-          <li><a href="#kontakt">Kontakt</a></li>
+          <li><a href="index.html" aria-current="page">Úvod</a></li>
+          <li><a href="co-dodavame.html">Co dodáváme</a></li>
+          <li><a href="jak-poptat.html">Jak poptat</a></li>
+          <li><a href="ukazky-dilu.html">Ukázky dílů</a></li>
+          <li><a href="kontakty.html">Kontakt</a></li>
         </ul>
-        <a href="#poptavka" class="btn btn-primary nav-cta">Poslat poptávku</a>
+        <a href="poptavka.html" class="btn btn-primary nav-cta">Poslat poptávku</a>
         <button class="hamburger" aria-label="Otevřít menu" aria-expanded="false" id="hamburger">
           <span></span><span></span><span></span>
         </button>
       </nav>
     </div>
     <nav class="mobile-menu" id="mobile-menu" aria-label="Mobilní navigace">
-      <a href="/">Úvod</a>
-      <a href="#sortiment">Co dodáváme</a>
-      <a href="#poptavka">Jak poptat</a>
-      <a href="#ukazky">Ukázky dílů</a>
-      <a href="#kontakt">Kontakt</a>
-      <a href="#poptavka" class="btn btn-primary">Poslat poptávku</a>
+      <a href="index.html" aria-current="page">Úvod</a>
+      <a href="co-dodavame.html">Co dodáváme</a>
+      <a href="jak-poptat.html">Jak poptat</a>
+      <a href="ukazky-dilu.html">Ukázky dílů</a>
+      <a href="kontakty.html">Kontakt</a>
+      <a href="poptavka.html" class="btn btn-primary">Poslat poptávku</a>
     </nav>
   </header>
 
@@ -956,8 +957,8 @@
             <h1>Stejné díly,<br><em>příjemnější cena.</em></h1>
             <p class="hero-subtitle">Servisní technici se zkušenostmi z každodenní praxe. Originální díly, repasy i výroba na zakázku — pro Hurco, Hermle, Mazak, DMG Mori, Mikron, Kovosvit MAS a další. Dodáváme po celé Evropské unii.</p>
             <div class="hero-actions">
-              <a href="#poptavka" class="btn btn-primary">Poslat poptávku</a>
-              <a href="#proc-vic-info" class="btn btn-outline">Co od vás budeme potřebovat</a>
+              <a href="poptavka.html" class="btn btn-primary">Poslat poptávku</a>
+              <a href="jak-poptat.html#co-potrebujeme" class="btn btn-outline">Co od vás budeme potřebovat</a>
             </div>
             <div class="hero-facts">
               <div class="hero-fact">
@@ -1092,7 +1093,7 @@
             <h2 id="sortiment-heading">Díly pro většinu CNC strojů na trhu</h2>
             <p>Zajišťujeme náhradní díly pro frézovací centra, soustruhy i kombinované stroje předních evropských i asijských výrobců. Pokud si nejste jisti, jestli máte ten správný stroj v naší nabídce — zeptejte se. Zatím jsme nenarazili na typ, ke kterému bychom díl nedohledali.</p>
             <div class="sortiment-cta-row">
-              <a href="#sortiment-detail" class="btn btn-outline-dark">Zobrazit kompletní nabídku →</a>
+              <a href="co-dodavame.html" class="btn btn-outline-dark">Zobrazit kompletní nabídku →</a>
             </div>
           </div>
 
@@ -1211,7 +1212,7 @@
             <p>Označení dílu a údaje o stroji od vás vyžadujeme z jediného důvodu — abyste díl montovali jen jednou.</p>
             <p>Jeden a tentýž stroj může mít napříč generacemi tři různá ložiska vřetene. Stejné označení řemenu se vyrábí ve čtyřech délkách podle roku výroby. Bez ověření vám můžeme poslat díl, který vypadá správně, ale do stroje nesedne — a vy budete řešit reklamaci místo poruchy.</p>
             <p>Než cokoliv objednáme u dodavatele, ověříme to. Proto se ptáme. Proto to funguje.</p>
-            <a href="#poptavka" class="btn btn-outline">Co přesně potřebujeme vědět →</a>
+            <a href="jak-poptat.html#co-potrebujeme" class="btn btn-outline">Co přesně potřebujeme vědět →</a>
           </div>
 
           <div class="dark-visual" aria-label="Co od vás potřebujeme">
@@ -1275,7 +1276,7 @@
             <h2 id="ukazky-heading">Co jsme nedávno řešili</h2>
             <p>Vybrané díly za posledních pár měsíců. Ceny i termíny se vždy ověřují u konkrétní poptávky.</p>
           </div>
-          <a href="#ukazky-vsechny" class="btn btn-outline-dark">Zobrazit všechny ukázky →</a>
+          <a href="ukazky-dilu.html" class="btn btn-outline-dark">Zobrazit všechny ukázky →</a>
         </div>
 
         <div class="parts-grid">
@@ -1361,7 +1362,7 @@
             <p>Pošlete nám poptávku — ozveme se zpravidla do 24 hodin.</p>
           </div>
           <div class="final-cta-actions">
-            <a href="/cdn-cgi/l/email-protection#e1888f878ea1828f82cc8f80899380858f8885888d98cf829b" class="btn btn-primary">Poptávkový formulář →</a>
+            <a href="poptavka.html" class="btn btn-primary">Poptávkový formulář →</a>
             <span class="final-cta-note">Odpovídáme do 24 hodin v pracovní dny</span>
           </div>
         </div>
@@ -1385,17 +1386,18 @@
         <nav class="footer-col" aria-label="Sortiment">
           <h4>Sortiment</h4>
           <ul>
-            <li><a href="#originalni">Originální díly</a></li>
-            <li><a href="#repasy">Repasované díly</a></li>
-            <li><a href="#vyroba">Výroba na zakázku</a></li>
+            <li><a href="co-dodavame.html#originalni">Originální díly</a></li>
+            <li><a href="co-dodavame.html#repasy">Repasované díly</a></li>
+            <li><a href="co-dodavame.html#vyroba">Výroba na zakázku</a></li>
           </ul>
         </nav>
 
         <nav class="footer-col" aria-label="Pomoc">
           <h4>Pomoc</h4>
           <ul>
-            <li><a href="#poptavka">Jak poptat</a></li>
-            <li><a href="#ukazky">Ukázky dodaných dílů</a></li>
+            <li><a href="jak-poptat.html">Jak poptat</a></li>
+            <li><a href="ukazky-dilu.html">Ukázky dodaných dílů</a></li>
+            <li><a href="poptavka.html">Poslat poptávku</a></li>
           </ul>
         </nav>
 
@@ -1405,7 +1407,7 @@
             <li>
               <span class="footer-contact-item">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                <a href="/cdn-cgi/l/email-protection#452c2b232a05262b26682b242d3724212b2c212c293c6b263f"><span class="__cf_email__" data-cfemail="d7beb9b1b897b4b9b4fab9b6bfa5b6b3b9beb3bebbaef9b4ad">[email&#160;protected]</span></a>
+                <a href="mailto:info@cnc-nahradnidily.cz">info@cnc-nahradnidily.cz</a>
               </span>
             </li>
             <li>
@@ -1427,8 +1429,8 @@
       <div class="footer-bottom">
         <p>© 2026 cnc-nahradnidily.cz</p>
         <div class="footer-bottom-links">
-          <a href="#gdpr">Ochrana osobních údajů</a>
-          <a href="#cookies">Cookies</a>
+          <a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a>
+          <a href="ochrana-osobnich-udaju.html#cookies">Cookies</a>
         </div>
       </div>
     </div>
@@ -1439,7 +1441,7 @@
     <div class="cookie-inner">
       <p class="cookie-text">
         Používáme pouze technicky nezbytné cookies. Žádné sledování, žádná reklama.
-        <a href="#cookies">Více informací</a>
+        <a href="ochrana-osobnich-udaju.html#cookies">Více informací</a>
       </p>
       <div class="cookie-actions">
         <button class="btn-cookie-primary" id="cookie-essential">Pouze nezbytné</button>
@@ -1448,7 +1450,7 @@
     </div>
   </div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
     hamburger.addEventListener('click', function () {
