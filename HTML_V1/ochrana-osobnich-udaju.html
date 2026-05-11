@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ochrana osobních údajů a cookies | cnc-nahradnidily.cz</title>
+  <meta name="description" content="Jak nakládáme s osobními údaji z poptávkového formuláře a e-mailové komunikace, jak dlouho je uchováváme, komu je předáváme a jaká máte práva. Informace o cookies.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Ochrana osobních údajů a cookies | cnc-nahradnidily.cz">
+  <meta property="og:description" content="Zásady zpracování osobních údajů a informace o cookies pro web cnc-nahradnidily.cz.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand-deep:       #042C53;
+      --brand-primary:    #0C447C;
+      --brand-accent:     #185FA5;
+      --accent-warm:      #EF9F27;
+      --accent-warm-text: #412402;
+      --surface-light:    #FFFFFF;
+      --surface-soft:     #F1EFE8;
+      --border-soft:      #E5E7EB;
+      --border-mid:       #D1D5DB;
+      --text-primary:     #2C2C2A;
+      --text-secondary:   #5F5E5A;
+      --text-tertiary:    #888780;
+      --success:          #639922;
+      --danger:           #C14A3A;
+      --radius-card:      14px;
+      --radius-btn:       8px;
+      --max-w:            1200px;
+      --px:               24px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background: var(--surface-light);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1 { font-size: clamp(36px, 5.5vw, 56px); font-weight: 600; line-height: 1.08; letter-spacing: -0.025em; }
+    h2 { font-size: clamp(22px, 3vw, 30px); font-weight: 600; line-height: 1.2; letter-spacing: -0.015em; }
+    h3 { font-size: 17px; font-weight: 600; line-height: 1.3; letter-spacing: -0.01em; }
+    p  { text-wrap: pretty; }
+
+    .pretitle { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brand-accent); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+    .pretitle::before { content: ''; display: block; width: 20px; height: 1.5px; background: currentColor; flex-shrink: 0; }
+    .pretitle--light { color: rgba(255,255,255,0.5); }
+
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--px); }
+
+    section { padding: 80px 0; }
+    section.alt { background: var(--surface-soft); }
+
+    /* ── BUTTONS ── */
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px; border-radius: var(--radius-btn); font-family: inherit; font-size: 15px; font-weight: 500; text-decoration: none; cursor: pointer; border: none; transition: all .18s ease; letter-spacing: -0.01em; }
+    .btn:focus-visible { outline: 2px solid var(--brand-primary); outline-offset: 3px; }
+    .btn-primary { background: var(--accent-warm); color: var(--accent-warm-text); }
+    .btn-primary:hover { background: #f5a93a; }
+
+    /* ── NAV ── */
+    .site-header { position: sticky; top: 0; z-index: 100; background: var(--brand-deep); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .logo-mark { width: 34px; height: 34px; border-radius: 7px; background: var(--brand-primary); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; color: #fff; letter-spacing: 0.03em; }
+    .logo-text { font-size: 14px; font-weight: 600; color: #fff; letter-spacing: -0.02em; }
+    .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
+    .nav-links a { display: block; padding: 8px 13px; font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.65); text-decoration: none; border-radius: 6px; transition: color .15s, background .15s; }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+    .nav-links a[aria-current="page"] { color: #fff; background: rgba(255,255,255,0.06); }
+    .nav-cta { margin-left: 8px; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px; }
+    .mobile-menu { display: none; flex-direction: column; background: var(--brand-deep); border-top: 1px solid rgba(255,255,255,0.08); padding: 16px var(--px) 24px; gap: 4px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { display: block; padding: 10px 12px; font-size: 15px; font-weight: 500; color: rgba(255,255,255,0.8); text-decoration: none; border-radius: 6px; }
+    .mobile-menu a:hover { background: rgba(255,255,255,0.07); color: #fff; }
+    .mobile-menu .btn { margin-top: 8px; width: fit-content; }
+
+    /* ── PAGE HERO ── */
+    .page-hero { background: var(--brand-deep); position: relative; overflow: hidden; padding: 72px 0 80px; }
+    .page-hero-grid { position: absolute; inset: 0; z-index: 1; background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 56px 56px; pointer-events: none; }
+    .page-hero-inner { position: relative; z-index: 2; }
+    .page-hero h1 { color: #fff; margin-bottom: 18px; max-width: 760px; }
+    .page-hero-lead { font-size: 17px; color: rgba(255,255,255,0.72); line-height: 1.7; max-width: 640px; }
+    .page-hero-meta { margin-top: 22px; font-size: 13px; color: rgba(255,255,255,0.4); }
+
+    /* ── LEGAL DOC ── */
+    .legal-layout { display: grid; grid-template-columns: 240px 1fr; gap: 64px; align-items: start; }
+    .legal-toc { position: sticky; top: 88px; }
+    .legal-toc h2 { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 14px; }
+    .legal-toc ul { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+    .legal-toc a { display: block; padding: 7px 12px; font-size: 14px; color: var(--text-secondary); text-decoration: none; border-radius: 6px; border-left: 2px solid transparent; transition: color .15s, background .15s, border-color .15s; }
+    .legal-toc a:hover { color: var(--brand-primary); background: var(--surface-soft); border-left-color: var(--border-mid); }
+
+    .legal-prose { max-width: 760px; }
+    .legal-block { padding: 28px 0; border-bottom: 1px solid var(--border-soft); scroll-margin-top: 84px; }
+    .legal-block:first-child { padding-top: 0; }
+    .legal-block:last-child { border-bottom: none; }
+    .legal-block > h2 { margin-bottom: 14px; }
+    .legal-block h3 { margin-top: 22px; margin-bottom: 8px; color: var(--brand-deep); }
+    .legal-block p { color: var(--text-secondary); margin-bottom: 14px; line-height: 1.75; }
+    .legal-block p:last-child { margin-bottom: 0; }
+    .legal-block ul, .legal-block ol { color: var(--text-secondary); margin: 0 0 14px 0; padding-left: 22px; line-height: 1.75; }
+    .legal-block ul:last-child, .legal-block ol:last-child { margin-bottom: 0; }
+    .legal-block li { margin-bottom: 6px; }
+    .legal-block li:last-child { margin-bottom: 0; }
+    .legal-block a { color: var(--brand-accent); text-decoration: underline; }
+    .legal-block strong { color: var(--text-primary); font-weight: 600; }
+
+    .admin-card { background: var(--surface-soft); border: 1px solid var(--border-soft); border-radius: var(--radius-card); padding: 24px 28px; margin-bottom: 14px; }
+    .admin-card .admin-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 10px; }
+    .admin-card p { color: var(--text-primary); margin-bottom: 6px; line-height: 1.7; }
+    .admin-card p.muted { color: var(--text-secondary); font-size: 14px; }
+    .admin-card a { color: var(--brand-accent); text-decoration: underline; }
+
+    .data-table { width: 100%; border-collapse: collapse; margin-bottom: 14px; font-size: 14px; }
+    .data-table th, .data-table td { text-align: left; padding: 11px 14px; border: 1px solid var(--border-soft); vertical-align: top; line-height: 1.6; }
+    .data-table th { background: var(--surface-soft); font-weight: 600; color: var(--text-primary); font-size: 12px; letter-spacing: 0.03em; text-transform: uppercase; }
+    .data-table td { color: var(--text-secondary); }
+
+    .note-box { background: rgba(12,68,124,0.05); border: 1px solid rgba(12,68,124,0.12); border-radius: var(--radius-card); padding: 18px 22px; font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+    .note-box strong { color: var(--brand-primary); }
+
+    /* ── FOOTER ── */
+    .site-footer { background: var(--brand-deep); border-top: 1px solid rgba(255,255,255,0.07); padding: 64px 0 0; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 56px; }
+    .footer-tagline { margin-top: 16px; font-size: 14px; color: rgba(255,255,255,0.4); line-height: 1.65; max-width: 230px; }
+    .footer-col h4 { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 18px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a { font-size: 14px; color: rgba(255,255,255,0.6); text-decoration: none; transition: color .15s; }
+    .footer-col a:hover { color: #fff; }
+    .footer-contact-item { display: flex; align-items: center; gap: 10px; font-size: 14px; color: rgba(255,255,255,0.6); }
+    .footer-contact-item a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    .footer-contact-item a:hover { color: #fff; }
+    .footer-contact-item svg { flex-shrink: 0; opacity: 0.5; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding: 20px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .footer-bottom p { font-size: 13px; color: rgba(255,255,255,0.3); }
+    .footer-bottom-links { display: flex; gap: 20px; }
+    .footer-bottom-links a { font-size: 13px; color: rgba(255,255,255,0.3); text-decoration: none; }
+    .footer-bottom-links a:hover { color: rgba(255,255,255,0.65); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .legal-layout { grid-template-columns: 1fr; gap: 36px; }
+      .legal-toc { position: static; }
+      .legal-toc ul { flex-flow: row wrap; gap: 6px; }
+      .legal-toc a { border-left: none; border: 1px solid var(--border-soft); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      section { padding: 56px 0; }
+      .page-hero { padding: 48px 0 56px; }
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .data-table, .data-table tbody, .data-table tr, .data-table td, .data-table th { display: block; }
+      .data-table th { border-bottom: none; }
+      .data-table td { border-top: none; }
+      .data-table tr { margin-bottom: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-inner" role="navigation" aria-label="Hlavní navigace">
+        <a href="index.html" class="logo" aria-label="cnc-nahradnidily.cz — úvod">
+          <div class="logo-mark" aria-hidden="true">CN</div>
+          <span class="logo-text">cnc-nahradnidily.cz</span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Úvod</a></li>
+          <li><a href="co-dodavame.html">Co dodáváme</a></li>
+          <li><a href="jak-poptat.html">Jak poptat</a></li>
+          <li><a href="ukazky-dilu.html">Ukázky dílů</a></li>
+          <li><a href="kontakty.html">Kontakt</a></li>
+        </ul>
+        <a href="poptavka.html" class="btn btn-primary nav-cta">Poslat poptávku</a>
+        <button class="hamburger" aria-label="Otevřít menu" aria-expanded="false" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobilní navigace">
+      <a href="index.html">Úvod</a>
+      <a href="co-dodavame.html">Co dodáváme</a>
+      <a href="jak-poptat.html">Jak poptat</a>
+      <a href="ukazky-dilu.html">Ukázky dílů</a>
+      <a href="kontakty.html">Kontakt</a>
+      <a href="poptavka.html" class="btn btn-primary">Poslat poptávku</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="Ochrana osobních údajů">
+      <div class="page-hero-grid" aria-hidden="true"></div>
+      <div class="container">
+        <div class="page-hero-inner">
+          <span class="pretitle pretitle--light">Právní informace</span>
+          <h1>Ochrana osobních údajů a cookies</h1>
+          <p class="page-hero-lead">Jaké osobní údaje od vás potřebujeme, když nám pošlete poptávku nebo nám napíšete, proč je zpracováváme, jak dlouho je uchováváme, komu je předáváme a jaká máte práva. A jaké cookies tento web používá.</p>
+          <p class="page-hero-meta">Účinné od 11. 5. 2026 · poslední aktualizace 11. 5. 2026</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEGAL CONTENT -->
+    <section aria-label="Zásady zpracování osobních údajů">
+      <div class="container">
+        <div class="legal-layout">
+
+          <!-- TOC -->
+          <nav class="legal-toc" aria-label="Obsah stránky">
+            <h2>Obsah</h2>
+            <ul>
+              <li><a href="#spravce">1. Kdo zpracovává vaše údaje</a></li>
+              <li><a href="#udaje">2. Jaké údaje a proč</a></li>
+              <li><a href="#zaklad">3. Právní základ a doba uchování</a></li>
+              <li><a href="#prijemci">4. Komu údaje předáváme</a></li>
+              <li><a href="#prava">5. Vaše práva</a></li>
+              <li><a href="#cookies">6. Cookies</a></li>
+              <li><a href="#dotazy">7. Dotazy a stížnosti</a></li>
+            </ul>
+          </nav>
+
+          <!-- PROSE -->
+          <div class="legal-prose">
+
+            <article class="legal-block" id="spravce">
+              <h2>1. Kdo zpracovává vaše osobní údaje</h2>
+              <p>Správcem osobních údajů, které zpracováváme v souvislosti s provozem webu <strong>cnc-nahradnidily.cz</strong>, vyřízením poptávek a další komunikací, je:</p>
+              <div class="admin-card">
+                <p class="admin-label">Správce osobních údajů</p>
+                <p><strong>Šikl Servis s.r.o.</strong></p>
+                <p class="muted">IČO 07034814</p>
+                <p class="muted">Prosetín 109, 539 76 Prosetín</p>
+                <p class="muted">Zapsaná v obchodním rejstříku vedeném Krajským soudem v Hradci Králové, oddíl C, vložka 41546</p>
+                <p class="muted">E-mail: <a href="mailto:info@cnc-nahradnidily.cz">info@cnc-nahradnidily.cz</a> · Telefon: <a href="tel:+420702805614">+420 702 805 614</a></p>
+              </div>
+              <p>Nejmenovali jsme pověřence pro ochranu osobních údajů. Ve všech záležitostech týkajících se zpracování vašich údajů se obracejte na výše uvedené kontakty.</p>
+            </article>
+
+            <article class="legal-block" id="udaje">
+              <h2>2. Jaké údaje zpracováváme a za jakým účelem</h2>
+
+              <h3>2.1 Poptávkový formulář a komunikace o poptávce</h3>
+              <p>Když nám pošlete poptávku přes formulář na webu nebo e-mailem, telefonem či přes WhatsApp, zpracováváme údaje, které nám sami sdělíte. Zpravidla jde o:</p>
+              <ul>
+                <li><strong>identifikační a kontaktní údaje</strong> — jméno a příjmení, název firmy, e-mail, telefon;</li>
+                <li><strong>údaje o stroji a poptávaném dílu</strong> — výrobce, typ/model, rok výroby, sériové číslo, řídicí systém, označení dílu, popis problému;</li>
+                <li><strong>přílohy</strong> — fotografie dílu, fotografie štítku, rozkresy, manuály nebo videa, která k poptávce přiložíte;</li>
+                <li><strong>obsah další komunikace</strong> — e-maily, zprávy a poznámky vzniklé při vyřizování vaší poptávky a případné dodávky.</li>
+              </ul>
+              <p>Tyto údaje používáme k tomu, abychom vám připravili nabídku (cenu a termín), zodpověděli dotazy, zajistili dodání dílu a vedli s vámi související obchodní komunikaci.</p>
+              <p>Vyplnění povinných polí formuláře je nezbytné k tomu, abychom poptávku mohli zpracovat — bez nich vám nabídku připravit nedokážeme. Nepovinné údaje a přílohy nám pomáhají odpovědět rychleji a přesněji, ale jejich poskytnutí je dobrovolné.</p>
+
+              <h3>2.2 Plnění smlouvy a zákonné povinnosti</h3>
+              <p>Pokud na základě poptávky dojde k objednávce a dodávce dílu, zpracováváme nezbytné údaje pro uzavření a plnění smlouvy a dále údaje, které musíme uchovávat podle právních předpisů (zejména účetní a daňové doklady).</p>
+
+              <h3>2.3 Provoz webu</h3>
+              <p>Web je statický a sám o sobě nesbírá analytická data. Poskytovatel hostingu (viz bod 4) může v technických protokolech serveru krátkodobě zaznamenávat údaje, jako je IP adresa, datum a čas požadavku, typ prohlížeče a stránka, ze které jste přišli — pro zajištění provozu, bezpečnosti a stability webu.</p>
+            </article>
+
+            <article class="legal-block" id="zaklad">
+              <h2>3. Právní základ zpracování a doba uchování</h2>
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Účel</th>
+                    <th>Právní základ</th>
+                    <th>Doba uchování</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Vyřízení poptávky a související komunikace</td>
+                    <td>Provedení opatření před uzavřením smlouvy na vaši žádost, popř. oprávněný zájem na vyřízení vašeho dotazu (čl. 6 odst. 1 písm. b) a f) GDPR)</td>
+                    <td>Po dobu vyřizování poptávky a následně zpravidla 24 měsíců od poslední komunikace; poté údaje mažeme, pokud nevznikne důvod je uchovávat déle (např. uzavřená objednávka, právní nárok)</td>
+                  </tr>
+                  <tr>
+                    <td>Uzavření a plnění smlouvy (objednávka, dodávka dílu)</td>
+                    <td>Plnění smlouvy (čl. 6 odst. 1 písm. b) GDPR)</td>
+                    <td>Po dobu trvání smluvního vztahu a dále po dobu promlčecích lhůt případných nároků</td>
+                  </tr>
+                  <tr>
+                    <td>Účetní a daňové doklady</td>
+                    <td>Splnění právní povinnosti (čl. 6 odst. 1 písm. c) GDPR)</td>
+                    <td>Po dobu stanovenou účetními a daňovými předpisy (zpravidla 5–10 let)</td>
+                  </tr>
+                  <tr>
+                    <td>Ochrana a uplatnění právních nároků</td>
+                    <td>Oprávněný zájem (čl. 6 odst. 1 písm. f) GDPR)</td>
+                    <td>Po dobu trvání příslušných promlčecích lhůt</td>
+                  </tr>
+                  <tr>
+                    <td>Technické protokoly serveru / provoz webu</td>
+                    <td>Oprávněný zájem na zabezpečení a provozu webu (čl. 6 odst. 1 písm. f) GDPR)</td>
+                    <td>Krátkodobě, v rozsahu nastavení poskytovatele hostingu</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>Souhlas se zpracováním osobních údajů, který v poptávkovém formuláři udělujete, se vztahuje na zpracování údajů a příloh za účelem vyřízení poptávky způsobem popsaným výše. Souhlas můžete kdykoli odvolat e-mailem na <a href="mailto:info@cnc-nahradnidily.cz">info@cnc-nahradnidily.cz</a>; odvoláním není dotčena zákonnost zpracování provedeného do té doby ani zpracování, které je nutné pro plnění smlouvy nebo pro splnění zákonné povinnosti.</p>
+            </article>
+
+            <article class="legal-block" id="prijemci">
+              <h2>4. Komu vaše údaje předáváme</h2>
+              <p>Vaše osobní údaje neprodáváme a nepředáváme je k marketingovým účelům třetích stran. K údajům se mohou v nezbytném rozsahu dostat:</p>
+              <ul>
+                <li><strong>poskytovatel hostingu webu</strong> a souvisejících technických služeb, který pro nás zajišťuje provoz stránek;</li>
+                <li><strong>poskytovatel e-mailové schránky</strong>, případně služby pro příjem zpráv z formuláře;</li>
+                <li><strong>dodavatelé a výrobci dílů</strong> — pokud je to nutné pro ověření dostupnosti, ceny a dodání konkrétního dílu (zpravidla v rozsahu označení dílu a údajů o stroji, případně nezbytných kontaktních a dodacích údajů);</li>
+                <li><strong>přepravci</strong> — v rozsahu nutném pro doručení zásilky;</li>
+                <li><strong>účetní, daňoví a právní poradci</strong>, je-li to potřeba;</li>
+                <li><strong>orgány veřejné moci</strong>, pokud nám to ukládá zákon.</li>
+              </ul>
+              <p>Někteří poskytovatelé technických služeb (např. hosting nebo e-mail) mohou data zpracovávat na serverech umístěných mimo Evropský hospodářský prostor. V takovém případě je předání zajištěno v souladu s GDPR (zejména na základě standardních smluvních doložek schválených Evropskou komisí nebo rozhodnutí o odpovídající ochraně).</p>
+            </article>
+
+            <article class="legal-block" id="prava">
+              <h2>5. Vaše práva</h2>
+              <p>Ve vztahu k osobním údajům, které o vás zpracováváme, máte tato práva:</p>
+              <ul>
+                <li><strong>právo na přístup</strong> — vědět, zda a jaké údaje o vás zpracováváme, a získat jejich kopii;</li>
+                <li><strong>právo na opravu</strong> nepřesných nebo neúplných údajů;</li>
+                <li><strong>právo na výmaz</strong> („právo být zapomenut") — v případech stanovených právními předpisy;</li>
+                <li><strong>právo na omezení zpracování</strong>;</li>
+                <li><strong>právo vznést námitku</strong> proti zpracování založenému na oprávněném zájmu;</li>
+                <li><strong>právo na přenositelnost údajů</strong>, které jste nám poskytli, je-li zpracování založeno na souhlasu nebo smlouvě a probíhá automatizovaně;</li>
+                <li><strong>právo odvolat souhlas</strong> — pokud je zpracování založeno na souhlasu, můžete jej kdykoli odvolat;</li>
+                <li><strong>právo podat stížnost</strong> u dozorového úřadu.</li>
+              </ul>
+              <p>Svá práva uplatníte e-mailem na <a href="mailto:info@cnc-nahradnidily.cz">info@cnc-nahradnidily.cz</a> nebo telefonicky na <a href="tel:+420702805614">+420 702 805 614</a>. Abychom mohli žádost vyřídit, můžeme vás požádat o ověření totožnosti. Žádost vyřídíme bez zbytečného odkladu, nejpozději do jednoho měsíce.</p>
+              <p>Dozorovým úřadem v České republice je <strong>Úřad pro ochranu osobních údajů</strong>, Pplk. Sochora 27, 170 00 Praha 7, <a href="https://www.uoou.cz" target="_blank" rel="noopener">www.uoou.cz</a>.</p>
+            </article>
+
+            <article class="legal-block" id="cookies">
+              <h2>6. Cookies</h2>
+              <p>Tento web používá <strong>pouze technicky nezbytné cookies a obdobné technologie</strong> (např. úložiště prohlížeče <em>localStorage</em>). Neprovozujeme analytiku návštěvnosti, reklamní ani sledovací cookies a nepropojujeme vás napříč weby.</p>
+
+              <h3>6.1 Jaká úložiště používáme</h3>
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Název</th>
+                    <th>Typ / kde</th>
+                    <th>Účel</th>
+                    <th>Doba</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>cookies_accepted</td>
+                    <td>localStorage prohlížeče</td>
+                    <td>Zapamatuje si, že jste zavřeli lištu s informací o cookies, aby se nezobrazovala znovu</td>
+                    <td>Do smazání dat prohlížeče</td>
+                  </tr>
+                  <tr>
+                    <td>Technické cookies hostingu</td>
+                    <td>HTTP cookie (dle nastavení poskytovatele)</td>
+                    <td>Případné cookies nezbytné pro doručení obsahu, zabezpečení a vyrovnávání zátěže ze strany poskytovatele hostingu / CDN</td>
+                    <td>Krátkodobé (relace) až dny</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h3>6.2 Souhlas a správa cookies</h3>
+              <p>Technicky nezbytné cookies a úložiště nevyžadují podle zákona souhlas — bez nich by web nefungoval správně. Lišta s informací o cookies vás pouze informuje; žádné volitelné cookies se na webu nenastavují.</p>
+              <p>Cookies a data uložená v prohlížeči můžete kdykoli vymazat nebo zablokovat v nastavení svého prohlížeče. Po vymazání dat se vám lišta s informací o cookies může zobrazit znovu. Blokování technických cookies může omezit funkčnost webu.</p>
+
+              <div class="note-box">
+                <strong>Žádné sledování.</strong> Pokud v budoucnu zavedeme analytické nebo jiné nepovinné cookies, požádáme vás předem o souhlas a tuto stránku aktualizujeme.
+              </div>
+            </article>
+
+            <article class="legal-block" id="dotazy">
+              <h2>7. Dotazy a stížnosti</h2>
+              <p>S jakýmkoli dotazem ke zpracování osobních údajů, k uplatnění práv nebo se stížností se na nás obraťte:</p>
+              <ul>
+                <li>E-mailem: <a href="mailto:info@cnc-nahradnidily.cz">info@cnc-nahradnidily.cz</a></li>
+                <li>Telefonicky: <a href="tel:+420702805614">+420 702 805 614</a> (Po–Pá, 8:00–17:00)</li>
+              </ul>
+              <p>Tyto zásady můžeme čas od času upravit (např. při změně způsobu zpracování nebo právních předpisů). Aktuální znění je vždy dostupné na této stránce; nahoře je uvedeno datum poslední aktualizace.</p>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="cnc-nahradnidily.cz">
+            <div class="logo-mark" aria-hidden="true">CN</div>
+            <span class="logo-text">cnc-nahradnidily.cz</span>
+          </a>
+          <p class="footer-tagline">Náhradní díly pro CNC obráběcí stroje. Originální díly, repasy, výroba na zakázku.</p>
+        </div>
+
+        <nav class="footer-col" aria-label="Sortiment">
+          <h4>Sortiment</h4>
+          <ul>
+            <li><a href="co-dodavame.html#originalni">Originální díly</a></li>
+            <li><a href="co-dodavame.html#repasy">Repasované díly</a></li>
+            <li><a href="co-dodavame.html#vyroba">Výroba na zakázku</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-label="Pomoc">
+          <h4>Pomoc</h4>
+          <ul>
+            <li><a href="jak-poptat.html">Jak poptat</a></li>
+            <li><a href="ukazky-dilu.html">Ukázky dodaných dílů</a></li>
+            <li><a href="poptavka.html">Poslat poptávku</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li>
+              <span class="footer-contact-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <a href="mailto:info@cnc-nahradnidily.cz">info@cnc-nahradnidily.cz</a>
+              </span>
+            </li>
+            <li>
+              <span class="footer-contact-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.2 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                <a href="tel:+420702805614">+420 702 805 614</a>
+              </span>
+            </li>
+            <li>
+              <span class="footer-contact-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+                <a href="https://wa.me/420702805614">WhatsApp</a>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 cnc-nahradnidily.cz</p>
+        <div class="footer-bottom-links">
+          <a href="ochrana-osobnich-udaju.html" aria-current="page">Ochrana osobních údajů</a>
+          <a href="ochrana-osobnich-udaju.html#cookies">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', function () {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
+</body>
+</html>
