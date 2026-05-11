@@ -1,0 +1,7 @@
+# Netlify konfigurace pro web cnc-nahradnidily.cz
+# Statický web bez build kroku — Netlify jen publikuje obsah složky HTML_V1/.
+# Poptávkový formulář (poptavka.html) využívá Netlify Forms (form-name "poptavka").
+# Po nasazení nezapomeň v Netlify UI: Forms → form notifications → e-mail na info@cnc-nahradnidily.cz.
+
+[build]
+  publish = "HTML_V1"

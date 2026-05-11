@@ -317,10 +317,16 @@
         <div class="form-layout">
 
           <!-- ===== FORM ===== -->
-          <!-- TODO (návrh): formulář zatím data nikam neodesílá. Pro ostrý provoz napojit na Formspree / Web3Forms / webhook
-               (action="https://formspree.io/f/XXXXXXXX" method="post" enctype="multipart/form-data") nebo jako fallback
-               sestavit mailto: odkaz na info@cnc-nahradnidily.cz (přílohy se přes mailto neodešlou — uživatel je přiloží ručně). -->
-          <form class="inquiry-form" id="inquiry-form" novalidate>
+          <!-- Napojeno na Netlify Forms (form-name "poptavka"). Netlify detekuje formulář při buildu podle data-netlify="true"
+               a skrytého inputu form-name; honeypot pole bot-field odfiltruje spam. Odeslání běží přes fetch (níže v <script>),
+               aby zůstala děkovná hláška na stránce. Přílohy: enctype="multipart/form-data" — pozn.: Netlify u file inputu
+               ukládá zpravidla jen první soubor, pro víc fotek je lepší poslat e-mailem (viz sidebar). E-mailové notifikace
+               poptávek je nutné zapnout v Netlify → Forms → form notifications. Předpoklad: publish directory = složka HTML_V1. -->
+          <form class="inquiry-form" id="inquiry-form" name="poptavka" method="POST" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+            <input type="hidden" name="form-name" value="poptavka">
+            <p hidden>
+              <label>Toto pole prosím nevyplňujte: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+            </p>
 
             <fieldset class="form-fieldset">
               <legend>Kontaktní údaje <span class="legend-num">01 / 04</span></legend>
@@ -444,7 +450,10 @@
             </div>
 
             <div class="form-submit-row">
-              <button type="submit" class="btn btn-primary btn-lg btn-block">Odeslat poptávku</button>
+              <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit-btn">Odeslat poptávku</button>
+              <p class="form-footnote" id="form-error" style="display:none;color:var(--danger);">
+                Poptávku se nepodařilo odeslat. Zkuste to prosím znovu, nebo nám ji pošlete e-mailem na <a href="mailto:info@cnc-nahradnidily.cz" style="color:var(--danger);text-decoration:underline;">info@cnc-nahradnidily.cz</a>.
+              </p>
               <p class="form-footnote">Pokud něco chybí nebo budeme potřebovat upřesnit, ozveme se. Odpovídáme zpravidla do 24 hodin v pracovní dny.</p>
             </div>
 
@@ -606,22 +615,43 @@
       });
     });
 
-    // odeslání poptávky — zatím jen vizuální potvrzení (návrh)
-    // TODO: napojit na Formspree / webhook nebo mailto fallback (viz komentář u <form>)
+    // odeslání poptávky → Netlify Forms (přes fetch, ať zůstane děkovná hláška na stránce)
     const form = document.getElementById('inquiry-form');
     const sectionForm = document.getElementById('section-form');
     const formSuccess = document.getElementById('form-success');
+    const submitBtn = document.getElementById('submit-btn');
+    const formError = document.getElementById('form-error');
+
+    function showFormSuccess() {
+      sectionForm.classList.add('is-submitted');
+      formSuccess.classList.add('show');
+      formSuccess.setAttribute('tabindex', '-1');
+      formSuccess.focus({ preventScroll: true });
+      window.scrollTo({ top: sectionForm.offsetTop - 72, behavior: 'smooth' });
+    }
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
       }
-      sectionForm.classList.add('is-submitted');
-      formSuccess.classList.add('show');
-      formSuccess.setAttribute('tabindex', '-1');
-      formSuccess.focus({ preventScroll: true });
-      window.scrollTo({ top: sectionForm.offsetTop - 72, behavior: 'smooth' });
+      formError.style.display = 'none';
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Odesílám…';
+
+      fetch(window.location.pathname, { method: 'POST', body: new FormData(form) })
+        .then(function (res) {
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          showFormSuccess();
+        })
+        .catch(function () {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Odeslat poptávku';
+          formError.style.display = '';
+          formError.setAttribute('tabindex', '-1');
+          formError.focus({ preventScroll: true });
+        });
     });
 
     const cookieBanner = document.getElementById('cookie-banner');
