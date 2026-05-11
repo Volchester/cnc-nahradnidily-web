@@ -149,6 +149,22 @@
     .footer-bottom-links a { font-size: 13px; color: rgba(255,255,255,0.3); text-decoration: none; }
     .footer-bottom-links a:hover { color: rgba(255,255,255,0.65); }
 
+    /* ── COOKIE BANNER ── */
+    .cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; background: #fff; border-top: 1px solid var(--border-soft); padding: 14px var(--px); }
+    .cookie-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .cookie-text { font-size: 14px; color: var(--text-secondary); flex: 1; min-width: 240px; }
+    .cookie-text a { color: var(--brand-accent); text-decoration: underline; }
+    .cookie-actions { display: flex; gap: 8px; flex-shrink: 0; }
+    .btn-cookie-primary { padding: 9px 18px; font-size: 14px; background: var(--brand-primary); color: #fff; border: none; border-radius: var(--radius-btn); font-family: inherit; font-weight: 500; cursor: pointer; }
+    .btn-cookie-secondary { padding: 9px 18px; font-size: 14px; background: transparent; color: var(--text-secondary); border: 1px solid var(--border-soft); border-radius: var(--radius-btn); font-family: inherit; font-weight: 500; cursor: pointer; }
+    .btn-cookie-primary:hover { opacity: .88; }
+    .btn-cookie-secondary:hover { border-color: var(--text-secondary); }
+    @media (max-width: 640px) {
+      .cookie-inner { flex-direction: column; align-items: flex-start; }
+      .cookie-actions { width: 100%; flex-direction: column; }
+      .btn-cookie-primary, .btn-cookie-secondary { width: 100%; }
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       .legal-layout { grid-template-columns: 1fr; gap: 36px; }
@@ -469,6 +485,20 @@
     </div>
   </footer>
 
+  <!-- COOKIE BANNER -->
+  <div class="cookie-banner" id="cookie-banner" role="region" aria-label="Souhlas s cookies">
+    <div class="cookie-inner">
+      <p class="cookie-text">
+        Používáme pouze technicky nezbytné cookies. Žádné sledování, žádná reklama.
+        <a href="ochrana-osobnich-udaju.html#cookies">Více informací</a>
+      </p>
+      <div class="cookie-actions">
+        <button class="btn-cookie-primary" id="cookie-essential">Pouze nezbytné</button>
+        <button class="btn-cookie-secondary" id="cookie-all">Přijmout vše</button>
+      </div>
+    </div>
+  </div>
+
   <script>
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -482,6 +512,17 @@
         hamburger.setAttribute('aria-expanded', 'false');
       });
     });
+
+    const cookieBanner = document.getElementById('cookie-banner');
+    function dismissCookies() {
+      cookieBanner.style.display = 'none';
+      try { localStorage.setItem('cookies_accepted', '1'); } catch (e) {}
+    }
+    document.getElementById('cookie-essential').addEventListener('click', dismissCookies);
+    document.getElementById('cookie-all').addEventListener('click', dismissCookies);
+    try {
+      if (localStorage.getItem('cookies_accepted')) cookieBanner.style.display = 'none';
+    } catch (e) {}
   </script>
 
 </body>
