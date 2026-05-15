@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://volchester.github.io/cnc-nahradnidily-web/HTML_V1/sitemap.xml
