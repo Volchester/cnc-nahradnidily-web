@@ -19,8 +19,11 @@ Hromadně nahradit (zachovat URL-encoding tam, kde je):
   - `<meta property="og:url" content="...">`
   - `<meta property="og:image" content="...">`
   - `<meta name="twitter:image" content="...">`
-- `HTML_V1/sitemap.xml` (vznikne v úkolu 3) — `<loc>` URL všech stránek
-- `HTML_V1/robots.txt` (vznikne v úkolu 3) — `Sitemap:` direktiva
+- `HTML_V1/sitemap.xml` — `<loc>` URL všech stránek
+- `HTML_V1/robots.txt`:
+  - `Sitemap:` direktiva
+  - **přepnout `Disallow: /` zpět na `Allow: /`** (staging blokuje indexaci, produkce povoluje)
+  - smazat komentář o staging na prvních 3 řádcích
 - JSON-LD strukturovaná data (vzniknou v úkolu 4):
   - `Organization.url`
   - `Product.url` / `Product.offers.url`
