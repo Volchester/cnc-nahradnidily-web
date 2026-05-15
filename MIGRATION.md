@@ -53,7 +53,13 @@ Doporučení: **A** (jednodušší, čistší produkce).
 - Aktualizovat `MEMORY.md` Claude (hosting GH→Netlify, doména změněna)
 - Smazat staging URL z případných externích odkazů
 
-## 5. Co NEMUSÍ řešit migrace
+## 5. 404 stránka
+
+`HTML_V1/404.html` existuje. Na GitHub Pages staging **není auto-discovered** (GitHub hledá `404.html` v rootu repa, ne v `HTML_V1/`). Pro test stránky: navštívit `volchester.github.io/cnc-nahradnidily-web/HTML_V1/404.html` přímo.
+
+Po migraci na **Netlify** (`publish="HTML_V1"`) bude `HTML_V1/404.html` automaticky použito pro neplatné URL — Netlify ho detekuje jako root `/404.html`.
+
+## 6. Co NEMUSÍ řešit migrace
 
 - Texty (CNC_Web_Texty.md, .md soubory) — už v `.gitignore`
 - Lokální obrázky `Obrázky/*.jpg|.png|.webp` — přesouvají se s repem
