@@ -668,18 +668,16 @@
     .part-img {
       width: 100%;
       aspect-ratio: 4/3;
-      background: var(--surface-soft);
+      background: var(--surface-light);
       overflow: hidden;
       position: relative;
     }
     .part-img img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       display: block;
-      transition: transform .4s ease;
     }
-    .part-card:hover .part-img img { transform: scale(1.03); }
 
     .part-img-placeholder {
       width: 100%;
