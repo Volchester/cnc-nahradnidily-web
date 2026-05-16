@@ -136,8 +136,7 @@
     .part-card:hover { border-color: var(--brand-accent); }
     .part-card[hidden] { display: none; }
     .part-img { width: 100%; aspect-ratio: 4/3; background: var(--surface-soft); overflow: hidden; position: relative; }
-    .part-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
-    .part-card:hover .part-img img { transform: scale(1.03); }
+    .part-img img { width: 100%; height: 100%; object-fit: contain; display: block; }
     .part-save-badge { position: absolute; top: 12px; right: 12px; background: rgba(4,44,83,0.92); color: #fff; font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 6px; letter-spacing: -0.01em; backdrop-filter: blur(4px); }
     .part-body { padding: 20px 20px 22px; display: flex; flex-direction: column; flex: 1; }
     .part-category { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brand-accent); margin-bottom: 7px; }
