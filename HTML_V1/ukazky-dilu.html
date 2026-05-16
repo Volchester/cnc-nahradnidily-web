@@ -148,6 +148,7 @@
     .part-footer { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; padding-top: 14px; border-top: 1px solid var(--border-soft); margin-top: auto; }
     .part-price-block { display: flex; flex-direction: column; gap: 1px; }
     .part-price-old { font-size: 12px; color: var(--text-tertiary); text-decoration: line-through; }
+    .part-price-note { font-size: 12px; color: var(--text-tertiary); }
     .part-price { font-size: 18px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.02em; }
     .part-price--soft { font-size: 14px; font-weight: 500; color: var(--text-secondary); letter-spacing: 0; }
     .part-delivery { display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--success); font-weight: 500; white-space: nowrap; padding-bottom: 2px; }
@@ -355,7 +356,13 @@
                        "name":  "420-5GT-40",
                        "category":  "Ozubený řemen",
                        "description":  "Ozubený řemen profilu 5GT, šířka 40 mm. Pohon vřetene i posuvových os. Dodáváme v originální specifikaci nebo jako ověřenou alternativu.",
-                       "image":  "https://volchester.github.io/cnc-nahradnidily-web/Obr%C3%A1zky/%C5%98emen.jpg"
+                       "image":  "https://volchester.github.io/cnc-nahradnidily-web/Obr%C3%A1zky/%C5%98emen.jpg",
+                       "offers":  {
+                                      "@type":  "AggregateOffer",
+                                      "lowPrice":  "1150",
+                                      "priceCurrency":  "CZK",
+                                      "availability":  "https://schema.org/InStock"
+                                  }
                    },
                    {
                        "@type":  "Product",
@@ -376,7 +383,13 @@
                        "name":  "Dávkovací jednotka mazání CPV2",
                        "category":  "Mazání",
                        "description":  "Dávkovací jednotka centrálního mazání — řízené dávkování oleje do vedení a vřetena. Náhrada za opotřebovaný nebo netěsnící kus.",
-                       "image":  "https://volchester.github.io/cnc-nahradnidily-web/Obr%C3%A1zky/D%C3%A1vkova%C4%8D%20maz%C3%A1n%C3%AD%20CPV2.png"
+                       "image":  "https://volchester.github.io/cnc-nahradnidily-web/Obr%C3%A1zky/D%C3%A1vkova%C4%8D%20maz%C3%A1n%C3%AD%20CPV2.png",
+                       "offers":  {
+                                      "@type":  "AggregateOffer",
+                                      "lowPrice":  "240",
+                                      "priceCurrency":  "CZK",
+                                      "availability":  "https://schema.org/InStock"
+                                  }
                    },
                    {
                        "@type":  "Product",
@@ -390,7 +403,13 @@
                        "name":  "Repasované vřeteno",
                        "category":  "Repas vřetene",
                        "description":  "Repas mechanických vřeten i elektrovřeten — výsledek odpovídá novému dílu a vrací se s protokolem o kontrole. Řešení tam, kde je nový kus drahý nebo na dlouhý termín.",
-                       "image":  "https://volchester.github.io/cnc-nahradnidily-web/Obr%C3%A1zky/Repasov%C3%A1n%C3%AD%20v%C5%99eten.png"
+                       "image":  "https://volchester.github.io/cnc-nahradnidily-web/Obr%C3%A1zky/Repasov%C3%A1n%C3%AD%20v%C5%99eten.png",
+                       "offers":  {
+                                      "@type":  "AggregateOffer",
+                                      "lowPrice":  "110000",
+                                      "priceCurrency":  "CZK",
+                                      "availability":  "https://schema.org/InStock"
+                                  }
                    },
                    {
                        "@type":  "Product",
@@ -650,9 +669,9 @@
               </div>
               <div class="part-footer">
                 <div class="part-price-block">
-                  <span class="part-price part-price--soft">Cena na vyžádání</span>
+                  <span class="part-price">od 1 150 Kč</span>
                 </div>
-                <span class="part-delivery part-delivery--neutral">dle dostupnosti</span>
+                <span class="part-delivery">skladem · do 24 h</span>
               </div>
             </div>
           </article>
@@ -716,9 +735,9 @@
               </div>
               <div class="part-footer">
                 <div class="part-price-block">
-                  <span class="part-price part-price--soft">Cena na vyžádání</span>
+                  <span class="part-price">od 240 Kč</span>
                 </div>
-                <span class="part-delivery part-delivery--neutral">dle dostupnosti</span>
+                <span class="part-delivery">skladem · do 24 h</span>
               </div>
             </div>
           </article>
@@ -760,7 +779,8 @@
               </div>
               <div class="part-footer">
                 <div class="part-price-block">
-                  <span class="part-price part-price--soft">Kalkulace po diagnostice</span>
+                  <span class="part-price">od 110 000 Kč</span>
+                  <span class="part-price-note">kalkulace po diagnostice</span>
                 </div>
                 <span class="part-delivery part-delivery--neutral">repas 2–4 týdny</span>
               </div>
