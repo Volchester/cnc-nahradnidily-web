@@ -49,18 +49,6 @@
 
     html { scroll-behavior: smooth; }
 
-    .visually-hidden {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
       font-size: 16px;
@@ -416,105 +404,19 @@
     }
 
     .advantage-icon-wrap {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      background: var(--brand-deep);
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(12,68,124,0.07);
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 20px;
-      color: var(--accent-warm);
+      color: var(--brand-primary);
     }
 
     .advantage-card h3 { margin-bottom: 12px; font-size: 17px; }
     .advantage-card p { font-size: 15px; color: var(--text-secondary); line-height: 1.65; }
-
-    /* Srovnávací tabulka */
-    .comparison-block { margin-top: 64px; }
-    .comparison-title {
-      font-size: 22px;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-      margin-bottom: 24px;
-      text-align: center;
-      color: var(--text-primary);
-    }
-    .comparison-table-wrap {
-      border: 1px solid var(--border-soft);
-      border-radius: var(--radius-card);
-      overflow: hidden;
-    }
-    .comparison-table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-    }
-    .comparison-table thead th {
-      padding: 16px 20px;
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      text-align: left;
-      background: var(--surface-soft);
-      color: var(--text-secondary);
-      border-bottom: 1px solid var(--border-soft);
-    }
-    .comparison-table thead th:first-child { background: var(--surface-soft); }
-    .comparison-table thead th:last-child {
-      background: var(--brand-deep);
-      color: #fff;
-    }
-    .comparison-table tbody th {
-      padding: 14px 20px;
-      font-weight: 600;
-      font-size: 14px;
-      color: var(--text-primary);
-      background: #fafaf9;
-      text-align: left;
-      border-bottom: 1px solid var(--border-soft);
-      width: 22%;
-    }
-    .comparison-table tbody td {
-      padding: 14px 20px;
-      font-size: 15px;
-      color: var(--text-tertiary);
-      border-bottom: 1px solid var(--border-soft);
-      vertical-align: middle;
-    }
-    .comparison-table tbody td:last-child {
-      color: var(--text-primary);
-      font-weight: 500;
-      background: rgba(239,159,39,0.06);
-      border-left: 2px solid var(--accent-warm);
-    }
-    .comparison-table tbody tr:last-child th,
-    .comparison-table tbody tr:last-child td { border-bottom: none; }
-
-    /* CTA proužek pod sekcí „Proč u nás" */
-    .proc-cta-strip {
-      margin-top: 56px;
-      padding: 22px 28px;
-      background: rgba(239,159,39,0.08);
-      border: 1px solid rgba(239,159,39,0.45);
-      border-radius: var(--radius-card);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-    .proc-cta-strip p {
-      font-size: 15px;
-      color: var(--text-primary);
-      margin: 0;
-      flex: 1;
-      min-width: 280px;
-      line-height: 1.6;
-    }
-    .proc-cta-strip p strong { font-weight: 600; }
-    .proc-cta-strip .btn { flex-shrink: 0; }
 
     /* ── JAK TO FUNGUJE ── */
     .section-lead { max-width: 600px; }
@@ -1025,18 +927,6 @@
       .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
       .parts-header { flex-direction: column; align-items: flex-start; }
       .final-cta-inner { padding: 64px 0; }
-      .comparison-block { margin-top: 48px; }
-      .comparison-title { font-size: 20px; }
-      .comparison-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-      .comparison-table { min-width: 520px; }
-      .proc-cta-strip {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-        gap: 14px;
-        margin-top: 40px;
-      }
-      .proc-cta-strip .btn { width: fit-content; }
     }
 
     @media (max-width: 640px) {
@@ -1233,141 +1123,43 @@
           <article class="advantage-card">
             <span class="advantage-num">01</span>
             <div class="advantage-icon-wrap" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="9.5"/>
-                <line x1="8.5" y1="7" x2="8.5" y2="17"/>
-                <line x1="8.5" y1="12" x2="13" y2="7"/>
-                <line x1="8.5" y1="12" x2="13" y2="17"/>
-                <path d="M17.5 10.5a2.2 2.2 0 100 3"/>
-                <polyline points="14.7 7.5 15.9 8.4 17.1 7.5"/>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <!-- K -->
+                <line x1="5" y1="5" x2="5" y2="19"/>
+                <line x1="5" y1="12" x2="11" y2="5"/>
+                <line x1="5" y1="12" x2="11" y2="19"/>
+                <!-- č s háčkem -->
+                <path d="M20 9.5a3.8 3.8 0 100 5"/>
+                <polyline points="15 4.5 17 6 19 4.5"/>
               </svg>
             </div>
-            <h3>Nižší ceny díky přímému přístupu k dodavatelům</h3>
-            <p>Bez režie autorizovaných servisů a bez mezičlánků. Stejný díl, výrazně lepší cena.</p>
+            <h3>Nižší ceny bez ústupků v kvalitě</h3>
+            <p>Pracujeme s ověřenými dodavateli napřímo. Bez režie autorizovaných servisů a bez zbytečných mezičlánků. Stejný díl, výrazně lepší cena.</p>
           </article>
 
           <article class="advantage-card">
             <span class="advantage-num">02</span>
             <div class="advantage-icon-wrap" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="5" cy="12" r="2"/>
-                <circle cx="19" cy="5" r="2"/>
-                <circle cx="19" cy="12" r="2"/>
-                <circle cx="19" cy="19" r="2"/>
-                <path d="M7 12h2c2 0 4-2 4-3.5V7"/>
-                <path d="M13 7l4-1.5"/>
-                <line x1="7" y1="12" x2="17" y2="12"/>
-                <path d="M7 12h2c2 0 4 2 4 3.5V17"/>
-                <path d="M13 17l4 1.5"/>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
               </svg>
             </div>
-            <h3>Originál, repas nebo výroba na zakázku</h3>
-            <p>Tři cesty k vyřešení podle rozpočtu a urgentnosti. Vy si vyberete.</p>
+            <h3>Technicky podloženo</h3>
+            <p>Než cokoliv objednáme, ověříme, že díl skutečně pasuje do vašeho stroje, jeho generace a konfigurace. Nemontujte stejný díl dvakrát kvůli záměně typu.</p>
           </article>
 
           <article class="advantage-card">
             <span class="advantage-num">03</span>
             <div class="advantage-icon-wrap" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="10.5" cy="10.5" r="6.5"/>
-                <line x1="20" y1="20" x2="15.2" y2="15.2"/>
-                <polyline points="7.5 10.5 9.8 12.8 13.5 8.5"/>
-              </svg>
-            </div>
-            <h3>Technicky ověřená kompatibilita</h3>
-            <p>Před objednáním dohledáme přesnou specifikaci pro vaši generaci stroje.</p>
-          </article>
-
-          <article class="advantage-card">
-            <span class="advantage-num">04</span>
-            <div class="advantage-icon-wrap" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 7l9-4 9 4v6"/>
-                <path d="M3 7v10l9 4"/>
-                <path d="M12 11v10"/>
-                <line x1="3" y1="7" x2="12" y2="11"/>
-                <line x1="21" y1="7" x2="12" y2="11"/>
-                <circle cx="17.5" cy="17.5" r="4.5"/>
-                <polyline points="17.5 15.3 17.5 17.5 19 18.7"/>
-              </svg>
-            </div>
-            <h3>Sklad CZ → odeslání do 24 hodin</h3>
-            <p>Skladové díly do 24 h, ostatní vždy s reálným termínem, ne odhadem.</p>
-          </article>
-
-          <article class="advantage-card">
-            <span class="advantage-num">05</span>
-            <div class="advantage-icon-wrap" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="9.5"/>
-                <line x1="2.5" y1="12" x2="21.5" y2="12"/>
-                <path d="M12 2.5a14 14 0 014 9.5 14 14 0 01-4 9.5 14 14 0 01-4-9.5 14 14 0 014-9.5z"/>
-                <path d="M3.5 8.5h17M3.5 15.5h17"/>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
               </svg>
             </div>
             <h3>Dodáváme po celé EU</h3>
-            <p>Česko, Slovensko a celá Evropská unie. Faktura v EUR k dispozici.</p>
+            <p>Česko, Slovensko a celá Evropská unie. Skladové díly odesíláme do 24 hodin, ostatní podle dostupnosti — vždy s reálným termínem, ne odhadem.</p>
           </article>
 
-          <article class="advantage-card">
-            <span class="advantage-num">06</span>
-            <div class="advantage-icon-wrap" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2.5L4 5.5v6c0 4.5 3.2 8.6 8 10 4.8-1.4 8-5.5 8-10v-6L12 2.5z"/>
-                <polyline points="8.5 12 11 14.5 15.5 9.5"/>
-              </svg>
-            </div>
-            <h3>Záruka a podpora od reálných techniků</h3>
-            <p>Plná záruka. Pokud něco nesedne, řešíte to přímo s technikem, ne s obchodníkem.</p>
-          </article>
-
-        </div>
-
-        <div class="comparison-block">
-          <h3 class="comparison-title">Proč jsme jiní než autorizovaný servis</h3>
-          <div class="comparison-table-wrap">
-            <table class="comparison-table">
-              <thead>
-                <tr>
-                  <th scope="col"><span class="visually-hidden">Kritérium</span></th>
-                  <th scope="col">Autorizovaný servis</th>
-                  <th scope="col">cnc-nahradnidily.cz</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">Cena</th>
-                  <td>OEM marže + servisní režie</td>
-                  <td>Přímý dodavatel, bez mezičlánků</td>
-                </tr>
-                <tr>
-                  <th scope="row">Rychlost</th>
-                  <td>Týdny</td>
-                  <td>Skladem do 24 hodin</td>
-                </tr>
-                <tr>
-                  <th scope="row">Komunikace</th>
-                  <td>Přes obchodního zástupce</td>
-                  <td>Přímo s technikem</td>
-                </tr>
-                <tr>
-                  <th scope="row">Možnosti</th>
-                  <td>Pouze nové originál díly</td>
-                  <td>Originál, repas, výroba na zakázku</td>
-                </tr>
-                <tr>
-                  <th scope="row">Záruka</th>
-                  <td>Ano</td>
-                  <td>Ano</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="proc-cta-strip">
-          <p><strong>Máte stroj, který stojí?</strong> Pošlete štítek a foto dílu — ozveme se zpravidla do hodiny v pracovní době.</p>
-          <a href="poptavka.html" class="btn btn-primary">Poslat poptávku →</a>
         </div>
       </div>
     </section>
