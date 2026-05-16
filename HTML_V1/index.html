@@ -404,15 +404,15 @@
     }
 
     .advantage-icon-wrap {
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
-      background: rgba(12,68,124,0.07);
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--brand-deep);
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 20px;
-      color: var(--brand-primary);
+      color: var(--accent-warm);
     }
 
     .advantage-card h3 { margin-bottom: 12px; font-size: 17px; }
@@ -1123,41 +1123,92 @@
           <article class="advantage-card">
             <span class="advantage-num">01</span>
             <div class="advantage-icon-wrap" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <!-- K -->
-                <line x1="5" y1="5" x2="5" y2="19"/>
-                <line x1="5" y1="12" x2="11" y2="5"/>
-                <line x1="5" y1="12" x2="11" y2="19"/>
-                <!-- č s háčkem -->
-                <path d="M20 9.5a3.8 3.8 0 100 5"/>
-                <polyline points="15 4.5 17 6 19 4.5"/>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9.5"/>
+                <line x1="8.5" y1="7" x2="8.5" y2="17"/>
+                <line x1="8.5" y1="12" x2="13" y2="7"/>
+                <line x1="8.5" y1="12" x2="13" y2="17"/>
+                <path d="M17.5 10.5a2.2 2.2 0 100 3"/>
+                <polyline points="14.7 7.5 15.9 8.4 17.1 7.5"/>
               </svg>
             </div>
-            <h3>Nižší ceny bez ústupků v kvalitě</h3>
-            <p>Pracujeme s ověřenými dodavateli napřímo. Bez režie autorizovaných servisů a bez zbytečných mezičlánků. Stejný díl, výrazně lepší cena.</p>
+            <h3>Nižší ceny díky přímému přístupu k dodavatelům</h3>
+            <p>Bez režie autorizovaných servisů a bez mezičlánků. Stejný díl, výrazně lepší cena.</p>
           </article>
 
           <article class="advantage-card">
             <span class="advantage-num">02</span>
             <div class="advantage-icon-wrap" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="5" cy="12" r="2"/>
+                <circle cx="19" cy="5" r="2"/>
+                <circle cx="19" cy="12" r="2"/>
+                <circle cx="19" cy="19" r="2"/>
+                <path d="M7 12h2c2 0 4-2 4-3.5V7"/>
+                <path d="M13 7l4-1.5"/>
+                <line x1="7" y1="12" x2="17" y2="12"/>
+                <path d="M7 12h2c2 0 4 2 4 3.5V17"/>
+                <path d="M13 17l4 1.5"/>
               </svg>
             </div>
-            <h3>Technicky podloženo</h3>
-            <p>Než cokoliv objednáme, ověříme, že díl skutečně pasuje do vašeho stroje, jeho generace a konfigurace. Nemontujte stejný díl dvakrát kvůli záměně typu.</p>
+            <h3>Originál, repas nebo výroba na zakázku</h3>
+            <p>Tři cesty k vyřešení podle rozpočtu a urgentnosti. Vy si vyberete.</p>
           </article>
 
           <article class="advantage-card">
             <span class="advantage-num">03</span>
             <div class="advantage-icon-wrap" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="10.5" cy="10.5" r="6.5"/>
+                <line x1="20" y1="20" x2="15.2" y2="15.2"/>
+                <polyline points="7.5 10.5 9.8 12.8 13.5 8.5"/>
+              </svg>
+            </div>
+            <h3>Technicky ověřená kompatibilita</h3>
+            <p>Před objednáním dohledáme přesnou specifikaci pro vaši generaci stroje.</p>
+          </article>
+
+          <article class="advantage-card">
+            <span class="advantage-num">04</span>
+            <div class="advantage-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 7l9-4 9 4v6"/>
+                <path d="M3 7v10l9 4"/>
+                <path d="M12 11v10"/>
+                <line x1="3" y1="7" x2="12" y2="11"/>
+                <line x1="21" y1="7" x2="12" y2="11"/>
+                <circle cx="17.5" cy="17.5" r="4.5"/>
+                <polyline points="17.5 15.3 17.5 17.5 19 18.7"/>
+              </svg>
+            </div>
+            <h3>Sklad CZ → odeslání do 24 hodin</h3>
+            <p>Skladové díly do 24 h, ostatní vždy s reálným termínem, ne odhadem.</p>
+          </article>
+
+          <article class="advantage-card">
+            <span class="advantage-num">05</span>
+            <div class="advantage-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9.5"/>
+                <line x1="2.5" y1="12" x2="21.5" y2="12"/>
+                <path d="M12 2.5a14 14 0 014 9.5 14 14 0 01-4 9.5 14 14 0 01-4-9.5 14 14 0 014-9.5z"/>
+                <path d="M3.5 8.5h17M3.5 15.5h17"/>
               </svg>
             </div>
             <h3>Dodáváme po celé EU</h3>
-            <p>Česko, Slovensko a celá Evropská unie. Skladové díly odesíláme do 24 hodin, ostatní podle dostupnosti — vždy s reálným termínem, ne odhadem.</p>
+            <p>Česko, Slovensko a celá Evropská unie. Faktura v EUR k dispozici.</p>
+          </article>
+
+          <article class="advantage-card">
+            <span class="advantage-num">06</span>
+            <div class="advantage-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2.5L4 5.5v6c0 4.5 3.2 8.6 8 10 4.8-1.4 8-5.5 8-10v-6L12 2.5z"/>
+                <polyline points="8.5 12 11 14.5 15.5 9.5"/>
+              </svg>
+            </div>
+            <h3>Záruka a podpora od reálných techniků</h3>
+            <p>Plná záruka. Pokud něco nesedne, řešíte to přímo s technikem, ne s obchodníkem.</p>
           </article>
 
         </div>
