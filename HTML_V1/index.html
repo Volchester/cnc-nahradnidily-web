@@ -284,62 +284,95 @@
     .hero-fact-value { font-size: 22px; font-weight: 600; color: #fff; letter-spacing: -0.02em; display: block; }
     .hero-fact-label { font-size: 12px; color: rgba(255,255,255,0.4); letter-spacing: 0.02em; display: block; margin-top: 2px; }
 
-    /* Pravá část hero — jedna velká fotka */
-    .hero-visual {
-      position: relative;
-      align-self: stretch;
-      min-height: 420px;
-      border-radius: 14px 14px 0 0;
-      overflow: hidden;
+    /* Pravá část hero — grid 2×2 produktových karet */
+    .hero-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      align-self: center;
+      width: 100%;
     }
 
-    .hero-visual img {
+    .hero-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: border-color .2s, background .2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .hero-card:hover {
+      border-color: rgba(239,159,39,0.45);
+      background: rgba(255,255,255,0.06);
+    }
+
+    .hero-card-img {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: rgba(0,0,0,0.2);
+    }
+    .hero-card-img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 40%;
       display: block;
-      position: absolute;
-      inset: 0;
+      transition: transform .4s ease;
     }
+    .hero-card:hover .hero-card-img img { transform: scale(1.04); }
 
-    .hero-visual::after {
-      content: '';
+    .hero-card-badge {
       position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(4,44,83,0.05) 0%,
-        rgba(4,44,83,0.45) 100%
-      );
-    }
-
-    /* badge na foto */
-    .hero-img-badge {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      z-index: 2;
-      background: rgba(4,44,83,0.80);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 8px;
-      padding: 10px 16px;
-      display: flex;
+      top: 8px;
+      left: 8px;
+      display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 5px;
+      padding: 4px 9px;
+      background: rgba(4,44,83,0.82);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.92);
+      letter-spacing: 0.01em;
     }
-    .hero-img-badge-dot {
-      width: 7px;
-      height: 7px;
+    .hero-card-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background: var(--success);
       flex-shrink: 0;
     }
-    .hero-img-badge-text {
+
+    .hero-card-body {
+      padding: 12px 14px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      flex: 1;
+    }
+    .hero-card-name {
       font-size: 13px;
-      color: rgba(255,255,255,0.92);
-      font-weight: 500;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.3;
+      letter-spacing: -0.005em;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .hero-card-price {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent-warm);
+      letter-spacing: -0.01em;
+      margin-top: auto;
     }
 
     /* ── VÝHODY ── */
@@ -878,7 +911,7 @@
       section { padding: 64px 0; }
       .hero { min-height: auto; }
       .hero-inner { grid-template-columns: 1fr; gap: 40px; padding: 64px 0 56px; }
-      .hero-visual { display: none; }
+      .hero-cards-grid { display: none; }
       .hero-subtitle { font-size: 16px; }
       .hero-actions { flex-direction: column; }
       .hero-actions .btn { width: 100%; justify-content: center; }
@@ -1012,17 +1045,69 @@
             </div>
           </div>
 
-          <!-- Jedna velká fotka vpravo -->
-          <div class="hero-visual" aria-hidden="true">
-            <img
-              src="../Obr%C3%A1zky/deublin.jpeg"
-              alt="Rotační průchodka CNC stroje"
-              loading="eager"
-            >
-            <div class="hero-img-badge">
-              <div class="hero-img-badge-dot"></div>
-              <span class="hero-img-badge-text">skladem · odeslání do 24 h</span>
-            </div>
+          <!-- Grid 2×2 produktových karet vpravo -->
+          <div class="hero-cards-grid" aria-label="Vybrané díly skladem">
+
+            <article class="hero-card">
+              <div class="hero-card-img">
+                <img
+                  src="../Obr%C3%A1zky/Pneumatic%20boosting%20cylinder%203000kg%2013mm.jpeg"
+                  alt="Pneumatic boosting cylinder"
+                  loading="eager"
+                >
+                <span class="hero-card-badge">skladem</span>
+              </div>
+              <div class="hero-card-body">
+                <div class="hero-card-name">Pneumatic boosting cylinder</div>
+                <div class="hero-card-price">od 18 000 Kč</div>
+              </div>
+            </article>
+
+            <article class="hero-card">
+              <div class="hero-card-img">
+                <img
+                  src="../Obr%C3%A1zky/YASKAWA%20HV-75AP4.jpeg"
+                  alt="YASKAWA HV-75AP4"
+                  loading="eager"
+                >
+                <span class="hero-card-badge">skladem</span>
+              </div>
+              <div class="hero-card-body">
+                <div class="hero-card-name">YASKAWA HV-75AP4</div>
+                <div class="hero-card-price">od 15 000 Kč</div>
+              </div>
+            </article>
+
+            <article class="hero-card">
+              <div class="hero-card-img">
+                <img
+                  src="../Obr%C3%A1zky/Rotary%20Joint.png"
+                  alt="Rotary Joint KJC 6314-20"
+                  loading="eager"
+                >
+                <span class="hero-card-badge">skladem</span>
+              </div>
+              <div class="hero-card-body">
+                <div class="hero-card-name">Rotary Joint KJC 6314-20</div>
+                <div class="hero-card-price">od 19 650 Kč</div>
+              </div>
+            </article>
+
+            <article class="hero-card">
+              <div class="hero-card-img">
+                <img
+                  src="../Obr%C3%A1zky/Lo%C5%BEiska%20NSK.jpg"
+                  alt="Ložisko NSK 20TAC47CSUHPN7C"
+                  loading="eager"
+                >
+                <span class="hero-card-badge">skladem</span>
+              </div>
+              <div class="hero-card-body">
+                <div class="hero-card-name">Ložisko NSK 20TAC47CSUHPN7C</div>
+                <div class="hero-card-price">od 1 480 Kč</div>
+              </div>
+            </article>
+
           </div>
 
         </div>
