@@ -492,6 +492,30 @@
     .comparison-table tbody tr:last-child th,
     .comparison-table tbody tr:last-child td { border-bottom: none; }
 
+    /* CTA proužek pod sekcí „Proč u nás" */
+    .proc-cta-strip {
+      margin-top: 56px;
+      padding: 22px 28px;
+      background: rgba(239,159,39,0.08);
+      border: 1px solid rgba(239,159,39,0.45);
+      border-radius: var(--radius-card);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .proc-cta-strip p {
+      font-size: 15px;
+      color: var(--text-primary);
+      margin: 0;
+      flex: 1;
+      min-width: 280px;
+      line-height: 1.6;
+    }
+    .proc-cta-strip p strong { font-weight: 600; }
+    .proc-cta-strip .btn { flex-shrink: 0; }
+
     /* ── JAK TO FUNGUJE ── */
     .section-lead { max-width: 600px; }
     .section-lead h2 { margin-bottom: 12px; }
@@ -1005,6 +1029,14 @@
       .comparison-title { font-size: 20px; }
       .comparison-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
       .comparison-table { min-width: 520px; }
+      .proc-cta-strip {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 14px;
+        margin-top: 40px;
+      }
+      .proc-cta-strip .btn { width: fit-content; }
     }
 
     @media (max-width: 640px) {
@@ -1331,6 +1363,11 @@
               </tbody>
             </table>
           </div>
+        </div>
+
+        <div class="proc-cta-strip">
+          <p><strong>Máte stroj, který stojí?</strong> Pošlete štítek a foto dílu — ozveme se zpravidla do hodiny v pracovní době.</p>
+          <a href="poptavka.html" class="btn btn-primary">Poslat poptávku →</a>
         </div>
       </div>
     </section>
