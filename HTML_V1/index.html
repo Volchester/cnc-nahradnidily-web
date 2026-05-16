@@ -547,11 +547,13 @@
       align-items: center;
       justify-content: center;
       padding: 0 12px;
-      transition: border-color .15s, background .15s;
+      transition: border-color .15s, background .15s, color .15s;
+      color: var(--brand-primary);
     }
     .brand-logo-card:hover {
       border-color: var(--brand-accent);
       background: #f5f8fc;
+      color: var(--brand-deep);
     }
     .brand-logo-card svg {
       max-width: 100%;
@@ -1228,84 +1230,85 @@
             <p class="brands-group-label">Výrobci strojů</p>
             <div class="brands-logo-grid" role="list" aria-label="Podporované značky strojů">
 
-              <!-- Hurco -->
-              <div class="brand-logo-card" role="listitem" title="Hurco">
-                <svg viewBox="0 0 80 24" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Hurco">
-                  <text x="0" y="19" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0C447C" letter-spacing="-0.5">HURCO</text>
-                </svg>
-              </div>
-
-              <!-- Hermle -->
-              <div class="brand-logo-card" role="listitem" title="Hermle">
-                <svg viewBox="0 0 88 24" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Hermle">
-                  <text x="0" y="19" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#2C2C2A" letter-spacing="0.5">HERMLE</text>
-                </svg>
-              </div>
-
-              <!-- Mazak -->
-              <div class="brand-logo-card" role="listitem" title="Mazak">
-                <svg viewBox="0 0 76 24" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Mazak">
-                  <text x="0" y="19" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#C8102E" letter-spacing="0">MAZAK</text>
-                </svg>
-              </div>
-
-              <!-- DMG Mori -->
+              <!-- 1. DMG Mori -->
               <div class="brand-logo-card" role="listitem" title="DMG Mori">
                 <svg viewBox="0 0 90 24" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="DMG Mori">
-                  <text x="0" y="17" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" letter-spacing="0.5">DMG MORI</text>
+                  <text x="0" y="17" font-family="Archivo, Inter, system-ui, sans-serif" font-size="15" font-weight="700" fill="currentColor" letter-spacing="0.5">DMG MORI</text>
                 </svg>
               </div>
 
-              <!-- Mikron -->
+              <!-- 2. Hermle -->
+              <div class="brand-logo-card" role="listitem" title="Hermle">
+                <svg viewBox="0 0 88 24" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Hermle">
+                  <text x="0" y="19" font-family="Archivo, Inter, system-ui, sans-serif" font-size="17" font-weight="700" fill="currentColor" letter-spacing="0.5">HERMLE</text>
+                </svg>
+              </div>
+
+              <!-- 3. Mazak -->
+              <div class="brand-logo-card" role="listitem" title="Mazak">
+                <svg viewBox="0 0 76 24" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Mazak">
+                  <text x="0" y="19" font-family="Archivo, Inter, system-ui, sans-serif" font-size="18" font-weight="700" fill="currentColor" letter-spacing="0">MAZAK</text>
+                </svg>
+              </div>
+
+              <!-- 4. Kovosvit MAS — dvouřádkové -->
+              <div class="brand-logo-card" role="listitem" title="Kovosvit MAS">
+                <svg viewBox="0 0 70 32" height="30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Kovosvit MAS">
+                  <text x="35" y="14" text-anchor="middle" font-family="Archivo, Inter, system-ui, sans-serif" font-size="12" font-weight="700" fill="currentColor" letter-spacing="0.3">KOVOSVIT</text>
+                  <text x="35" y="28" text-anchor="middle" font-family="Archivo, Inter, system-ui, sans-serif" font-size="12" font-weight="700" fill="currentColor" letter-spacing="0.8">MAS</text>
+                </svg>
+              </div>
+
+              <!-- 5. Mikron -->
               <div class="brand-logo-card" role="listitem" title="Mikron">
                 <svg viewBox="0 0 80 24" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Mikron">
-                  <text x="0" y="19" font-family="Arial, sans-serif" font-size="17" font-weight="600" fill="#042C53" letter-spacing="0.3">MIKRON</text>
+                  <text x="0" y="19" font-family="Archivo, Inter, system-ui, sans-serif" font-size="17" font-weight="600" fill="currentColor" letter-spacing="0.3">MIKRON</text>
                 </svg>
               </div>
 
-              <!-- Kovosvit MAS -->
-              <div class="brand-logo-card" role="listitem" title="Kovosvit MAS">
-                <svg viewBox="0 0 100 24" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Kovosvit MAS">
-                  <text x="0" y="17" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#1A3A6B" letter-spacing="0.4">KOVOSVIT MAS</text>
+              <!-- 6. Hurco -->
+              <div class="brand-logo-card" role="listitem" title="Hurco">
+                <svg viewBox="0 0 80 24" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Hurco">
+                  <text x="0" y="19" font-family="Archivo, Inter, system-ui, sans-serif" font-size="18" font-weight="700" fill="currentColor" letter-spacing="-0.5">HURCO</text>
                 </svg>
               </div>
 
-              <!-- Doosan -->
+              <!-- 7. Doosan -->
               <div class="brand-logo-card" role="listitem" title="Doosan">
                 <svg viewBox="0 0 82 24" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Doosan">
-                  <text x="0" y="19" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#003087" letter-spacing="0.2">DOOSAN</text>
+                  <text x="0" y="19" font-family="Archivo, Inter, system-ui, sans-serif" font-size="17" font-weight="700" fill="currentColor" letter-spacing="0.2">DOOSAN</text>
                 </svg>
               </div>
 
-              <!-- Okuma -->
+              <!-- 8. Okuma -->
               <div class="brand-logo-card" role="listitem" title="Okuma">
                 <svg viewBox="0 0 76 24" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Okuma">
-                  <text x="0" y="19" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0057A8" letter-spacing="0">OKUMA</text>
+                  <text x="0" y="19" font-family="Archivo, Inter, system-ui, sans-serif" font-size="18" font-weight="700" fill="currentColor" letter-spacing="0">OKUMA</text>
                 </svg>
               </div>
 
-              <!-- Deckel Maho -->
+              <!-- 9. Deckel Maho -->
               <div class="brand-logo-card" role="listitem" title="Deckel Maho">
                 <svg viewBox="0 0 100 24" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Deckel Maho">
-                  <text x="0" y="17" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#2C2C2A" letter-spacing="0.3">DECKEL MAHO</text>
+                  <text x="0" y="17" font-family="Archivo, Inter, system-ui, sans-serif" font-size="13" font-weight="700" fill="currentColor" letter-spacing="0.3">DECKEL MAHO</text>
                 </svg>
               </div>
 
-              <!-- ZPS Tajmac -->
+              <!-- 10. ZPS Tajmac -->
               <div class="brand-logo-card" role="listitem" title="ZPS Tajmac">
                 <svg viewBox="0 0 96 24" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="ZPS Tajmac">
-                  <text x="0" y="17" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#1A1A1A" letter-spacing="0.3">ZPS TAJMAC</text>
+                  <text x="0" y="17" font-family="Archivo, Inter, system-ui, sans-serif" font-size="13" font-weight="700" fill="currentColor" letter-spacing="0.3">ZPS TAJMAC</text>
                 </svg>
               </div>
 
-              <!-- Mori Seiki -->
+              <!-- 11. Mori Seiki -->
               <div class="brand-logo-card" role="listitem" title="Mori Seiki">
                 <svg viewBox="0 0 92 24" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Mori Seiki">
-                  <text x="0" y="17" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#003087" letter-spacing="0.3">MORI SEIKI</text>
+                  <text x="0" y="17" font-family="Archivo, Inter, system-ui, sans-serif" font-size="13" font-weight="700" fill="currentColor" letter-spacing="0.3">MORI SEIKI</text>
                 </svg>
               </div>
 
-              <!-- a další -->
+              <!-- 12. a další -->
               <div class="brand-logo-card brand-logo-card--more" role="listitem">
                 + a další
               </div>
