@@ -49,6 +49,18 @@
 
     html { scroll-behavior: smooth; }
 
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
       font-size: 16px;
@@ -417,6 +429,68 @@
 
     .advantage-card h3 { margin-bottom: 12px; font-size: 17px; }
     .advantage-card p { font-size: 15px; color: var(--text-secondary); line-height: 1.65; }
+
+    /* Srovnávací tabulka */
+    .comparison-block { margin-top: 64px; }
+    .comparison-title {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 24px;
+      text-align: center;
+      color: var(--text-primary);
+    }
+    .comparison-table-wrap {
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+    }
+    .comparison-table thead th {
+      padding: 16px 20px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      text-align: left;
+      background: var(--surface-soft);
+      color: var(--text-secondary);
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .comparison-table thead th:first-child { background: var(--surface-soft); }
+    .comparison-table thead th:last-child {
+      background: var(--brand-deep);
+      color: #fff;
+    }
+    .comparison-table tbody th {
+      padding: 14px 20px;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text-primary);
+      background: #fafaf9;
+      text-align: left;
+      border-bottom: 1px solid var(--border-soft);
+      width: 22%;
+    }
+    .comparison-table tbody td {
+      padding: 14px 20px;
+      font-size: 15px;
+      color: var(--text-tertiary);
+      border-bottom: 1px solid var(--border-soft);
+      vertical-align: middle;
+    }
+    .comparison-table tbody td:last-child {
+      color: var(--text-primary);
+      font-weight: 500;
+      background: rgba(239,159,39,0.06);
+      border-left: 2px solid var(--accent-warm);
+    }
+    .comparison-table tbody tr:last-child th,
+    .comparison-table tbody tr:last-child td { border-bottom: none; }
 
     /* ── JAK TO FUNGUJE ── */
     .section-lead { max-width: 600px; }
@@ -927,6 +1001,10 @@
       .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
       .parts-header { flex-direction: column; align-items: flex-start; }
       .final-cta-inner { padding: 64px 0; }
+      .comparison-block { margin-top: 48px; }
+      .comparison-title { font-size: 20px; }
+      .comparison-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .comparison-table { min-width: 520px; }
     }
 
     @media (max-width: 640px) {
@@ -1211,6 +1289,48 @@
             <p>Plná záruka. Pokud něco nesedne, řešíte to přímo s technikem, ne s obchodníkem.</p>
           </article>
 
+        </div>
+
+        <div class="comparison-block">
+          <h3 class="comparison-title">Proč jsme jiní než autorizovaný servis</h3>
+          <div class="comparison-table-wrap">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th scope="col"><span class="visually-hidden">Kritérium</span></th>
+                  <th scope="col">Autorizovaný servis</th>
+                  <th scope="col">cnc-nahradnidily.cz</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Cena</th>
+                  <td>OEM marže + servisní režie</td>
+                  <td>Přímý dodavatel, bez mezičlánků</td>
+                </tr>
+                <tr>
+                  <th scope="row">Rychlost</th>
+                  <td>Týdny</td>
+                  <td>Skladem do 24 hodin</td>
+                </tr>
+                <tr>
+                  <th scope="row">Komunikace</th>
+                  <td>Přes obchodního zástupce</td>
+                  <td>Přímo s technikem</td>
+                </tr>
+                <tr>
+                  <th scope="row">Možnosti</th>
+                  <td>Pouze nové originál díly</td>
+                  <td>Originál, repas, výroba na zakázku</td>
+                </tr>
+                <tr>
+                  <th scope="row">Záruka</th>
+                  <td>Ano</td>
+                  <td>Ano</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </section>
