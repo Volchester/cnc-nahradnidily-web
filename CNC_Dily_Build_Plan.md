@@ -192,7 +192,7 @@ Drž se brand identity webu: tmavá námořnická, krémová, oranžová akcent.
 - **Cena:** `19650` CZK, `InStock`
 - **Brand:** KJC
 
-### [ ] ÚKOL 6: Dávkovač mazání CPV2
+### [x] ÚKOL 6: Dávkovač mazání CPV2
 
 - **URL:** `HTML_V1/dily/davkovac-mazani-cpv2.html`
 - **Text:** sekce 6
