@@ -208,7 +208,7 @@ Drž se brand identity webu: tmavá námořnická, krémová, oranžová akcent.
 - **Cena:** `22000` CZK, `PreOrder`
 - **Brand:** Indramat (Bosch Rexroth)
 
-### [ ] ÚKOL 8: Yaskawa HV-75AP4
+### [x] ÚKOL 8: Yaskawa HV-75AP4
 
 - **URL:** `HTML_V1/dily/yaskawa-hv-75ap4.html`
 - **Text:** sekce 8 (POZOR: 2 odstavce popisu, druhý je důležitý diagnostický tip o „pop" zvuku)
