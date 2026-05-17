@@ -168,7 +168,7 @@ Drž se brand identity webu: tmavá námořnická, krémová, oranžová akcent.
 - **Cena:** `1950` CZK, `InStock`
 - **Brand:** NSK
 
-### [ ] ÚKOL 3: Ložisko 35TAC72BSU C-10
+### [x] ÚKOL 3: Ložisko 35TAC72BSU C-10
 
 - **URL:** `HTML_V1/dily/lozisko-35tac72bsu-c10.html`
 - **Text:** sekce 3
