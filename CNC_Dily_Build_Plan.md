@@ -184,7 +184,7 @@ Drž se brand identity webu: tmavá námořnická, krémová, oranžová akcent.
 - **Cena:** `7650` CZK, `PreOrder` (objednávkové, 2–3 týdny)
 - **Brand:** INA (Schaeffler)
 
-### [ ] ÚKOL 5: Rotační průchodka KJC 6314-20
+### [x] ÚKOL 5: Rotační průchodka KJC 6314-20
 
 - **URL:** `HTML_V1/dily/rotacni-pruchodka-kjc-6314-20.html`
 - **Text:** sekce 5 (POZOR: 2 odstavce popisu — druhý o náhradě za Deublin)
