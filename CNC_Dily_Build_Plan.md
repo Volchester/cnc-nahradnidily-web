@@ -200,7 +200,7 @@ Drž se brand identity webu: tmavá námořnická, krémová, oranžová akcent.
 - **Cena:** `240` CZK, `InStock`
 - **Brand:** ponech v JSON-LD prázdné nebo uveď „výrobce dle specifikace"
 
-### [ ] ÚKOL 7: Indramat TDM 3.2-030-300-W1
+### [x] ÚKOL 7: Indramat TDM 3.2-030-300-W1
 
 - **URL:** `HTML_V1/dily/indramat-tdm-3-2-030-300-w1.html`
 - **Text:** sekce 7
