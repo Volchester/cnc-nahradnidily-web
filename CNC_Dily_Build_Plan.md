@@ -217,7 +217,7 @@ Drž se brand identity webu: tmavá námořnická, krémová, oranžová akcent.
 - **Brand:** Yaskawa
 - **POZN:** V description JSON-LD zmiň „Status: OBSOLETE — dostupný jako náhradní díl".
 
-### [ ] ÚKOL 9: Pneumatic boosting cylinder SUN
+### [x] ÚKOL 9: Pneumatic boosting cylinder SUN
 
 - **URL:** `HTML_V1/dily/pneumaticky-valec-sun-3000kg.html`
 - **Text:** sekce 9
