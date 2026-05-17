@@ -118,11 +118,11 @@
     .gallery { position: relative; }
     .gallery-main {
       position: relative; aspect-ratio: 4/3; border-radius: var(--radius-card);
-      background: radial-gradient(120% 80% at 50% 40%, #fbfaf7 0%, #ebe5d8 65%, #ddd5c3 100%);
+      background: #fff;
       border: 1px solid var(--line); overflow: hidden; box-shadow: var(--shadow-md);
     }
     .gallery-img { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 18px; }
-    .gallery-img img { max-width: 92%; max-height: 92%; object-fit: contain; display: block; filter: drop-shadow(0 24px 32px rgba(20,16,8,.22)); }
+    .gallery-img img { max-width: 92%; max-height: 92%; object-fit: contain; display: block; }
     .gallery-badge { position: absolute; top: 14px; left: 14px; display: flex; gap: 6px; flex-wrap: wrap; z-index: 2; }
     .chip {
       display: inline-flex; align-items: center; gap: 6px;
@@ -135,61 +135,7 @@
     .chip.accent{ background: var(--accent-soft);  border-color: transparent; color: var(--accent-ink); }
     .chip .dot  { width: 6px; height: 6px; border-radius: 50%; background: var(--success); }
 
-    /* CSS-art bearing (alt view) */
-    .bearing { width: 62%; aspect-ratio: 1/1; position: relative; filter: drop-shadow(0 30px 30px rgba(20,16,8,.18)); }
-    .bearing::before, .bearing::after { content: ""; position: absolute; inset: 0; border-radius: 50%; }
-    .bearing::before {
-      background: radial-gradient(circle at 30% 25%, #f5f1ea 0%, #c9bfa9 35%, #6a5f49 78%, #2c2620 100%);
-      box-shadow: inset 0 0 0 1px rgba(0,0,0,.25), inset 8px 6px 22px rgba(255,255,255,.35), inset -6px -10px 28px rgba(0,0,0,.35);
-    }
-    .bearing::after {
-      inset: 32%;
-      background: radial-gradient(circle at 65% 70%, #efe9dd 0%, #b9ad94 50%, #5c513d 100%);
-      box-shadow: inset 0 0 0 1px rgba(0,0,0,.3), inset -4px -6px 14px rgba(0,0,0,.35), inset 4px 4px 10px rgba(255,255,255,.4);
-    }
-    .bearing-mid {
-      position: absolute; inset: 22%; border-radius: 50%;
-      background: radial-gradient(circle at 50% 35%, rgba(255,255,255,.55), rgba(0,0,0,.25));
-      box-shadow: inset 0 0 0 1px rgba(0,0,0,.35), inset 0 6px 10px rgba(255,255,255,.4), inset 0 -6px 10px rgba(0,0,0,.4);
-    }
-    .balls { position: absolute; inset: 0; }
-    .ball {
-      position: absolute; width: 9%; aspect-ratio: 1/1; border-radius: 50%;
-      left: 50%; top: 50%;
-      background: radial-gradient(circle at 35% 30%, #ffffff 0%, #d6ccb6 40%, #5c513d 100%);
-      box-shadow: 0 1px 2px rgba(0,0,0,.4);
-      transform: translate(-50%,-50%) rotate(var(--a)) translateY(-37%);
-    }
-
-    /* technical drawing */
-    .cross { position: relative; width: 85%; max-width: 420px; height: 180px; margin: 0 auto; }
-    .cross .shaft {
-      position: absolute; left: 0; right: 0; top: 50%; height: 30px; transform: translateY(-50%);
-      background: repeating-linear-gradient(45deg, #d6cfc1 0 6px, #c4bba6 6px 7px);
-      border-top: 1.5px solid var(--text-primary); border-bottom: 1.5px solid var(--text-primary);
-    }
-    .cross .ring { position: absolute; left: 50%; width: 100px; height: 70px; background: var(--surface-card); border: 1.5px solid var(--text-primary); transform: translateX(-50%); }
-    .cross .ring.top { top: 0; border-bottom: 0; border-radius: 8px 8px 0 0; }
-    .cross .ring.bot { bottom: 0; border-top: 0; border-radius: 0 0 8px 8px; }
-    .cross .race-ball {
-      position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
-      width: 30px; height: 30px; border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, #fff 0%, #d6ccb6 40%, #6a5f49 100%);
-      border: 1.5px solid var(--text-primary); box-shadow: 0 1px 2px rgba(0,0,0,.2);
-    }
-    .dim { position: absolute; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-primary); font-weight: 500; }
-    .dim .lbl { background: var(--surface-card); padding: 1px 6px; border-radius: 3px; }
-    .dim.d-D { left: 50%; top: -22px; transform: translateX(-50%); }
-    .dim.d-d { left: 50%; top: 50%; transform: translate(-50%,-50%); background: var(--surface-card); padding: 1px 6px; border-radius: 3px; }
-    .dim.d-B { right: -54px; top: 50%; transform: translateY(-50%); }
-    .dim.d-angle {
-      left: 50%; bottom: -28px; transform: translateX(-50%);
-      color: var(--brand-deep); background: var(--accent-soft); padding: 2px 10px; border-radius: 999px;
-      font-weight: 600; border: 1px solid rgba(239,159,39,0.35);
-    }
-    .axis { position: absolute; left: 0; right: 0; top: 50%; height: 0; border-top: 1px dashed var(--text-tertiary); }
-
-    .gallery-thumbs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 12px; }
+    .gallery-thumbs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 12px; max-width: 280px; }
     .thumb {
       aspect-ratio: 1/1; border-radius: 10px; border: 1px solid var(--line);
       background: var(--surface-card); overflow: hidden; position: relative; cursor: pointer;
@@ -200,14 +146,6 @@
     .thumb.active { border-color: var(--brand-deep); box-shadow: 0 0 0 3px rgba(4,44,83,0.08); }
     .thumb-photo { width: 100%; height: 100%; object-fit: cover; display: block; }
     .thumb-label { position: absolute; left: 8px; bottom: 6px; font-size: 10px; color: var(--text-tertiary); letter-spacing: .04em; text-transform: uppercase; font-weight: 600; }
-    .thumb-bearing {
-      width: 62%; aspect-ratio: 1/1; border-radius: 50%;
-      background: radial-gradient(circle at 35% 30%, #f5f1ea 0%, #c9bfa9 40%, #6a5f49 78%, #2c2620 100%);
-      position: relative;
-    }
-    .thumb-bearing::after { content: ""; position: absolute; inset: 32%; border-radius: 50%; background: radial-gradient(circle at 65% 70%, #efe9dd 0%, #5c513d 100%); }
-    .thumb.drawing { background: repeating-linear-gradient(45deg, #fbfaf7 0 10px, #f4f0e8 10px 11px); }
-    .thumb.drawing::before { content: ""; width: 50%; height: 40%; border: 1.5px solid var(--text-secondary); border-radius: 6px; }
     .thumb.box { background: repeating-linear-gradient(0deg, #fbfaf7 0 12px, #f0eadd 12px 13px); }
     .thumb.box::before { content: "BAL."; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-secondary); font-weight: 600; letter-spacing: .06em; }
 
@@ -328,8 +266,8 @@
     .related { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 8px; }
     .rel-card { border: 1px solid var(--line); border-radius: var(--radius-card); background: var(--surface-card); overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: inherit; transition: transform .15s, box-shadow .15s, border-color .15s; }
     .rel-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--line-2); }
-    .rel-img { aspect-ratio: 5/3; background: radial-gradient(110% 80% at 50% 40%, #fbfaf7, #e6dfd0); border-bottom: 1px solid var(--line); position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-    .rel-img img { max-width: 78%; max-height: 78%; object-fit: contain; }
+    .rel-img { aspect-ratio: 5/3; background: #fff; border-bottom: 1px solid var(--line); position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 14px; }
+    .rel-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
     .rel-tag { position: absolute; top: 10px; left: 10px; }
     .rel-body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 4px; }
     .rel-kind { font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-tertiary); font-weight: 600; }
@@ -531,15 +469,8 @@
           <img class="thumb-photo" src="../../Obr%C3%A1zky/Lo%C5%BEiska%20NSK.jpg" alt="" aria-hidden="true">
           <span class="thumb-label">01 · foto</span>
         </button>
-        <button class="thumb" data-view="render" aria-label="3D vizualizace">
-          <div class="thumb-bearing"></div>
-          <span class="thumb-label">02 · render</span>
-        </button>
-        <button class="thumb drawing" data-view="drawing" aria-label="Technický výkres">
-          <span class="thumb-label">03 · výkres</span>
-        </button>
         <button class="thumb box" data-view="package" aria-label="Balení">
-          <span class="thumb-label">04 · bal.</span>
+          <span class="thumb-label">02 · bal.</span>
         </button>
       </div>
     </div>
@@ -760,26 +691,26 @@
               <div class="rel-foot"><span>d 30 mm · větší bratr</span><b>od 1 950 Kč</b></div>
             </div>
           </a>
-          <a class="rel-card" href="remen-420-5gt-40.html">
+          <a class="rel-card" href="lozisko-35tac72bsu-c10.html">
             <div class="rel-img">
               <span class="chip ok rel-tag"><span class="dot"></span>skladem</span>
-              <img src="../../Obr%C3%A1zky/%C5%98emen.jpg" alt="Ozubený řemen Gates 420-5GT-40" loading="lazy">
+              <img src="../../Obr%C3%A1zky/Lo%C5%BEiska%20NSK.jpg" alt="Ložisko NSK 35TAC72BSU C-10" loading="lazy">
             </div>
             <div class="rel-body">
-              <span class="rel-kind">Ozubený řemen · Gates</span>
-              <span class="rel-title">420-5GT-40</span>
-              <div class="rel-foot"><span>PowerGrip GT · 5 mm</span><b>od 1 150 Kč</b></div>
+              <span class="rel-kind">Úhlové ložisko · NSK</span>
+              <span class="rel-title">35TAC72BSU C-10</span>
+              <div class="rel-foot"><span>d 35 mm · klec C-10</span><b>od 2 450 Kč</b></div>
             </div>
           </a>
-          <a class="rel-card" href="rotacni-pruchodka-kjc-6314-20.html">
+          <a class="rel-card" href="lozisko-zarn-2557-tn.html">
             <div class="rel-img">
-              <span class="chip ok rel-tag"><span class="dot"></span>skladem</span>
-              <img src="../../Obr%C3%A1zky/Rotary%20Joint.png" alt="Rotační průchodka KJC 6314-20" loading="lazy">
+              <span class="chip rel-tag">2–3 týdny</span>
+              <img src="../../Obr%C3%A1zky/ZARN_lozisko.jpg" alt="Kombinované ložisko INA ZARN 2557 TN" loading="lazy">
             </div>
             <div class="rel-body">
-              <span class="rel-kind">Rotační průchodka · KJC</span>
-              <span class="rel-title">KJC 6314-20</span>
-              <div class="rel-foot"><span>CTS · náhrada za Deublin</span><b>od 19 650 Kč</b></div>
+              <span class="rel-kind">Axiálně-radiální · INA</span>
+              <span class="rel-title">ZARN 2557 TN</span>
+              <div class="rel-foot"><span>kombinované · kompaktní</span><b>od 7 650 Kč</b></div>
             </div>
           </a>
         </div>
@@ -923,28 +854,14 @@
 
     // gallery thumb switcher
     const view = document.getElementById('galleryView');
-    const main = document.getElementById('galleryMain');
     const photoSrc = '../../Obr%C3%A1zky/Lo%C5%BEiska%20NSK.jpg';
     document.querySelectorAll('.thumb').forEach(function (t) {
       t.addEventListener('click', function () {
         document.querySelectorAll('.thumb').forEach(function (x) { x.classList.remove('active'); });
         t.classList.add('active');
         const v = t.dataset.view;
-        view.innerHTML = '';
-        main.style.background = '';
-        main.style.backgroundImage = '';
-        main.style.backgroundSize = '';
         if (v === 'photo') {
           view.innerHTML = '<img src="' + photoSrc + '" alt="Úhlové kontaktní ložisko NSK 20TAC47CSUHPN7C" loading="eager" width="800" height="600">';
-        } else if (v === 'render') {
-          view.innerHTML = '<div class="bearing" aria-label="Vizualizace úhlového kontaktního ložiska"><div class="bearing-mid"></div><div class="balls">' +
-            [0,30,60,90,120,150,180,210,240,270,300,330].map(function (a) { return '<span class="ball" style="--a:' + a + 'deg"></span>'; }).join('') +
-            '</div></div>';
-        } else if (v === 'drawing') {
-          view.innerHTML = '<div class="cross"><div class="shaft"></div><div class="ring top"></div><div class="ring bot"></div><div class="race-ball"></div><div class="axis"></div><div class="dim d-D"><span class="lbl">⌀D = 47</span></div><div class="dim d-d"><span>⌀d = 20</span></div><div class="dim d-B"><span class="lbl">B = 15</span></div><div class="dim d-angle">α = 60°</div></div>';
-          main.style.background = 'radial-gradient(120% 80% at 50% 40%, #fbfaf7 0%, #f1ece1 100%)';
-          main.style.backgroundImage = 'linear-gradient(rgba(20,16,8,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(20,16,8,.05) 1px, transparent 1px)';
-          main.style.backgroundSize = '24px 24px, 24px 24px';
         } else {
           view.innerHTML = '<div style="width:55%;aspect-ratio:1.1/1;background:#f0e9d9;border:1px solid #d6cfc1;border-radius:8px;box-shadow:inset 0 -8px 18px rgba(0,0,0,.06), 0 10px 24px rgba(20,16,8,.12);display:flex;align-items:center;justify-content:center;color:#3a3b3f;font-family:\'JetBrains Mono\',monospace;font-weight:600;letter-spacing:.08em;font-size:14px;text-align:center;padding:18px"><span>NSK<br>20TAC47CSUHPN7C</span></div>';
         }
