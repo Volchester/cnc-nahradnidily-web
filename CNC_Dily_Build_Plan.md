@@ -176,7 +176,7 @@ Drž se brand identity webu: tmavá námořnická, krémová, oranžová akcent.
 - **Cena:** `2450` CZK, `InStock`
 - **Brand:** NSK
 
-### [ ] ÚKOL 4: Ložisko ZARN 2557 TN INA
+### [x] ÚKOL 4: Ložisko ZARN 2557 TN INA
 
 - **URL:** `HTML_V1/dily/lozisko-zarn-2557-tn.html`
 - **Text:** sekce 4
