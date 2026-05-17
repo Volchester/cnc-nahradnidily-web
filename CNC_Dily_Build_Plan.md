@@ -160,7 +160,7 @@ Drž se brand identity webu: tmavá námořnická, krémová, oranžová akcent.
 - **Brand:** NSK
 - **POZN:** Tohle je pilot — pečlivě navrhni template stránky, který budeme používat pro všechny další díly. Po schválení ho použijeme jako vzor.
 
-### [ ] ÚKOL 2: Ložisko 30TAC62CSUHPN7C
+### [x] ÚKOL 2: Ložisko 30TAC62CSUHPN7C
 
 - **URL:** `HTML_V1/dily/lozisko-30tac62csuhpn7c.html`
 - **Text:** sekce 2
