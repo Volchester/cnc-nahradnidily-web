@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ložisko 20TAC47CSUHPN7C — Náhradní díly CNC | cnc-nahradnidily.cz</title>
+  <title>Ložisko 20TAC47CSUHPN7C — NSK · od 1 480 Kč | cnc-nahradnidily.cz</title>
   <meta name="description" content="Vysoce přesné úhlové kontaktní kuličkové ložisko NSK pro podporu kuličkových šroubů v CNC strojích. Skladem od 1 480 Kč bez DPH.">
   <meta property="og:title" content="Ložisko 20TAC47CSUHPN7C — NSK ložisko pro kuličkové šrouby">
   <meta property="og:description" content="Vysoce přesné úhlové kontaktní kuličkové ložisko NSK pro podporu kuličkových šroubů v CNC strojích.">
@@ -24,7 +24,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,400&family=Archivo:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Archivo:wght@500;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -35,19 +35,29 @@
       --brand-accent:     #185FA5;
       --accent-warm:      #EF9F27;
       --accent-warm-text: #412402;
+      --accent-soft:      #FDF2DF;
+      --accent-ink:       #7A4A04;
       --surface-light:    #FFFFFF;
+      --surface-card:     #FBFAF7;
       --surface-soft:     #F1EFE8;
+      --surface-tint:     #F7F4ED;
+      --line:             #E3DDD2;
+      --line-2:           #D6CFC1;
       --border-soft:      #E5E7EB;
-      --border-mid:       #D1D5DB;
       --text-primary:     #2C2C2A;
       --text-secondary:   #5F5E5A;
       --text-tertiary:    #888780;
       --success:          #639922;
+      --success-soft:     #EAF1DA;
+      --success-ink:      #3F5E15;
       --danger:           #C14A3A;
       --radius-card:      14px;
-      --radius-btn:       8px;
-      --max-w:            1200px;
-      --px:               24px;
+      --radius-sm:        8px;
+      --radius-btn:       10px;
+      --maxw:             1240px;
+      --px:               28px;
+      --shadow-sm:        0 1px 0 rgba(255,255,255,.7) inset, 0 1px 2px rgba(20,16,8,.04);
+      --shadow-md:        0 1px 0 rgba(255,255,255,.7) inset, 0 6px 22px -10px rgba(20,16,8,.18), 0 2px 6px -2px rgba(20,16,8,.06);
     }
 
     html { scroll-behavior: smooth; }
@@ -59,36 +69,17 @@
       color: var(--text-primary);
       background: var(--surface-light);
       -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
-    h1 { font-size: clamp(32px, 4.5vw, 46px); font-weight: 600; line-height: 1.1; letter-spacing: -0.025em; }
-    h2 { font-size: clamp(24px, 3vw, 30px); font-weight: 600; line-height: 1.2; letter-spacing: -0.015em; }
-    h3 { font-size: 18px; font-weight: 600; line-height: 1.3; letter-spacing: -0.01em; }
-    p  { text-wrap: pretty; }
+    a { color: inherit; }
+    .mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .num  { font-variant-numeric: tabular-nums; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--px); }
 
-    .pretitle { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brand-accent); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
-    .pretitle::before { content: ''; display: block; width: 20px; height: 1.5px; background: currentColor; flex-shrink: 0; }
-    .pretitle--light { color: rgba(255,255,255,0.55); }
-    .pretitle--warm  { color: var(--accent-warm); }
-
-    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--px); }
-
-    section { padding: 80px 0; }
-    section.alt  { background: var(--surface-soft); }
-    section.dark { background: var(--brand-deep); color: rgba(255,255,255,0.85); }
-
-    /* ── BUTTONS ── */
-    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px; border-radius: var(--radius-btn); font-family: inherit; font-size: 15px; font-weight: 500; text-decoration: none; cursor: pointer; border: none; transition: all .18s ease; letter-spacing: -0.01em; }
-    .btn:focus-visible { outline: 2px solid var(--brand-primary); outline-offset: 3px; }
-    .btn-primary   { background: var(--accent-warm); color: var(--accent-warm-text); }
-    .btn-primary:hover { background: #f5a93a; }
-    .btn-outline-dark { background: transparent; color: var(--brand-primary); border: 1px solid currentColor; }
-    .btn-outline-dark:hover { background: var(--brand-primary); color: #fff; }
-    .btn-lg { padding: 15px 30px; font-size: 16px; }
-
-    /* ── NAV ── */
+    /* ── HEADER (kanonický web styl) ── */
     .site-header { position: sticky; top: 0; z-index: 100; background: var(--brand-deep); }
-    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; max-width: var(--maxw); margin: 0 auto; padding: 0 var(--px); }
     .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
     .logo-wordmark { display: flex; flex-direction: column; align-items: center; line-height: 1; }
     .logo-cnc { font-family: 'Archivo', 'Inter', system-ui, sans-serif; font-weight: 700; font-size: 22px; color: #E6EEF8; letter-spacing: -0.02em; line-height: 1; }
@@ -97,7 +88,8 @@
     .nav-links a { display: block; padding: 8px 13px; font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.65); text-decoration: none; border-radius: 6px; transition: color .15s, background .15s; }
     .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.08); }
     .nav-links a[aria-current="page"] { color: #fff; background: rgba(255,255,255,0.06); }
-    .nav-cta { margin-left: 8px; }
+    .nav-cta { margin-left: 8px; display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: var(--radius-btn); background: var(--accent-warm); color: var(--accent-warm-text); font-size: 14px; font-weight: 600; text-decoration: none; transition: background .15s; }
+    .nav-cta:hover { background: #f5a93a; }
     .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
     .hamburger span { display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px; }
     .mobile-menu { display: none; flex-direction: column; background: var(--brand-deep); border-top: 1px solid rgba(255,255,255,0.08); padding: 16px var(--px) 24px; gap: 4px; }
@@ -105,64 +97,271 @@
     .mobile-menu a { display: block; padding: 10px 12px; font-size: 15px; font-weight: 500; color: rgba(255,255,255,0.8); text-decoration: none; border-radius: 6px; }
     .mobile-menu a:hover { background: rgba(255,255,255,0.07); color: #fff; }
     .mobile-menu a[aria-current="page"] { background: rgba(255,255,255,0.07); color: #fff; }
-    .mobile-menu .btn { margin-top: 8px; width: fit-content; }
+    .mobile-menu .nav-cta { margin-top: 8px; width: fit-content; }
 
     /* ── BREADCRUMB ── */
-    .breadcrumb-wrap { background: var(--surface-soft); border-bottom: 1px solid var(--border-soft); padding: 16px 0; }
-    .breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 13px; color: var(--text-tertiary); }
-    .breadcrumb a { color: var(--text-secondary); text-decoration: none; transition: color .15s; }
-    .breadcrumb a:hover { color: var(--brand-accent); }
-    .breadcrumb-sep { color: var(--text-tertiary); user-select: none; }
-    .breadcrumb [aria-current="page"] { color: var(--text-primary); font-weight: 500; }
+    .crumb-wrap { background: var(--surface-soft); border-bottom: 1px solid var(--line); }
+    .crumb { max-width: var(--maxw); margin: 0 auto; padding: 16px var(--px); font-size: 13px; color: var(--text-tertiary); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .crumb a { color: var(--text-secondary); text-decoration: none; }
+    .crumb a:hover { color: var(--brand-accent); }
+    .crumb .sep { opacity: .45; user-select: none; }
+    .crumb .here { color: var(--text-primary); font-weight: 500; }
 
-    /* ── PRODUCT HERO ── */
-    .product-hero { background: var(--brand-deep); position: relative; overflow: hidden; padding: 72px 0 80px; }
-    .product-hero-grid { position: absolute; inset: 0; z-index: 1; background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 56px 56px; pointer-events: none; }
-    .product-hero-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
-    .product-hero-text h1 { color: #fff; margin-bottom: 18px; }
-    .product-hero-lead { font-size: 17px; color: rgba(255,255,255,0.78); line-height: 1.7; margin-bottom: 28px; max-width: 560px; }
-    .product-hero-meta { display: flex; flex-wrap: wrap; gap: 18px 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); }
-    .product-hero-meta-item { display: flex; flex-direction: column; gap: 2px; }
-    .product-hero-meta-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
-    .product-hero-meta-value { font-size: 15px; font-weight: 500; color: #fff; }
-    .product-hero-img { background: #fff; border-radius: var(--radius-card); padding: 24px; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; box-shadow: 0 24px 60px -20px rgba(0,0,0,0.5); }
-    .product-hero-img img { width: 100%; height: 100%; object-fit: contain; display: block; }
+    /* ── PRODUCT SPLIT HERO ── */
+    .product {
+      display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(380px, 1fr);
+      gap: 36px; padding: 32px var(--px) 56px;
+      max-width: var(--maxw); margin: 0 auto; align-items: start;
+    }
 
-    /* ── DETAIL SECTIONS ── */
-    .detail-head { margin-bottom: 28px; max-width: 760px; }
-    .detail-head h2 { margin-bottom: 10px; }
-    .detail-head p { color: var(--text-secondary); font-size: 15px; }
-    .detail-body { max-width: 820px; font-size: 16px; color: var(--text-primary); line-height: 1.75; }
-    .detail-body p + p { margin-top: 16px; }
-    .detail-body strong { color: var(--text-primary); font-weight: 600; }
+    /* gallery */
+    .gallery { position: relative; }
+    .gallery-main {
+      position: relative; aspect-ratio: 4/3; border-radius: var(--radius-card);
+      background: radial-gradient(120% 80% at 50% 40%, #fbfaf7 0%, #ebe5d8 65%, #ddd5c3 100%);
+      border: 1px solid var(--line); overflow: hidden; box-shadow: var(--shadow-md);
+    }
+    .gallery-img { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 18px; }
+    .gallery-img img { max-width: 92%; max-height: 92%; object-fit: contain; display: block; filter: drop-shadow(0 24px 32px rgba(20,16,8,.22)); }
+    .gallery-badge { position: absolute; top: 14px; left: 14px; display: flex; gap: 6px; flex-wrap: wrap; z-index: 2; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 5px 10px; border-radius: 999px;
+      background: var(--surface-card); border: 1px solid var(--line);
+      font-size: 11.5px; font-weight: 500; color: var(--text-secondary); letter-spacing: .01em;
+    }
+    .chip.solid { background: var(--brand-deep); color: #fff; border-color: var(--brand-deep); }
+    .chip.ok    { background: var(--success-soft); border-color: transparent; color: var(--success-ink); }
+    .chip.accent{ background: var(--accent-soft);  border-color: transparent; color: var(--accent-ink); }
+    .chip .dot  { width: 6px; height: 6px; border-radius: 50%; background: var(--success); }
 
-    /* ── SPEC TABLE ── */
-    .spec-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: var(--radius-card); overflow: hidden; border: 1px solid var(--border-soft); max-width: 720px; }
-    .spec-table caption { caption-side: top; text-align: left; font-size: 13px; color: var(--text-tertiary); padding-bottom: 12px; }
-    .spec-table th, .spec-table td { padding: 14px 18px; text-align: left; font-size: 15px; border-bottom: 1px solid var(--border-soft); }
-    .spec-table thead th { background: var(--brand-deep); color: #fff; font-weight: 600; font-size: 13px; letter-spacing: 0.02em; text-transform: uppercase; }
-    .spec-table tbody tr:nth-child(even) { background: var(--surface-soft); }
-    .spec-table tbody tr:last-child th, .spec-table tbody tr:last-child td { border-bottom: none; }
-    .spec-table tbody th { font-weight: 500; color: var(--text-secondary); width: 50%; }
-    .spec-table tbody td { color: var(--text-primary); font-weight: 500; }
+    /* CSS-art bearing (alt view) */
+    .bearing { width: 62%; aspect-ratio: 1/1; position: relative; filter: drop-shadow(0 30px 30px rgba(20,16,8,.18)); }
+    .bearing::before, .bearing::after { content: ""; position: absolute; inset: 0; border-radius: 50%; }
+    .bearing::before {
+      background: radial-gradient(circle at 30% 25%, #f5f1ea 0%, #c9bfa9 35%, #6a5f49 78%, #2c2620 100%);
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,.25), inset 8px 6px 22px rgba(255,255,255,.35), inset -6px -10px 28px rgba(0,0,0,.35);
+    }
+    .bearing::after {
+      inset: 32%;
+      background: radial-gradient(circle at 65% 70%, #efe9dd 0%, #b9ad94 50%, #5c513d 100%);
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,.3), inset -4px -6px 14px rgba(0,0,0,.35), inset 4px 4px 10px rgba(255,255,255,.4);
+    }
+    .bearing-mid {
+      position: absolute; inset: 22%; border-radius: 50%;
+      background: radial-gradient(circle at 50% 35%, rgba(255,255,255,.55), rgba(0,0,0,.25));
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,.35), inset 0 6px 10px rgba(255,255,255,.4), inset 0 -6px 10px rgba(0,0,0,.4);
+    }
+    .balls { position: absolute; inset: 0; }
+    .ball {
+      position: absolute; width: 9%; aspect-ratio: 1/1; border-radius: 50%;
+      left: 50%; top: 50%;
+      background: radial-gradient(circle at 35% 30%, #ffffff 0%, #d6ccb6 40%, #5c513d 100%);
+      box-shadow: 0 1px 2px rgba(0,0,0,.4);
+      transform: translate(-50%,-50%) rotate(var(--a)) translateY(-37%);
+    }
 
-    /* ── PRICE BOX ── */
-    .price-box { background: #fff; border: 1px solid var(--border-soft); border-radius: var(--radius-card); padding: 36px; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; box-shadow: 0 4px 14px -8px rgba(4,44,83,0.12); }
-    .price-box-info { display: flex; flex-direction: column; gap: 10px; }
-    .price-box-label { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brand-accent); }
-    .price-box-value { font-size: clamp(32px, 4vw, 40px); font-weight: 600; color: var(--text-primary); letter-spacing: -0.02em; line-height: 1; }
-    .price-box-note { font-size: 14px; color: var(--text-secondary); }
-    .availability-pill { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 500; color: var(--success); padding: 6px 12px; background: rgba(99,153,34,0.1); border-radius: 999px; align-self: flex-start; }
-    .availability-pill::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--success); flex-shrink: 0; }
-    .availability-pill--neutral { color: var(--text-secondary); background: rgba(95,94,90,0.08); }
-    .availability-pill--neutral::before { background: var(--text-tertiary); }
-    .price-box-actions { display: flex; flex-direction: column; gap: 10px; align-items: flex-end; }
-    .price-box-actions .btn { white-space: nowrap; }
-    .price-box-actions-note { font-size: 12px; color: var(--text-tertiary); text-align: right; }
+    /* technical drawing */
+    .cross { position: relative; width: 85%; max-width: 420px; height: 180px; margin: 0 auto; }
+    .cross .shaft {
+      position: absolute; left: 0; right: 0; top: 50%; height: 30px; transform: translateY(-50%);
+      background: repeating-linear-gradient(45deg, #d6cfc1 0 6px, #c4bba6 6px 7px);
+      border-top: 1.5px solid var(--text-primary); border-bottom: 1.5px solid var(--text-primary);
+    }
+    .cross .ring { position: absolute; left: 50%; width: 100px; height: 70px; background: var(--surface-card); border: 1.5px solid var(--text-primary); transform: translateX(-50%); }
+    .cross .ring.top { top: 0; border-bottom: 0; border-radius: 8px 8px 0 0; }
+    .cross .ring.bot { bottom: 0; border-top: 0; border-radius: 0 0 8px 8px; }
+    .cross .race-ball {
+      position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+      width: 30px; height: 30px; border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #fff 0%, #d6ccb6 40%, #6a5f49 100%);
+      border: 1.5px solid var(--text-primary); box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    }
+    .dim { position: absolute; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-primary); font-weight: 500; }
+    .dim .lbl { background: var(--surface-card); padding: 1px 6px; border-radius: 3px; }
+    .dim.d-D { left: 50%; top: -22px; transform: translateX(-50%); }
+    .dim.d-d { left: 50%; top: 50%; transform: translate(-50%,-50%); background: var(--surface-card); padding: 1px 6px; border-radius: 3px; }
+    .dim.d-B { right: -54px; top: 50%; transform: translateY(-50%); }
+    .dim.d-angle {
+      left: 50%; bottom: -28px; transform: translateX(-50%);
+      color: var(--brand-deep); background: var(--accent-soft); padding: 2px 10px; border-radius: 999px;
+      font-weight: 600; border: 1px solid rgba(239,159,39,0.35);
+    }
+    .axis { position: absolute; left: 0; right: 0; top: 50%; height: 0; border-top: 1px dashed var(--text-tertiary); }
+
+    .gallery-thumbs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 12px; }
+    .thumb {
+      aspect-ratio: 1/1; border-radius: 10px; border: 1px solid var(--line);
+      background: var(--surface-card); overflow: hidden; position: relative; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color .15s;
+    }
+    .thumb:hover { border-color: var(--line-2); }
+    .thumb.active { border-color: var(--brand-deep); box-shadow: 0 0 0 3px rgba(4,44,83,0.08); }
+    .thumb-photo { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .thumb-label { position: absolute; left: 8px; bottom: 6px; font-size: 10px; color: var(--text-tertiary); letter-spacing: .04em; text-transform: uppercase; font-weight: 600; }
+    .thumb-bearing {
+      width: 62%; aspect-ratio: 1/1; border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #f5f1ea 0%, #c9bfa9 40%, #6a5f49 78%, #2c2620 100%);
+      position: relative;
+    }
+    .thumb-bearing::after { content: ""; position: absolute; inset: 32%; border-radius: 50%; background: radial-gradient(circle at 65% 70%, #efe9dd 0%, #5c513d 100%); }
+    .thumb.drawing { background: repeating-linear-gradient(45deg, #fbfaf7 0 10px, #f4f0e8 10px 11px); }
+    .thumb.drawing::before { content: ""; width: 50%; height: 40%; border: 1.5px solid var(--text-secondary); border-radius: 6px; }
+    .thumb.box { background: repeating-linear-gradient(0deg, #fbfaf7 0 12px, #f0eadd 12px 13px); }
+    .thumb.box::before { content: "BAL."; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-secondary); font-weight: 600; letter-spacing: .06em; }
+
+    /* INFO PANEL (sticky) */
+    .info { position: sticky; top: 84px; display: flex; flex-direction: column; gap: 18px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--brand-accent); font-weight: 600; }
+    .eyebrow .bar { width: 18px; height: 1px; background: var(--brand-accent); }
+    h1.title { font-size: clamp(28px, 3.2vw, 40px); line-height: 1.05; letter-spacing: -.02em; margin: 6px 0 0; font-weight: 700; text-wrap: balance; color: var(--text-primary); }
+    h1.title small { display: block; color: var(--text-tertiary); font-weight: 500; font-size: .65em; margin-top: 6px; font-family: 'JetBrains Mono', monospace; letter-spacing: -0.01em; }
+
+    .pn { display: flex; align-items: center; gap: 8px; margin-top: 14px; }
+    .pn-code { font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 500; padding: 6px 10px; border-radius: 8px; background: var(--surface-card); border: 1px solid var(--line); color: var(--text-primary); }
+    .pn-copy { appearance: none; border: 1px solid var(--line); background: var(--surface-card); width: 32px; height: 32px; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; color: var(--text-secondary); }
+    .pn-copy:hover { border-color: var(--line-2); color: var(--text-primary); }
+    .pn-copy svg { width: 14px; height: 14px; }
+    .pn-copy.copied { color: var(--success); border-color: var(--success); }
+
+    .lede { color: var(--text-secondary); font-size: 15px; margin-top: 14px; text-wrap: pretty; line-height: 1.6; }
+
+    .quickspecs { margin-top: 6px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius-sm); overflow: hidden; }
+    .qs { background: var(--surface-card); padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; }
+    .qs-k { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-tertiary); font-weight: 600; }
+    .qs-v { font-family: 'JetBrains Mono', monospace; font-size: 17px; font-weight: 500; letter-spacing: -.01em; color: var(--text-primary); }
+    .qs-v small { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: var(--text-tertiary); font-weight: 400; margin-left: 2px; }
+
+    .price-card { margin-top: 6px; border: 1px solid var(--line); border-radius: var(--radius-card); background: var(--surface-card); overflow: hidden; box-shadow: var(--shadow-sm); }
+    .price-top { padding: 16px 18px 14px; display: flex; flex-direction: column; gap: 8px; }
+    .price-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+    .price-from { font-size: 11.5px; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: .06em; font-weight: 600; }
+    .price-val { font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: 600; letter-spacing: -.02em; color: var(--text-primary); }
+    .price-vat { font-size: 12px; color: var(--text-tertiary); margin-left: 6px; font-weight: 500; font-family: 'JetBrains Mono', monospace; }
+    .price-note { font-size: 12.5px; color: var(--text-tertiary); line-height: 1.55; }
+    .avail { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-secondary); padding-top: 8px; border-top: 1px dashed var(--line); margin-top: 4px; }
+    .pulse { position: relative; width: 9px; height: 9px; }
+    .pulse::before, .pulse::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--success); }
+    .pulse::after { animation: pulse 1.8s ease-out infinite; }
+    @keyframes pulse { 0% { transform: scale(1); opacity: .6; } 100% { transform: scale(2.6); opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .pulse::after { animation: none; } }
+
+    .ctas { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border-top: 1px solid var(--line); }
+    .btn {
+      appearance: none; border: 0; background: transparent; cursor: pointer;
+      padding: 16px 18px; display: flex; align-items: center; justify-content: center; gap: 8px;
+      font-family: inherit; font-size: 14px; font-weight: 600; text-decoration: none;
+      transition: background .15s;
+    }
+    .btn.primary { background: var(--accent-warm); color: var(--accent-warm-text); }
+    .btn.primary:hover { background: #f5a93a; }
+    .btn.secondary { background: var(--surface-card); color: var(--text-primary); }
+    .btn.secondary:hover { background: var(--surface-tint); }
+    .btn svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+    .reassure {
+      list-style: none; padding: 14px 18px; margin: 0;
+      display: flex; flex-direction: column; gap: 8px;
+      background: linear-gradient(to bottom, transparent, rgba(0,0,0,.015));
+      border-top: 1px solid var(--line);
+      font-size: 12.5px; color: var(--text-secondary);
+    }
+    .reassure li { display: flex; align-items: flex-start; gap: 10px; }
+    .reassure svg { width: 14px; height: 14px; color: var(--brand-accent); flex-shrink: 0; margin-top: 2px; }
+
+    /* ── SECTION CONTAINERS ── */
+    section.bn { border-top: 1px solid var(--line); padding: 64px 0; }
+    section.bn .container { display: grid; grid-template-columns: 240px 1fr; gap: 60px; }
+    .sec-head .eyebrow { display: flex; }
+    .sec-head h2 { font-size: 24px; line-height: 1.2; letter-spacing: -.015em; margin: 8px 0 0; font-weight: 600; text-wrap: balance; color: var(--text-primary); }
+    .sec-head .sticky { position: sticky; top: 84px; }
+    .sec-body { min-width: 0; }
+    .sec-body p { color: var(--text-secondary); font-size: 15px; margin: 0 0 14px; text-wrap: pretty; max-width: 65ch; line-height: 1.7; }
+    .sec-body p strong { color: var(--text-primary); font-weight: 600; }
+    .sec-body p:last-child { margin-bottom: 0; }
+
+    /* ── SPEC TABLE (2-col) ── */
+    .spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--line); border-radius: var(--radius-card); overflow: hidden; background: var(--surface-card); box-shadow: var(--shadow-sm); }
+    .spec-group + .spec-group { border-left: 1px solid var(--line); }
+    .spec-group-h { padding: 14px 20px 8px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-tertiary); font-weight: 600; border-bottom: 1px solid var(--line); background: linear-gradient(to bottom, rgba(0,0,0,.02), transparent); }
+    .spec-row { display: grid; grid-template-columns: 1.2fr 1fr; padding: 11px 20px; border-top: 1px solid var(--line); align-items: baseline; gap: 14px; }
+    .spec-row:first-of-type { border-top: 0; }
+    .spec-row .k { color: var(--text-secondary); font-size: 13.5px; }
+    .spec-row .k small { display: block; color: var(--text-tertiary); font-size: 11.5px; margin-top: 1px; }
+    .spec-row .v { font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 500; text-align: right; color: var(--text-primary); font-variant-numeric: tabular-nums; }
+    .spec-row .v em { font-style: normal; color: var(--text-tertiary); font-weight: 400; margin-left: 3px; font-size: 12px; }
+    .spec-foot { margin-top: 14px; padding: 12px 16px; border: 1px dashed var(--line-2); border-radius: var(--radius-sm); font-size: 12.5px; color: var(--text-tertiary); display: flex; gap: 10px; align-items: flex-start; line-height: 1.55; }
+    .spec-foot svg { width: 14px; height: 14px; margin-top: 3px; color: var(--brand-accent); flex-shrink: 0; }
+
+    /* ── COMPATIBILITY ── */
+    .compat { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; margin-top: 8px; }
+    .compat-card { border: 1px solid var(--line); border-radius: 10px; background: var(--surface-card); padding: 14px; display: flex; flex-direction: column; gap: 4px; }
+    .compat-brand { font-weight: 600; font-size: 14px; letter-spacing: -.005em; color: var(--text-primary); }
+    .compat-models { font-size: 12px; color: var(--text-tertiary); font-family: 'JetBrains Mono', monospace; line-height: 1.5; }
+    .compat-note { margin-top: 14px; font-size: 13px; color: var(--text-tertiary); max-width: 60ch; line-height: 1.6; }
+    .compat-note a { color: var(--brand-accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+    /* ── INQUIRY BLOCK ── */
+    .inquiry { border: 1px solid var(--line); border-radius: var(--radius-card); overflow: hidden; background: var(--surface-card); box-shadow: var(--shadow-md); display: grid; grid-template-columns: 1.2fr 1fr; }
+    .inq-left { padding: 26px 28px; display: flex; flex-direction: column; gap: 14px; border-right: 1px solid var(--line); }
+    .inq-eyebrow { font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-tertiary); font-weight: 600; }
+    .inq-h { font-size: 22px; font-weight: 600; letter-spacing: -.015em; line-height: 1.25; margin: 0; color: var(--text-primary); }
+    .inq-list { list-style: none; margin: 6px 0 0; padding: 0; display: flex; flex-direction: column; gap: 8px; font-size: 13.5px; color: var(--text-secondary); }
+    .inq-list li { display: flex; gap: 10px; align-items: flex-start; line-height: 1.5; }
+    .inq-list svg { width: 14px; height: 14px; color: var(--brand-accent); margin-top: 4px; flex-shrink: 0; }
+    .inq-list em { font-style: normal; color: var(--text-tertiary); }
+    .inq-right { padding: 26px 28px; background: linear-gradient(to bottom, transparent, rgba(4,44,83,0.02)); display: flex; flex-direction: column; gap: 10px; }
+    .inq-price { font-family: 'JetBrains Mono', monospace; font-size: 34px; font-weight: 600; letter-spacing: -.02em; color: var(--text-primary); }
+    .inq-price small { font-size: 13px; color: var(--text-tertiary); margin-left: 8px; font-weight: 500; }
+    .inq-meta { font-size: 12.5px; color: var(--text-tertiary); }
+    .inq-actions { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+    .btn-block { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 18px; border-radius: var(--radius-btn); font-size: 14px; font-weight: 600; text-decoration: none; border: 0; cursor: pointer; font-family: inherit; transition: background .15s, border-color .15s; }
+    .btn-block.primary { background: var(--accent-warm); color: var(--accent-warm-text); }
+    .btn-block.primary:hover { background: #f5a93a; }
+    .btn-block.ghost { background: var(--surface-card); color: var(--text-primary); border: 1px solid var(--line); }
+    .btn-block.ghost:hover { border-color: var(--line-2); background: var(--surface-tint); }
+    .btn-block.dark { background: var(--brand-deep); color: #fff; }
+    .btn-block.dark:hover { background: #06376a; }
+
+    /* ── RELATED ── */
+    .related { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 8px; }
+    .rel-card { border: 1px solid var(--line); border-radius: var(--radius-card); background: var(--surface-card); overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: inherit; transition: transform .15s, box-shadow .15s, border-color .15s; }
+    .rel-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--line-2); }
+    .rel-img { aspect-ratio: 5/3; background: radial-gradient(110% 80% at 50% 40%, #fbfaf7, #e6dfd0); border-bottom: 1px solid var(--line); position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .rel-img img { max-width: 78%; max-height: 78%; object-fit: contain; }
+    .rel-tag { position: absolute; top: 10px; left: 10px; }
+    .rel-body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 4px; }
+    .rel-kind { font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-tertiary); font-weight: 600; }
+    .rel-title { font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 14px; letter-spacing: -.01em; color: var(--text-primary); }
+    .rel-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; font-size: 12.5px; color: var(--text-tertiary); }
+    .rel-foot b { font-family: 'JetBrains Mono', monospace; color: var(--text-primary); font-weight: 600; }
+
+    /* ── BOTTOM CTA ── */
+    .bigcta {
+      margin: 40px auto 64px; max-width: var(--maxw);
+      border-radius: var(--radius-card);
+      background: var(--brand-deep);
+      position: relative; overflow: hidden;
+      padding: 40px 36px; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center;
+      box-shadow: 0 24px 48px -28px rgba(4,44,83,0.4);
+    }
+    .bigcta::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 56px 56px; pointer-events: none; }
+    .bigcta-text { position: relative; z-index: 1; }
+    .bigcta-text .pretitle { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-warm); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+    .bigcta-text .pretitle::before { content: ''; display: block; width: 20px; height: 1.5px; background: currentColor; }
+    .bigcta h3 { font-size: 24px; font-weight: 600; letter-spacing: -.015em; margin: 0 0 6px; color: #fff; text-wrap: balance; max-width: 28ch; }
+    .bigcta p { margin: 0; color: rgba(255,255,255,0.65); max-width: 50ch; font-size: 15px; }
+    .bigcta .actions { display: flex; gap: 10px; position: relative; z-index: 1; }
+    .bigcta .btn-block.ghost { background: rgba(255,255,255,0.06); color: #fff; border-color: rgba(255,255,255,0.18); }
+    .bigcta .btn-block.ghost:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.35); }
+
+    /* ── MOBILE STICKY CTA ── */
+    .mobile-cta { display: none; }
 
     /* ── FOOTER ── */
     .site-footer { background: var(--brand-deep); border-top: 1px solid rgba(255,255,255,0.07); padding: 64px 0 0; }
-    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 56px; }
+    .footer-grid { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--px); display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 56px; }
     .footer-tagline { margin-top: 16px; font-size: 14px; color: rgba(255,255,255,0.4); line-height: 1.65; max-width: 230px; }
     .footer-col h4 { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 18px; }
     .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
@@ -172,7 +371,7 @@
     .footer-contact-item a { color: rgba(255,255,255,0.6); text-decoration: none; }
     .footer-contact-item a:hover { color: #fff; }
     .footer-contact-item svg { flex-shrink: 0; opacity: 0.5; }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding: 20px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .footer-bottom { max-width: var(--maxw); margin: 0 auto; padding: 20px var(--px); border-top: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
     .footer-bottom p { font-size: 13px; color: rgba(255,255,255,0.3); }
     .footer-bottom-links { display: flex; gap: 20px; }
     .footer-bottom-links a { font-size: 13px; color: rgba(255,255,255,0.3); text-decoration: none; }
@@ -180,7 +379,7 @@
 
     /* ── COOKIE BANNER ── */
     .cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; background: #fff; border-top: 1px solid var(--border-soft); padding: 14px var(--px); }
-    .cookie-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .cookie-inner { max-width: var(--maxw); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
     .cookie-text { font-size: 14px; color: var(--text-secondary); flex: 1; min-width: 240px; }
     .cookie-text a { color: var(--brand-accent); text-decoration: underline; }
     .cookie-actions { display: flex; gap: 8px; flex-shrink: 0; }
@@ -191,24 +390,45 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
-      .product-hero-inner { grid-template-columns: 1fr; gap: 40px; }
-      .product-hero-img { max-width: 480px; }
+      .product { grid-template-columns: 1fr; gap: 28px; }
+      .info { position: static; }
+      section.bn .container { grid-template-columns: 1fr; gap: 18px; }
+      .sec-head .sticky { position: static; }
+      .inquiry { grid-template-columns: 1fr; }
+      .inq-left { border-right: 0; border-bottom: 1px solid var(--line); }
+      .related { grid-template-columns: 1fr 1fr; }
+      .bigcta { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
-      .price-box { grid-template-columns: 1fr; gap: 24px; }
-      .price-box-actions { align-items: flex-start; }
-      .price-box-actions-note { text-align: left; }
+      .spec-grid { grid-template-columns: 1fr; }
+      .spec-group + .spec-group { border-left: 0; border-top: 1px solid var(--line); }
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .mobile-cta {
+        display: flex; position: sticky; bottom: 0; z-index: 40;
+        background: color-mix(in srgb, var(--surface-card) 92%, transparent);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-top: 1px solid var(--line);
+        padding: 10px 16px; gap: 10px; align-items: center;
+      }
+      .mobile-cta .price { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+      .mobile-cta .price b { font-family: 'JetBrains Mono', monospace; font-size: 18px; color: var(--text-primary); font-weight: 600; }
+      .mobile-cta .price small { font-size: 11px; color: var(--text-tertiary); }
+      .mobile-cta a { flex-shrink: 0; padding: 12px 18px; border-radius: var(--radius-btn); background: var(--accent-warm); color: var(--accent-warm-text); font-weight: 600; text-decoration: none; font-size: 14px; display: inline-flex; align-items: center; gap: 8px; }
     }
     @media (max-width: 768px) {
-      section { padding: 56px 0; }
-      .product-hero { padding: 48px 0 56px; }
-      .nav-links, .nav-cta { display: none; }
-      .hamburger { display: flex; }
+      section.bn { padding: 48px 0; }
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
       .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
-      .spec-table th, .spec-table td { padding: 12px 14px; font-size: 14px; }
-      .price-box { padding: 28px; }
+      .bigcta { padding: 32px 24px; margin: 24px var(--px) 48px; }
     }
     @media (max-width: 640px) {
+      .related { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .quickspecs { grid-template-columns: 1fr 1fr; }
+      .product { padding: 24px 18px 40px; }
+      h1.title { font-size: 28px; }
       .cookie-inner { flex-direction: column; align-items: flex-start; }
       .cookie-actions { width: 100%; flex-direction: column; }
       .btn-cookie-primary, .btn-cookie-secondary { width: 100%; }
@@ -252,225 +472,406 @@
 
   <!-- HEADER -->
   <header class="site-header">
-    <div class="container">
-      <nav class="nav-inner" role="navigation" aria-label="Hlavní navigace">
-        <a href="../index.html" class="logo" aria-label="cnc-nahradnidily.cz — úvod">
-          <div class="logo-wordmark" aria-hidden="true">
-            <span class="logo-cnc">CNC</span>
-            <span class="logo-domain">nahradnidily.cz</span>
-          </div>
-        </a>
-        <ul class="nav-links" role="list">
-          <li><a href="../index.html">Úvod</a></li>
-          <li><a href="../co-dodavame.html">Co dodáváme</a></li>
-          <li><a href="../jak-poptat.html">Jak poptat</a></li>
-          <li><a href="../ukazky-dilu.html" aria-current="page">Ukázky dílů</a></li>
-          <li><a href="../kontakty.html">Kontakt</a></li>
-        </ul>
-        <a href="../poptavka.html" class="btn btn-primary nav-cta">Poslat poptávku</a>
-        <button class="hamburger" aria-label="Otevřít menu" aria-expanded="false" id="hamburger">
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
-    </div>
+    <nav class="nav-inner" role="navigation" aria-label="Hlavní navigace">
+      <a href="../index.html" class="logo" aria-label="cnc-nahradnidily.cz — úvod">
+        <div class="logo-wordmark" aria-hidden="true">
+          <span class="logo-cnc">CNC</span>
+          <span class="logo-domain">nahradnidily.cz</span>
+        </div>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="../index.html">Úvod</a></li>
+        <li><a href="../co-dodavame.html">Co dodáváme</a></li>
+        <li><a href="../jak-poptat.html">Jak poptat</a></li>
+        <li><a href="../ukazky-dilu.html" aria-current="page">Ukázky dílů</a></li>
+        <li><a href="../kontakty.html">Kontakt</a></li>
+      </ul>
+      <a href="../poptavka.html" class="nav-cta">Poslat poptávku</a>
+      <button class="hamburger" aria-label="Otevřít menu" aria-expanded="false" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
     <nav class="mobile-menu" id="mobile-menu" aria-label="Mobilní navigace">
       <a href="../index.html">Úvod</a>
       <a href="../co-dodavame.html">Co dodáváme</a>
       <a href="../jak-poptat.html">Jak poptat</a>
       <a href="../ukazky-dilu.html" aria-current="page">Ukázky dílů</a>
       <a href="../kontakty.html">Kontakt</a>
-      <a href="../poptavka.html" class="btn btn-primary">Poslat poptávku</a>
+      <a href="../poptavka.html" class="nav-cta">Poslat poptávku</a>
     </nav>
   </header>
 
-  <main>
+  <!-- BREADCRUMB -->
+  <div class="crumb-wrap">
+    <nav class="crumb" aria-label="Drobečková navigace">
+      <a href="../index.html">Úvod</a>
+      <span class="sep" aria-hidden="true">›</span>
+      <a href="../ukazky-dilu.html">Ukázky dílů</a>
+      <span class="sep" aria-hidden="true">›</span>
+      <span class="here" aria-current="page">Ložisko 20TAC47CSUHPN7C</span>
+    </nav>
+  </div>
 
-    <!-- BREADCRUMB -->
-    <div class="breadcrumb-wrap">
-      <div class="container">
-        <nav class="breadcrumb" aria-label="Drobečková navigace">
-          <a href="../index.html">Úvod</a>
-          <span class="breadcrumb-sep" aria-hidden="true">›</span>
-          <a href="../ukazky-dilu.html">Ukázky dílů</a>
-          <span class="breadcrumb-sep" aria-hidden="true">›</span>
-          <span aria-current="page">Ložisko 20TAC47CSUHPN7C</span>
-        </nav>
+  <!-- PRODUCT HERO -->
+  <main class="product">
+
+    <!-- GALLERY -->
+    <div class="gallery">
+      <div class="gallery-main" id="galleryMain">
+        <div class="gallery-badge">
+          <span class="chip ok"><span class="dot"></span>Skladem · odeslání do 24 h</span>
+          <span class="chip">NSK · originál</span>
+        </div>
+        <div class="gallery-img" id="galleryView">
+          <img src="../../Obr%C3%A1zky/Lo%C5%BEiska%20NSK.jpg" alt="Úhlové kontaktní ložisko NSK 20TAC47CSUHPN7C" loading="eager" width="800" height="600">
+        </div>
+      </div>
+      <div class="gallery-thumbs" role="tablist" aria-label="Náhledy">
+        <button class="thumb active" data-view="photo" aria-label="Fotografie">
+          <img class="thumb-photo" src="../../Obr%C3%A1zky/Lo%C5%BEiska%20NSK.jpg" alt="" aria-hidden="true">
+          <span class="thumb-label">01 · foto</span>
+        </button>
+        <button class="thumb" data-view="render" aria-label="3D vizualizace">
+          <div class="thumb-bearing"></div>
+          <span class="thumb-label">02 · render</span>
+        </button>
+        <button class="thumb drawing" data-view="drawing" aria-label="Technický výkres">
+          <span class="thumb-label">03 · výkres</span>
+        </button>
+        <button class="thumb box" data-view="package" aria-label="Balení">
+          <span class="thumb-label">04 · bal.</span>
+        </button>
       </div>
     </div>
 
-    <!-- PRODUCT HERO -->
-    <section class="product-hero" aria-labelledby="product-heading">
-      <div class="product-hero-grid" aria-hidden="true"></div>
-      <div class="container">
-        <div class="product-hero-inner">
-          <div class="product-hero-text">
-            <span class="pretitle pretitle--light">NSK · Úhlové kontaktní ložisko</span>
-            <h1 id="product-heading">Ložisko 20TAC47CSUHPN7C</h1>
-            <p class="product-hero-lead">Vysoce přesné úhlové kontaktní kuličkové ložisko NSK pro podporu kuličkových šroubů v CNC strojích.</p>
-            <div class="product-hero-meta">
-              <div class="product-hero-meta-item">
-                <span class="product-hero-meta-label">Výrobce</span>
-                <span class="product-hero-meta-value">NSK</span>
-              </div>
-              <div class="product-hero-meta-item">
-                <span class="product-hero-meta-label">Označení</span>
-                <span class="product-hero-meta-value">20TAC47CSUHPN7C</span>
-              </div>
-              <div class="product-hero-meta-item">
-                <span class="product-hero-meta-label">Dostupnost</span>
-                <span class="product-hero-meta-value">Skladem · do 24 h</span>
-              </div>
-            </div>
+    <!-- INFO PANEL -->
+    <aside class="info">
+      <div class="eyebrow">
+        <span class="bar"></span>
+        <span>NSK · Úhlové kontaktní ložisko · řada BSTC</span>
+      </div>
+      <h1 class="title">Ložisko pro kuličkové šrouby
+        <small>20TAC47CSUHPN7C</small>
+      </h1>
+
+      <div class="pn">
+        <code class="pn-code" id="pnCode">20TAC47CSUHPN7C</code>
+        <button class="pn-copy" id="copyBtn" title="Kopírovat označení" aria-label="Kopírovat označení do schránky">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="9" y="9" width="11" height="11" rx="2"/>
+            <path d="M5 15V5a2 2 0 0 1 2-2h10"/>
+          </svg>
+        </button>
+      </div>
+
+      <p class="lede">
+        Vysoce přesné úhlové kontaktní kuličkové ložisko NSK pro podporu kuličkových šroubů v CNC strojích.
+      </p>
+
+      <div class="quickspecs" aria-label="Klíčové parametry">
+        <div class="qs"><span class="qs-k">d (vnitřní)</span><span class="qs-v">20<small>mm</small></span></div>
+        <div class="qs"><span class="qs-k">D (vnější)</span><span class="qs-v">47<small>mm</small></span></div>
+        <div class="qs"><span class="qs-k">B (šířka)</span><span class="qs-v">15<small>mm</small></span></div>
+        <div class="qs"><span class="qs-k">Úhel kontaktu</span><span class="qs-v">60<small>°</small></span></div>
+      </div>
+
+      <div class="price-card">
+        <div class="price-top">
+          <div class="price-row">
+            <span class="price-from">Cena od</span>
+            <span class="price-val">1 480 Kč<span class="price-vat">bez DPH</span></span>
           </div>
-          <div class="product-hero-img">
-            <img src="../../Obr%C3%A1zky/Lo%C5%BEiska%20NSK.jpg" alt="Úhlové kontaktní ložisko NSK 20TAC47CSUHPN7C" loading="eager" width="800" height="600">
+          <div class="price-note">Orientační. Konečná cena podle stroje, generace a počtu kusů (typicky se montuje v páru).</div>
+          <div class="avail">
+            <span class="pulse" aria-hidden="true"></span>
+            <span>Skladem · expedice do 24 hodin v pracovní dny</span>
           </div>
         </div>
+        <div class="ctas">
+          <a class="btn primary" href="../poptavka.html?dil=lozisko-20tac47csuhpn7c">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16"/><path d="m14 6 6 6-6 6"/></svg>
+            Poptat tento díl
+          </a>
+          <a class="btn secondary" href="https://wa.me/420702805614" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+        <ul class="reassure">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+            Před objednáním ověřujeme kompatibilitu s vaší konfigurací stroje
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+            Odpovídáme zpravidla do 24 hodin v pracovní dny
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+            Doprava po celé EU · CZ a SK obvykle do 48 h
+          </li>
+        </ul>
       </div>
-    </section>
+    </aside>
+  </main>
 
-    <!-- POPIS PRODUKTU -->
-    <section aria-labelledby="popis-heading">
-      <div class="container">
-        <div class="detail-head">
-          <span class="pretitle">Popis produktu</span>
+  <!-- 01 — POPIS -->
+  <section class="bn" aria-labelledby="popis-heading">
+    <div class="container">
+      <div class="sec-head">
+        <div class="sticky">
+          <span class="eyebrow"><span class="bar"></span>01 · Popis</span>
           <h2 id="popis-heading">K čemu ložisko slouží</h2>
         </div>
-        <div class="detail-body">
-          <p>Ložisko 20TAC47CSUHPN7C je jednořadé úhlové kontaktní kuličkové ložisko NSK řady BSTC, specializované pro axiální zatížení a podporu kuličkových šroubů. Konstrukce s úhlem kontaktu 60° zajišťuje výjimečnou axiální tuhost při zachování schopnosti přenášet i kombinované zatížení. Třída přesnosti PN7C odpovídá ISO P2 a garantuje minimální házivost, což je klíčové pro polohovou přesnost pohonů. Univerzální provedení SUHP umožňuje montáž do párových uspořádání DB, DF nebo DT bez nutnosti speciálního výběru kusů. Ložiska této řady jsou určena pro vysokorychlostní provoz a stabilní teplotní chování v náročných CNC aplikacích.</p>
+      </div>
+      <div class="sec-body">
+        <p>Ložisko <strong>20TAC47CSUHPN7C</strong> je jednořadé úhlové kontaktní kuličkové ložisko NSK řady <strong>BSTC</strong>, specializované pro axiální zatížení a podporu kuličkových šroubů. Konstrukce s úhlem kontaktu <strong>60°</strong> zajišťuje výjimečnou axiální tuhost při zachování schopnosti přenášet i kombinované zatížení.</p>
+        <p>Třída přesnosti <strong>PN7C</strong> odpovídá ISO P2 a garantuje minimální házivost, což je klíčové pro polohovou přesnost pohonů. Univerzální provedení <strong>SUHP</strong> umožňuje montáž do párových uspořádání DB, DF nebo DT bez nutnosti speciálního výběru kusů.</p>
+        <p>Ložiska této řady jsou určena pro <strong>vysokorychlostní provoz</strong> a stabilní teplotní chování v náročných CNC aplikacích.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 — SPECIFIKACE -->
+  <section class="bn" style="padding-top:0" aria-labelledby="spec-heading">
+    <div class="container">
+      <div class="sec-head">
+        <div class="sticky">
+          <span class="eyebrow"><span class="bar"></span>02 · Specifikace</span>
+          <h2 id="spec-heading">Katalogové hodnoty NSK</h2>
         </div>
       </div>
-    </section>
-
-    <!-- TECHNICKÉ PARAMETRY -->
-    <section class="alt" aria-labelledby="params-heading">
-      <div class="container">
-        <div class="detail-head">
-          <span class="pretitle">Technické parametry</span>
-          <h2 id="params-heading">Specifikace</h2>
-          <p>Katalogové hodnoty NSK pro standardní variantu. Pro konkrétní aplikaci doporučujeme ověřit specifikaci ve výkresu stroje.</p>
-        </div>
-        <table class="spec-table">
-          <thead>
-            <tr><th scope="col">Parametr</th><th scope="col">Hodnota</th></tr>
-          </thead>
-          <tbody>
-            <tr><th scope="row">Vnitřní průměr (d)</th><td>20 mm</td></tr>
-            <tr><th scope="row">Vnější průměr (D)</th><td>47 mm</td></tr>
-            <tr><th scope="row">Šířka (B)</th><td>15 mm</td></tr>
-            <tr><th scope="row">Úhel kontaktu</th><td>60°</td></tr>
-            <tr><th scope="row">Dynamická únosnost (Ca)</th><td>27,6 kN</td></tr>
-            <tr><th scope="row">Statická únosnost (C0a)</th><td>53,5 kN</td></tr>
-            <tr><th scope="row">Max. otáčky (mazání tukem)</th><td>6 900 min⁻¹</td></tr>
-            <tr><th scope="row">Max. otáčky (mazání olej-vzduch)</th><td>9 200 min⁻¹</td></tr>
-            <tr><th scope="row">Třída přesnosti</th><td>PN7C (ISO P2)</td></tr>
-            <tr><th scope="row">Hmotnost</th><td>~0,12 kg</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- POUŽITÍ A KOMPATIBILITA -->
-    <section aria-labelledby="pouziti-heading">
-      <div class="container">
-        <div class="detail-head">
-          <span class="pretitle">Použití a kompatibilita</span>
-          <h2 id="pouziti-heading">Kde se ložisko vyskytuje</h2>
-        </div>
-        <div class="detail-body">
-          <p>Ložisko 20TAC47CSUHPN7C se používá jako podpora kuličkových šroubů v osách X, Y, Z u CNC frézovacích center a soustruhů. Typicky se vyskytuje u strojů značek <strong>Kovosvit MAS, ZPS Tajmac, Hurco</strong> a kompatibilních. Standardně se montuje v páru (uspořádání DB nebo DF) pro zachycení obousměrného axiálního zatížení kuličkového šroubu.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CENA A DOSTUPNOST -->
-    <section class="alt" aria-labelledby="cena-heading">
-      <div class="container">
-        <div class="detail-head">
-          <span class="pretitle">Cena a dostupnost</span>
-          <h2 id="cena-heading">Poptat tento díl</h2>
-          <p>Ceny jsou orientační, bez DPH. U konkrétní poptávky ověřujeme dostupnost a generaci stroje.</p>
-        </div>
-        <div class="price-box">
-          <div class="price-box-info">
-            <span class="price-box-label">Cena od</span>
-            <span class="price-box-value">1 480 Kč</span>
-            <span class="price-box-note">bez DPH · doprava řešena individuálně</span>
-            <span class="availability-pill">Skladem · odeslání do 24 hodin</span>
+      <div class="sec-body">
+        <div class="spec-grid">
+          <div class="spec-group">
+            <div class="spec-group-h">Rozměry &amp; geometrie</div>
+            <div class="spec-row"><span class="k">Vnitřní průměr <small>d</small></span><span class="v">20 <em>mm</em></span></div>
+            <div class="spec-row"><span class="k">Vnější průměr <small>D</small></span><span class="v">47 <em>mm</em></span></div>
+            <div class="spec-row"><span class="k">Šířka <small>B</small></span><span class="v">15 <em>mm</em></span></div>
+            <div class="spec-row"><span class="k">Úhel kontaktu <small>α</small></span><span class="v">60 <em>°</em></span></div>
+            <div class="spec-row"><span class="k">Hmotnost <small>typická</small></span><span class="v">≈ 0,12 <em>kg</em></span></div>
           </div>
-          <div class="price-box-actions">
-            <a href="../poptavka.html?dil=lozisko-20tac47csuhpn7c" class="btn btn-primary btn-lg">Poptat tento díl →</a>
-            <span class="price-box-actions-note">Odpovídáme do 24 hodin v pracovní dny</span>
+          <div class="spec-group">
+            <div class="spec-group-h">Únosnost &amp; provoz</div>
+            <div class="spec-row"><span class="k">Dynamická únosnost <small>Ca</small></span><span class="v">27,6 <em>kN</em></span></div>
+            <div class="spec-row"><span class="k">Statická únosnost <small>C₀ₐ</small></span><span class="v">53,5 <em>kN</em></span></div>
+            <div class="spec-row"><span class="k">Max. otáčky <small>mazání tukem</small></span><span class="v">6 900 <em>min⁻¹</em></span></div>
+            <div class="spec-row"><span class="k">Max. otáčky <small>olej–vzduch</small></span><span class="v">9 200 <em>min⁻¹</em></span></div>
+            <div class="spec-row"><span class="k">Třída přesnosti</span><span class="v">PN7C <em>ISO P2</em></span></div>
           </div>
         </div>
+        <div class="spec-foot">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+          <span>Hodnoty odpovídají standardní variantě podle katalogu NSK. Pro konkrétní aplikaci vždy ověřujeme specifikaci ve výkresu stroje a doporučujeme zachovat původní uspořádání párů.</span>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
+  <!-- 03 — KOMPATIBILITA -->
+  <section class="bn" style="padding-top:0" aria-labelledby="compat-heading">
+    <div class="container">
+      <div class="sec-head">
+        <div class="sticky">
+          <span class="eyebrow"><span class="bar"></span>03 · Kompatibilita</span>
+          <h2 id="compat-heading">Kde se ložisko vyskytuje</h2>
+        </div>
+      </div>
+      <div class="sec-body">
+        <p>Ložisko <strong>20TAC47CSUHPN7C</strong> se používá jako podpora kuličkových šroubů v osách <strong>X, Y, Z</strong> u CNC frézovacích center a soustruhů. Standardně se montuje v páru (uspořádání <strong>DB</strong> nebo <strong>DF</strong>) pro zachycení obousměrného axiálního zatížení kuličkového šroubu.</p>
+        <div class="compat">
+          <div class="compat-card">
+            <span class="compat-brand">Kovosvit MAS</span>
+            <span class="compat-models">MCV 750 · MCV 1000 · řada Kuřim</span>
+          </div>
+          <div class="compat-card">
+            <span class="compat-brand">ZPS Tajmac</span>
+            <span class="compat-models">vybrané generace MCFV / MCV</span>
+          </div>
+          <div class="compat-card">
+            <span class="compat-brand">Hurco</span>
+            <span class="compat-models">VMX, VM — vybrané konfigurace</span>
+          </div>
+          <div class="compat-card">
+            <span class="compat-brand">Další</span>
+            <span class="compat-models">a kompatibilní stroje</span>
+          </div>
+        </div>
+        <p class="compat-note">Jeden a tentýž stroj může mít napříč generacemi tři různá ložiska. Před objednáním proto ověřujeme stroj, rok výroby a uspořádání párů. <a href="../jak-poptat.html">Co od vás budeme potřebovat →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 — POPTÁVKA -->
+  <section class="bn" style="padding-top:0;padding-bottom:32px" aria-labelledby="inq-heading">
+    <div class="container">
+      <div class="sec-head">
+        <div class="sticky">
+          <span class="eyebrow"><span class="bar"></span>04 · Poptávka</span>
+          <h2 id="inq-heading">Poptat tento díl</h2>
+        </div>
+      </div>
+      <div class="sec-body">
+        <div class="inquiry">
+          <div class="inq-left">
+            <span class="inq-eyebrow">Co potřebujeme vědět</span>
+            <h3 class="inq-h">Pět údajů, díky kterým montujete jednou.</h3>
+            <ul class="inq-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Výrobce a typ stroje <em>— Kovosvit MAS MCV 750…</em></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Rok výroby nebo sériové číslo stroje</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Foto dílu a štítku na komponentě</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Počet kusů a požadované uspořádání (DB / DF / DT)</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Termín, do kdy díl potřebujete</li>
+            </ul>
+          </div>
+          <div class="inq-right">
+            <span class="inq-eyebrow">Orientační cena</span>
+            <div class="inq-price">od 1 480 Kč<small>/ ks · bez DPH</small></div>
+            <div class="inq-meta">Skladem · expedice do 24 h v pracovní dny</div>
+            <div class="inq-actions">
+              <a class="btn-block primary" href="../poptavka.html?dil=lozisko-20tac47csuhpn7c">Otevřít poptávkový formulář →</a>
+              <a class="btn-block ghost" href="mailto:info@cnc-nahradnidily.cz?subject=Pop%C3%A1vka%20-%20Lo%C5%BEisko%2020TAC47CSUHPN7C">Napsat e-mail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 — SOUVISEJÍCÍ -->
+  <section class="bn" style="padding-top:0" aria-labelledby="rel-heading">
+    <div class="container">
+      <div class="sec-head">
+        <div class="sticky">
+          <span class="eyebrow"><span class="bar"></span>05 · Související</span>
+          <h2 id="rel-heading">Další díly, které mohou být relevantní</h2>
+        </div>
+      </div>
+      <div class="sec-body">
+        <div class="related">
+          <a class="rel-card" href="lozisko-30tac62csuhpn7c.html">
+            <div class="rel-img">
+              <span class="chip ok rel-tag"><span class="dot"></span>skladem</span>
+              <img src="../../Obr%C3%A1zky/Lo%C5%BEiska%20NSK.jpg" alt="Ložisko NSK 30TAC62CSUHPN7C" loading="lazy">
+            </div>
+            <div class="rel-body">
+              <span class="rel-kind">Úhlové ložisko · NSK</span>
+              <span class="rel-title">30TAC62CSUHPN7C</span>
+              <div class="rel-foot"><span>d 30 mm · větší bratr</span><b>od 1 950 Kč</b></div>
+            </div>
+          </a>
+          <a class="rel-card" href="remen-420-5gt-40.html">
+            <div class="rel-img">
+              <span class="chip ok rel-tag"><span class="dot"></span>skladem</span>
+              <img src="../../Obr%C3%A1zky/%C5%98emen.jpg" alt="Ozubený řemen Gates 420-5GT-40" loading="lazy">
+            </div>
+            <div class="rel-body">
+              <span class="rel-kind">Ozubený řemen · Gates</span>
+              <span class="rel-title">420-5GT-40</span>
+              <div class="rel-foot"><span>PowerGrip GT · 5 mm</span><b>od 1 150 Kč</b></div>
+            </div>
+          </a>
+          <a class="rel-card" href="rotacni-pruchodka-kjc-6314-20.html">
+            <div class="rel-img">
+              <span class="chip ok rel-tag"><span class="dot"></span>skladem</span>
+              <img src="../../Obr%C3%A1zky/Rotary%20Joint.png" alt="Rotační průchodka KJC 6314-20" loading="lazy">
+            </div>
+            <div class="rel-body">
+              <span class="rel-kind">Rotační průchodka · KJC</span>
+              <span class="rel-title">KJC 6314-20</span>
+              <div class="rel-foot"><span>CTS · náhrada za Deublin</span><b>od 19 650 Kč</b></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section style="padding:0 var(--px)">
+    <div class="bigcta">
+      <div class="bigcta-text">
+        <span class="pretitle">Konkrétní stroj · konkrétní díl</span>
+        <h3>Máte konkrétní stroj a potřebujete jistotu, že tohle ložisko sedne?</h3>
+        <p>Pošlete typ, rok výroby a foto štítku — ověříme variantu a pošleme nabídku zpravidla do 24 hodin.</p>
+      </div>
+      <div class="actions">
+        <a class="btn-block primary" href="../poptavka.html?dil=lozisko-20tac47csuhpn7c">Poptat tento díl →</a>
+        <a class="btn-block ghost" href="tel:+420702805614">+420 702 805 614</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOBILE STICKY CTA -->
+  <div class="mobile-cta">
+    <div class="price">
+      <b>od 1 480 Kč</b>
+      <small>Skladem · do 24 h</small>
+    </div>
+    <a href="../poptavka.html?dil=lozisko-20tac47csuhpn7c">Poptat →</a>
+  </div>
 
   <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="../index.html" class="logo" aria-label="cnc-nahradnidily.cz">
-            <div class="logo-wordmark" aria-hidden="true">
-              <span class="logo-cnc">CNC</span>
-              <span class="logo-domain">nahradnidily.cz</span>
-            </div>
-          </a>
-          <p class="footer-tagline">Náhradní díly pro CNC obráběcí stroje. Originální díly, repasy, výroba na zakázku.</p>
-        </div>
-
-        <nav class="footer-col" aria-label="Sortiment">
-          <h4>Sortiment</h4>
-          <ul>
-            <li><a href="../co-dodavame.html#originalni">Originální díly</a></li>
-            <li><a href="../co-dodavame.html#repasy">Repasované díly</a></li>
-            <li><a href="../co-dodavame.html#vyroba">Výroba na zakázku</a></li>
-          </ul>
-        </nav>
-
-        <nav class="footer-col" aria-label="Pomoc">
-          <h4>Pomoc</h4>
-          <ul>
-            <li><a href="../jak-poptat.html">Jak poptat</a></li>
-            <li><a href="../ukazky-dilu.html">Ukázky dodaných dílů</a></li>
-            <li><a href="../poptavka.html">Poslat poptávku</a></li>
-          </ul>
-        </nav>
-
-        <div class="footer-col">
-          <h4>Kontakt</h4>
-          <ul>
-            <li>
-              <span class="footer-contact-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                <a href="mailto:info@cnc-nahradnidily.cz">info@cnc-nahradnidily.cz</a>
-              </span>
-            </li>
-            <li>
-              <span class="footer-contact-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.2 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-                <a href="tel:+420702805614">+420 702 805 614</a>
-              </span>
-            </li>
-            <li>
-              <span class="footer-contact-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
-                <a href="https://wa.me/420702805614">WhatsApp</a>
-              </span>
-            </li>
-          </ul>
-        </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo" aria-label="cnc-nahradnidily.cz">
+          <div class="logo-wordmark" aria-hidden="true">
+            <span class="logo-cnc">CNC</span>
+            <span class="logo-domain">nahradnidily.cz</span>
+          </div>
+        </a>
+        <p class="footer-tagline">Náhradní díly pro CNC obráběcí stroje. Originální díly, repasy, výroba na zakázku.</p>
       </div>
 
-      <div class="footer-bottom">
-        <p>© 2026 cnc-nahradnidily.cz</p>
-        <div class="footer-bottom-links">
-          <a href="../ochrana-osobnich-udaju.html">Ochrana osobních údajů</a>
-          <a href="../ochrana-osobnich-udaju.html#cookies">Cookies</a>
-        </div>
+      <nav class="footer-col" aria-label="Sortiment">
+        <h4>Sortiment</h4>
+        <ul>
+          <li><a href="../co-dodavame.html#originalni">Originální díly</a></li>
+          <li><a href="../co-dodavame.html#repasy">Repasované díly</a></li>
+          <li><a href="../co-dodavame.html#vyroba">Výroba na zakázku</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Pomoc">
+        <h4>Pomoc</h4>
+        <ul>
+          <li><a href="../jak-poptat.html">Jak poptat</a></li>
+          <li><a href="../ukazky-dilu.html">Ukázky dodaných dílů</a></li>
+          <li><a href="../poptavka.html">Poslat poptávku</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <ul>
+          <li>
+            <span class="footer-contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:info@cnc-nahradnidily.cz">info@cnc-nahradnidily.cz</a>
+            </span>
+          </li>
+          <li>
+            <span class="footer-contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.2 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <a href="tel:+420702805614">+420 702 805 614</a>
+            </span>
+          </li>
+          <li>
+            <span class="footer-contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+              <a href="https://wa.me/420702805614">WhatsApp</a>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 cnc-nahradnidily.cz</p>
+      <div class="footer-bottom-links">
+        <a href="../ochrana-osobnich-udaju.html">Ochrana osobních údajů</a>
+        <a href="../ochrana-osobnich-udaju.html#cookies">Cookies</a>
       </div>
     </div>
   </footer>
@@ -501,6 +902,52 @@
       link.addEventListener('click', function () {
         mobileMenu.classList.remove('open');
         hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // copy part number
+    const copyBtn = document.getElementById('copyBtn');
+    const pn = document.getElementById('pnCode').textContent.trim();
+    copyBtn.addEventListener('click', async function () {
+      try {
+        await navigator.clipboard.writeText(pn);
+        const original = copyBtn.innerHTML;
+        copyBtn.classList.add('copied');
+        copyBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>';
+        setTimeout(function () {
+          copyBtn.classList.remove('copied');
+          copyBtn.innerHTML = original;
+        }, 1400);
+      } catch (e) {}
+    });
+
+    // gallery thumb switcher
+    const view = document.getElementById('galleryView');
+    const main = document.getElementById('galleryMain');
+    const photoSrc = '../../Obr%C3%A1zky/Lo%C5%BEiska%20NSK.jpg';
+    document.querySelectorAll('.thumb').forEach(function (t) {
+      t.addEventListener('click', function () {
+        document.querySelectorAll('.thumb').forEach(function (x) { x.classList.remove('active'); });
+        t.classList.add('active');
+        const v = t.dataset.view;
+        view.innerHTML = '';
+        main.style.background = '';
+        main.style.backgroundImage = '';
+        main.style.backgroundSize = '';
+        if (v === 'photo') {
+          view.innerHTML = '<img src="' + photoSrc + '" alt="Úhlové kontaktní ložisko NSK 20TAC47CSUHPN7C" loading="eager" width="800" height="600">';
+        } else if (v === 'render') {
+          view.innerHTML = '<div class="bearing" aria-label="Vizualizace úhlového kontaktního ložiska"><div class="bearing-mid"></div><div class="balls">' +
+            [0,30,60,90,120,150,180,210,240,270,300,330].map(function (a) { return '<span class="ball" style="--a:' + a + 'deg"></span>'; }).join('') +
+            '</div></div>';
+        } else if (v === 'drawing') {
+          view.innerHTML = '<div class="cross"><div class="shaft"></div><div class="ring top"></div><div class="ring bot"></div><div class="race-ball"></div><div class="axis"></div><div class="dim d-D"><span class="lbl">⌀D = 47</span></div><div class="dim d-d"><span>⌀d = 20</span></div><div class="dim d-B"><span class="lbl">B = 15</span></div><div class="dim d-angle">α = 60°</div></div>';
+          main.style.background = 'radial-gradient(120% 80% at 50% 40%, #fbfaf7 0%, #f1ece1 100%)';
+          main.style.backgroundImage = 'linear-gradient(rgba(20,16,8,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(20,16,8,.05) 1px, transparent 1px)';
+          main.style.backgroundSize = '24px 24px, 24px 24px';
+        } else {
+          view.innerHTML = '<div style="width:55%;aspect-ratio:1.1/1;background:#f0e9d9;border:1px solid #d6cfc1;border-radius:8px;box-shadow:inset 0 -8px 18px rgba(0,0,0,.06), 0 10px 24px rgba(20,16,8,.12);display:flex;align-items:center;justify-content:center;color:#3a3b3f;font-family:\'JetBrains Mono\',monospace;font-weight:600;letter-spacing:.08em;font-size:14px;text-align:center;padding:18px"><span>NSK<br>20TAC47CSUHPN7C</span></div>';
+        }
       });
     });
 
