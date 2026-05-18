@@ -14,20 +14,37 @@ Hromadně nahradit (zachovat URL-encoding tam, kde je):
 | `https://volchester.github.io/cnc-nahradnidily-web/Obr%C3%A1zky/` | `https://cnc-nahradnidily.cz/Obr%C3%A1zky/` |
 
 **Týká se těchto souborů:**
-- 7 HTML stránek v `HTML_V1/`:
+- 7 HTML stránek v `HTML_V1/` (index, co-dodavame, jak-poptat, ukazky-dilu, kontakty, poptavka, ochrana-osobnich-udaju, 404):
   - `<link rel="canonical" href="...">`
+  - `<link rel="alternate" hreflang="cs" href="...">`
   - `<meta property="og:url" content="...">`
   - `<meta property="og:image" content="...">`
   - `<meta name="twitter:image" content="...">`
-- `HTML_V1/sitemap.xml` — `<loc>` URL všech stránek
+- **14 detail stránek v `HTML_V1/dily/`** (stejná pole jako výše, plus JSON-LD URL):
+  - `dily/lozisko-20tac47csuhpn7c.html`
+  - `dily/lozisko-30tac62csuhpn7c.html`
+  - `dily/lozisko-35tac72bsu-c10.html`
+  - `dily/lozisko-zarn-2557-tn.html`
+  - `dily/rotacni-pruchodka-kjc-6314-20.html`
+  - `dily/davkovac-mazani-cpv2.html`
+  - `dily/indramat-tdm-3-2-030-300-w1.html`
+  - `dily/yaskawa-hv-75ap4.html`
+  - `dily/pneumaticky-valec-sun-3000kg.html`
+  - `dily/remen-400-5gt-40.html`
+  - `dily/remen-420-5gt-40.html`
+  - `dily/remen-450-5gt-40.html`
+  - `dily/repasovani-vretene.html`
+  - `dily/repasovani-kulickoveho-sroubu.html`
+- `HTML_V1/sitemap.xml` — `<loc>` URL všech 21 stránek (7 hlavních + 14 dily)
 - `HTML_V1/robots.txt`:
   - `Sitemap:` direktiva
   - **přepnout `Disallow: /` zpět na `Allow: /`** (staging blokuje indexaci, produkce povoluje)
   - smazat komentář o staging na prvních 3 řádcích
-- JSON-LD strukturovaná data (vzniknou v úkolu 4):
-  - `Organization.url`
-  - `Product.url` / `Product.offers.url`
-  - `BreadcrumbList.itemListElement[*].item`
+- JSON-LD strukturovaná data (ve všech 14 dily/ stránkách):
+  - `Organization.url` / `Service.provider.url`
+  - `Product.image` / `Service.image`
+  - `Product.offers.url` / `Service.offers.url`
+  - `BreadcrumbList.itemListElement[*].item` (3 položky × 14 stránek)
 
 ## 2. Netlify: kam s `/Obrázky/`
 
