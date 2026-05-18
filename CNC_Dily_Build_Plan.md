@@ -258,7 +258,7 @@ Drž se brand identity webu: tmavá námořnická, krémová, oranžová akcent.
 - **Struktura stránky:** **ODLIŠNÁ** — viz sekce „Struktura HTML stránky SLUŽBY" výše. NEPOUŽÍVEJ Product schema, použij **Service schema**.
 - **POZN:** Proces má 7 kroků (NE 6) — krok 6 je „Záběh. Vřeteno zabíháme do 4 000 otáček. Zbytek rozsahu otáček je potřeba zaběhnout přímo na stroji."
 
-### [ ] ÚKOL 14: Repasování kuličkového šroubu (SLUŽBA)
+### [x] ÚKOL 14: Repasování kuličkového šroubu (SLUŽBA)
 
 - **URL:** `HTML_V1/dily/repasovani-kulickoveho-sroubu.html`
 - **Text:** sekce 14
