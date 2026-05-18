@@ -96,4 +96,22 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://volchester.github.io/cnc-nahradnidily-web/HTML_V1/dily/remen-400-5gt-40.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://volchester.github.io/cnc-nahradnidily-web/HTML_V1/dily/remen-420-5gt-40.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://volchester.github.io/cnc-nahradnidily-web/HTML_V1/dily/remen-450-5gt-40.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

@@ -225,7 +225,7 @@ Drž se brand identity webu: tmavá námořnická, krémová, oranžová akcent.
 - **Cena:** `18000` CZK, `PreOrder`
 - **Brand:** Chen Sound (SUN)
 
-### [ ] ÚKOL 10: Řemen 400-5GT-40
+### [x] ÚKOL 10: Řemen 400-5GT-40
 
 - **URL:** `HTML_V1/dily/remen-400-5gt-40.html`
 - **Text:** sekce 10
@@ -233,7 +233,7 @@ Drž se brand identity webu: tmavá námořnická, krémová, oranžová akcent.
 - **Cena:** `1050` CZK, `InStock`
 - **Brand:** Gates (PowerGrip GT)
 
-### [ ] ÚKOL 11: Řemen 420-5GT-40
+### [x] ÚKOL 11: Řemen 420-5GT-40
 
 - **URL:** `HTML_V1/dily/remen-420-5gt-40.html`
 - **Text:** sekce 11
@@ -241,7 +241,7 @@ Drž se brand identity webu: tmavá námořnická, krémová, oranžová akcent.
 - **Cena:** `1150` CZK, `InStock`
 - **Brand:** Gates
 
-### [ ] ÚKOL 12: Řemen 450-5GT-40
+### [x] ÚKOL 12: Řemen 450-5GT-40
 
 - **URL:** `HTML_V1/dily/remen-450-5gt-40.html`
 - **Text:** sekce 12
