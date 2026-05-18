@@ -249,7 +249,7 @@ Drž se brand identity webu: tmavá námořnická, krémová, oranžová akcent.
 - **Cena:** `1250` CZK, `InStock`
 - **Brand:** Gates
 
-### [ ] ÚKOL 13: Repasování vřetene (SLUŽBA — JINÁ STRUKTURA)
+### [x] ÚKOL 13: Repasování vřetene (SLUŽBA — JINÁ STRUKTURA)
 
 - **URL:** `HTML_V1/dily/repasovani-vretene.html`
 - **Text:** sekce 13
