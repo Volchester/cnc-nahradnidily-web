@@ -132,9 +132,11 @@
     .filter-pill:focus-visible { outline: 2px solid var(--brand-primary); outline-offset: 2px; }
 
     .parts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .part-card { border: 1px solid var(--border-soft); border-radius: var(--radius-card); overflow: hidden; background: #fff; display: flex; flex-direction: column; transition: border-color .2s; }
+    .part-card { border: 1px solid var(--border-soft); border-radius: var(--radius-card); overflow: hidden; background: #fff; display: flex; flex-direction: column; transition: border-color .2s; height: 100%; }
     .part-card:hover { border-color: var(--brand-accent); }
-    .part-card[hidden] { display: none; }
+    .part-card[hidden], .part-card-link[hidden] { display: none; }
+    .part-card-link { display: flex; flex-direction: column; text-decoration: none; color: inherit; border-radius: var(--radius-card); }
+    .part-card-link:focus-visible { outline: 2px solid var(--accent-warm); outline-offset: 2px; }
     .part-img { width: 100%; aspect-ratio: 4/3; background: var(--surface-light); overflow: hidden; position: relative; }
     .part-img img { width: 100%; height: 100%; object-fit: contain; display: block; }
     .part-body { padding: 20px 20px 22px; display: flex; flex-direction: column; flex: 1; }
@@ -589,158 +591,172 @@
         <div class="parts-grid" id="parts-grid">
 
           <!-- Pneumatický odepínací válec -->
-          <article class="part-card" data-category="odepinani-upinani-nastroje">
-            <div class="part-img">
-              <img src="../Obr%C3%A1zky/Pneumatic%20boosting%20cylinder%203000kg%2013mm.jpeg" alt="Pneumatický odepínací válec 3000 kg" loading="lazy">
-            </div>
-            <div class="part-body">
-              <div class="part-category">Pneumatický válec</div>
-              <h3>Pneumatický odepínací válec</h3>
-              <p class="part-desc">Pneumatický válec pro odepínání nástroje ve vřeteni — 3000 kg, ⌀ 13 mm. Bez funkčního válce stroj neprovede výměnu nástroje.</p>
-              <div class="part-machine">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
-                <span>Frézovací centra s pneumatickým upínáním · podle stroje</span>
+          <a href="dily/pneumaticky-valec-sun-3000kg.html" class="part-card-link" data-category="odepinani-upinani-nastroje">
+            <article class="part-card">
+              <div class="part-img">
+                <img src="../Obr%C3%A1zky/Pneumatic%20boosting%20cylinder%203000kg%2013mm.jpeg" alt="Pneumatický odepínací válec 3000 kg" loading="lazy">
               </div>
-              <div class="part-footer">
-                <div class="part-price-block">
-                  <span class="part-price">od 18 000 Kč</span>
+              <div class="part-body">
+                <div class="part-category">Pneumatický válec</div>
+                <h3>Pneumatický odepínací válec</h3>
+                <p class="part-desc">Pneumatický válec pro odepínání nástroje ve vřeteni — 3000 kg, ⌀ 13 mm. Bez funkčního válce stroj neprovede výměnu nástroje.</p>
+                <div class="part-machine">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+                  <span>Frézovací centra s pneumatickým upínáním · podle stroje</span>
                 </div>
-                <span class="part-delivery">skladem · do 24 h</span>
+                <div class="part-footer">
+                  <div class="part-price-block">
+                    <span class="part-price">od 18 000 Kč</span>
+                  </div>
+                  <span class="part-delivery">skladem · do 24 h</span>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </a>
 
           <!-- YASKAWA HV-75AP4 -->
-          <article class="part-card" data-category="pohony">
-            <div class="part-img">
-              <img src="../Obr%C3%A1zky/YASKAWA%20HV-75AP4.jpeg" alt="YASKAWA HV-75AP4 servoměnič" loading="lazy">
-            </div>
-            <div class="part-body">
-              <div class="part-category">Servopohon</div>
-              <h3>YASKAWA HV-75AP4</h3>
-              <p class="part-desc">Servoměnič řady HV (high-voltage) pro pohony os a vřeten CNC strojů. Originál nebo repas.</p>
-              <div class="part-machine">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
-                <span>CNC stroje s Yaskawa servopohony · podle generace</span>
+          <a href="dily/yaskawa-hv-75ap4.html" class="part-card-link" data-category="pohony">
+            <article class="part-card">
+              <div class="part-img">
+                <img src="../Obr%C3%A1zky/YASKAWA%20HV-75AP4.jpeg" alt="YASKAWA HV-75AP4 servoměnič" loading="lazy">
               </div>
-              <div class="part-footer">
-                <div class="part-price-block">
-                  <span class="part-price">od 15 000 Kč</span>
+              <div class="part-body">
+                <div class="part-category">Servopohon</div>
+                <h3>YASKAWA HV-75AP4</h3>
+                <p class="part-desc">Servoměnič řady HV (high-voltage) pro pohony os a vřeten CNC strojů. Originál nebo repas.</p>
+                <div class="part-machine">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+                  <span>CNC stroje s Yaskawa servopohony · podle generace</span>
                 </div>
-                <span class="part-delivery">skladem · do 24 h</span>
+                <div class="part-footer">
+                  <div class="part-price-block">
+                    <span class="part-price">od 15 000 Kč</span>
+                  </div>
+                  <span class="part-delivery">skladem · do 24 h</span>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </a>
 
           <!-- Indramat TDM 3.2-030-300-W1 -->
-          <article class="part-card" data-category="pohony">
-            <div class="part-img">
-              <img src="../Obr%C3%A1zky/Indramat%20TDM%203.2-030-300-W1.jpeg" alt="Servoměnič Indramat TDM 3.2-030-300-W1" loading="lazy">
-            </div>
-            <div class="part-body">
-              <div class="part-category">Servopohon</div>
-              <h3>Indramat TDM 3.2-030-300-W1</h3>
-              <p class="part-desc">Repasovaný a testovaný servoměnič. Náhrada za vadný kus, dodání pouze na objednání.</p>
-              <div class="part-machine">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
-                <span>CNC stroje s Indramat servopohony · podle generace</span>
+          <a href="dily/indramat-tdm-3-2-030-300-w1.html" class="part-card-link" data-category="pohony">
+            <article class="part-card">
+              <div class="part-img">
+                <img src="../Obr%C3%A1zky/Indramat%20TDM%203.2-030-300-W1.jpeg" alt="Servoměnič Indramat TDM 3.2-030-300-W1" loading="lazy">
               </div>
-              <div class="part-footer">
-                <div class="part-price-block">
-                  <span class="part-price">od 22 000 Kč</span>
+              <div class="part-body">
+                <div class="part-category">Servopohon</div>
+                <h3>Indramat TDM 3.2-030-300-W1</h3>
+                <p class="part-desc">Repasovaný a testovaný servoměnič. Náhrada za vadný kus, dodání pouze na objednání.</p>
+                <div class="part-machine">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+                  <span>CNC stroje s Indramat servopohony · podle generace</span>
                 </div>
-                <span class="part-delivery part-delivery--neutral">na objednání</span>
+                <div class="part-footer">
+                  <div class="part-price-block">
+                    <span class="part-price">od 22 000 Kč</span>
+                  </div>
+                  <span class="part-delivery part-delivery--neutral">na objednání</span>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </a>
 
           <!-- 1 — Rotační průchodka KJC 6314-20 -->
-          <article class="part-card" data-category="pruchodky">
-            <div class="part-img">
-              <img src="../Obr%C3%A1zky/Rotary%20Joint.png" alt="Rotační průchodka KJC 6314-20" loading="lazy">
-            </div>
-            <div class="part-body">
-              <div class="part-category">Rotační průchodka</div>
-              <h3>KJC 6314-20</h3>
-              <p class="part-desc">Přenos chladicí kapaliny mezi pevnou a rotující částí stroje. KJC je kvalitní alternativa ke značce Deublin se srovnatelnou technickou úrovní za výrazně nižší cenu.</p>
-              <div class="part-machine">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
-                <span>Hurco — chlazení nástroje skrz vřeteno · kompatibilní typy</span>
+          <a href="dily/rotacni-pruchodka-kjc-6314-20.html" class="part-card-link" data-category="pruchodky">
+            <article class="part-card">
+              <div class="part-img">
+                <img src="../Obr%C3%A1zky/Rotary%20Joint.png" alt="Rotační průchodka KJC 6314-20" loading="lazy">
               </div>
-              <div class="part-footer">
-                <div class="part-price-block">
-                  <span class="part-price">od 19 650 Kč</span>
+              <div class="part-body">
+                <div class="part-category">Rotační průchodka</div>
+                <h3>KJC 6314-20</h3>
+                <p class="part-desc">Přenos chladicí kapaliny mezi pevnou a rotující částí stroje. KJC je kvalitní alternativa ke značce Deublin se srovnatelnou technickou úrovní za výrazně nižší cenu.</p>
+                <div class="part-machine">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+                  <span>Hurco — chlazení nástroje skrz vřeteno · kompatibilní typy</span>
                 </div>
-                <span class="part-delivery">skladem · do 24 h</span>
+                <div class="part-footer">
+                  <div class="part-price-block">
+                    <span class="part-price">od 19 650 Kč</span>
+                  </div>
+                  <span class="part-delivery">skladem · do 24 h</span>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </a>
 
           <!-- 2 — Osové ložisko 20TAC47CSUHPN7C -->
-          <article class="part-card" data-category="lozyska">
-            <div class="part-img">
-              <img src="../Obr%C3%A1zky/kosouhle%20lo%C5%BEisko.jpg" alt="Kosoúhlé osové ložisko 20TAC47CSUHPN7C" loading="lazy">
-            </div>
-            <div class="part-body">
-              <div class="part-category">Osové ložisko</div>
-              <h3>20TAC47CSUHPN7C</h3>
-              <p class="part-desc">Kosoúhlé osové ložisko v různých velikostech — velmi oblíbený typ pro CNC stroje. Originální specifikace, cena výrazně pod běžnou nabídkou na trhu.</p>
-              <div class="part-machine">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
-                <span>ZPS Tajmac, Kovosvit MAS, Hurco, Deckel Maho a kompatibilní</span>
+          <a href="dily/lozisko-20tac47csuhpn7c.html" class="part-card-link" data-category="lozyska">
+            <article class="part-card">
+              <div class="part-img">
+                <img src="../Obr%C3%A1zky/kosouhle%20lo%C5%BEisko.jpg" alt="Kosoúhlé osové ložisko 20TAC47CSUHPN7C" loading="lazy">
               </div>
-              <div class="part-footer">
-                <div class="part-price-block">
-                  <span class="part-price">od 1 480 Kč</span>
+              <div class="part-body">
+                <div class="part-category">Osové ložisko</div>
+                <h3>20TAC47CSUHPN7C</h3>
+                <p class="part-desc">Kosoúhlé osové ložisko v různých velikostech — velmi oblíbený typ pro CNC stroje. Originální specifikace, cena výrazně pod běžnou nabídkou na trhu.</p>
+                <div class="part-machine">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+                  <span>ZPS Tajmac, Kovosvit MAS, Hurco, Deckel Maho a kompatibilní</span>
                 </div>
-                <span class="part-delivery">skladem · do 24 h</span>
+                <div class="part-footer">
+                  <div class="part-price-block">
+                    <span class="part-price">od 1 480 Kč</span>
+                  </div>
+                  <span class="part-delivery">skladem · do 24 h</span>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </a>
 
           <!-- Osové ložisko 30ATC62CSUHPN7C -->
-          <article class="part-card" data-category="lozyska">
-            <div class="part-img">
-              <img src="../Obr%C3%A1zky/Lo%C5%BEiska%20NSK.jpg" alt="Kosoúhlé osové ložisko 30ATC62CSUHPN7C" loading="lazy">
-            </div>
-            <div class="part-body">
-              <div class="part-category">Osové ložisko</div>
-              <h3>30ATC62CSUHPN7C</h3>
-              <p class="part-desc">Kosoúhlé osové ložisko NSK, vnitřní průměr 30 mm. Stejná řada jako 20TAC47, jen větší rozměr — pro osy s vyšší zátěží.</p>
-              <div class="part-machine">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
-                <span>ZPS Tajmac, Kovosvit MAS, Hurco a kompatibilní</span>
+          <a href="dily/lozisko-30tac62csuhpn7c.html" class="part-card-link" data-category="lozyska">
+            <article class="part-card">
+              <div class="part-img">
+                <img src="../Obr%C3%A1zky/Lo%C5%BEiska%20NSK.jpg" alt="Kosoúhlé osové ložisko 30ATC62CSUHPN7C" loading="lazy">
               </div>
-              <div class="part-footer">
-                <div class="part-price-block">
-                  <span class="part-price">od 1 950 Kč</span>
+              <div class="part-body">
+                <div class="part-category">Osové ložisko</div>
+                <h3>30ATC62CSUHPN7C</h3>
+                <p class="part-desc">Kosoúhlé osové ložisko NSK, vnitřní průměr 30 mm. Stejná řada jako 20TAC47, jen větší rozměr — pro osy s vyšší zátěží.</p>
+                <div class="part-machine">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+                  <span>ZPS Tajmac, Kovosvit MAS, Hurco a kompatibilní</span>
                 </div>
-                <span class="part-delivery">skladem · do 24 h</span>
+                <div class="part-footer">
+                  <div class="part-price-block">
+                    <span class="part-price">od 1 950 Kč</span>
+                  </div>
+                  <span class="part-delivery">skladem · do 24 h</span>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </a>
 
           <!-- Osové ložisko 35ATC72BSU C-10 -->
-          <article class="part-card" data-category="lozyska">
-            <div class="part-img">
-              <img src="../Obr%C3%A1zky/Lo%C5%BEiska%20NSK.jpg" alt="Kosoúhlé osové ložisko 35ATC72BSU C-10" loading="lazy">
-            </div>
-            <div class="part-body">
-              <div class="part-category">Osové ložisko</div>
-              <h3>35ATC72BSU C-10</h3>
-              <p class="part-desc">Kosoúhlé osové ložisko NSK ve vyšší přesnostní třídě C-10. Vnitřní průměr 35 mm, určené pro stroje s vyššími nároky na přesnost.</p>
-              <div class="part-machine">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
-                <span>osy s vyššími nároky na přesnost · podle stroje</span>
+          <a href="dily/lozisko-35tac72bsu-c10.html" class="part-card-link" data-category="lozyska">
+            <article class="part-card">
+              <div class="part-img">
+                <img src="../Obr%C3%A1zky/Lo%C5%BEiska%20NSK.jpg" alt="Kosoúhlé osové ložisko 35ATC72BSU C-10" loading="lazy">
               </div>
-              <div class="part-footer">
-                <div class="part-price-block">
-                  <span class="part-price">od 2 450 Kč</span>
+              <div class="part-body">
+                <div class="part-category">Osové ložisko</div>
+                <h3>35ATC72BSU C-10</h3>
+                <p class="part-desc">Kosoúhlé osové ložisko NSK ve vyšší přesnostní třídě C-10. Vnitřní průměr 35 mm, určené pro stroje s vyššími nároky na přesnost.</p>
+                <div class="part-machine">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+                  <span>osy s vyššími nároky na přesnost · podle stroje</span>
                 </div>
-                <span class="part-delivery">skladem · do 24 h</span>
+                <div class="part-footer">
+                  <div class="part-price-block">
+                    <span class="part-price">od 2 450 Kč</span>
+                  </div>
+                  <span class="part-delivery">skladem · do 24 h</span>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </a>
 
           <!-- 3 — OKUMA MU400VA - osa X -->
           <article class="part-card" data-category="kryci-plechy">
@@ -765,92 +781,100 @@
           </article>
 
           <!-- 4 — Radioaxiální ložisko ZARN 2557 TN INA -->
-          <article class="part-card" data-category="lozyska">
-            <div class="part-img">
-              <img src="../Obr%C3%A1zky/ZARN_lozisko.jpg" alt="Radioaxiální ložisko ZARN 2557 TN INA" loading="lazy">
-            </div>
-            <div class="part-body">
-              <div class="part-category">Osové ložisko</div>
-              <h3>ZARN 2557 TN INA</h3>
-              <p class="part-desc">Speciální radioaxiální ložisko kombinující válečky a jehličky. Konstrukce zajišťuje velmi přesný chod a současně eliminuje radiální i axiální vůli.</p>
-              <div class="part-machine">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
-                <span>Kovosvit MAS MCV32 — osové ložisko · kompatibilní typy</span>
+          <a href="dily/lozisko-zarn-2557-tn.html" class="part-card-link" data-category="lozyska">
+            <article class="part-card">
+              <div class="part-img">
+                <img src="../Obr%C3%A1zky/ZARN_lozisko.jpg" alt="Radioaxiální ložisko ZARN 2557 TN INA" loading="lazy">
               </div>
-              <div class="part-footer">
-                <div class="part-price-block">
-                  <span class="part-price">od 7 650 Kč</span>
+              <div class="part-body">
+                <div class="part-category">Osové ložisko</div>
+                <h3>ZARN 2557 TN INA</h3>
+                <p class="part-desc">Speciální radioaxiální ložisko kombinující válečky a jehličky. Konstrukce zajišťuje velmi přesný chod a současně eliminuje radiální i axiální vůli.</p>
+                <div class="part-machine">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+                  <span>Kovosvit MAS MCV32 — osové ložisko · kompatibilní typy</span>
                 </div>
-                <span class="part-delivery part-delivery--neutral">dle dostupnosti</span>
+                <div class="part-footer">
+                  <div class="part-price-block">
+                    <span class="part-price">od 7 650 Kč</span>
+                  </div>
+                  <span class="part-delivery part-delivery--neutral">dle dostupnosti</span>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </a>
 
           <!-- Ozubený řemen 400-5GT-40 -->
-          <article class="part-card" data-category="remeny">
-            <div class="part-img">
-              <img src="../Obr%C3%A1zky/%C5%98emen.jpg" alt="Ozubený řemen 400-5GT-40" loading="lazy">
-            </div>
-            <div class="part-body">
-              <div class="part-category">Ozubený řemen</div>
-              <h3>400-5GT-40</h3>
-              <p class="part-desc">Ozubený řemen profilu 5GT, šířka 40 mm, délka 400 mm. Pohon vřetene i posuvových os.</p>
-              <div class="part-machine">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
-                <span>Mazak Variaxis, DMG a kompatibilní</span>
+          <a href="dily/remen-400-5gt-40.html" class="part-card-link" data-category="remeny">
+            <article class="part-card">
+              <div class="part-img">
+                <img src="../Obr%C3%A1zky/%C5%98emen.jpg" alt="Ozubený řemen 400-5GT-40" loading="lazy">
               </div>
-              <div class="part-footer">
-                <div class="part-price-block">
-                  <span class="part-price">od 1 050 Kč</span>
+              <div class="part-body">
+                <div class="part-category">Ozubený řemen</div>
+                <h3>400-5GT-40</h3>
+                <p class="part-desc">Ozubený řemen profilu 5GT, šířka 40 mm, délka 400 mm. Pohon vřetene i posuvových os.</p>
+                <div class="part-machine">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+                  <span>Mazak Variaxis, DMG a kompatibilní</span>
                 </div>
-                <span class="part-delivery">skladem · do 24 h</span>
+                <div class="part-footer">
+                  <div class="part-price-block">
+                    <span class="part-price">od 1 050 Kč</span>
+                  </div>
+                  <span class="part-delivery">skladem · do 24 h</span>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </a>
 
           <!-- 5 — Ozubený řemen 420-5GT-40 -->
-          <article class="part-card" data-category="remeny">
-            <div class="part-img">
-              <img src="../Obr%C3%A1zky/%C5%98emen.jpg" alt="Ozubený řemen 420-5GT-40" loading="lazy">
-            </div>
-            <div class="part-body">
-              <div class="part-category">Ozubený řemen</div>
-              <h3>420-5GT-40</h3>
-              <p class="part-desc">Ozubený řemen profilu 5GT, šířka 40 mm. Pohon vřetene i posuvových os. Dodáváme v originální specifikaci nebo jako ověřenou alternativu.</p>
-              <div class="part-machine">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
-                <span>Mazak Variaxis, DMG a kompatibilní</span>
+          <a href="dily/remen-420-5gt-40.html" class="part-card-link" data-category="remeny">
+            <article class="part-card">
+              <div class="part-img">
+                <img src="../Obr%C3%A1zky/%C5%98emen.jpg" alt="Ozubený řemen 420-5GT-40" loading="lazy">
               </div>
-              <div class="part-footer">
-                <div class="part-price-block">
-                  <span class="part-price">od 1 150 Kč</span>
+              <div class="part-body">
+                <div class="part-category">Ozubený řemen</div>
+                <h3>420-5GT-40</h3>
+                <p class="part-desc">Ozubený řemen profilu 5GT, šířka 40 mm. Pohon vřetene i posuvových os. Dodáváme v originální specifikaci nebo jako ověřenou alternativu.</p>
+                <div class="part-machine">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+                  <span>Mazak Variaxis, DMG a kompatibilní</span>
                 </div>
-                <span class="part-delivery">skladem · do 24 h</span>
+                <div class="part-footer">
+                  <div class="part-price-block">
+                    <span class="part-price">od 1 150 Kč</span>
+                  </div>
+                  <span class="part-delivery">skladem · do 24 h</span>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </a>
 
           <!-- Ozubený řemen 450-5GT-40 -->
-          <article class="part-card" data-category="remeny">
-            <div class="part-img">
-              <img src="../Obr%C3%A1zky/%C5%98emen.jpg" alt="Ozubený řemen 450-5GT-40" loading="lazy">
-            </div>
-            <div class="part-body">
-              <div class="part-category">Ozubený řemen</div>
-              <h3>450-5GT-40</h3>
-              <p class="part-desc">Ozubený řemen profilu 5GT, šířka 40 mm, délka 450 mm. Pohon vřetene i posuvových os.</p>
-              <div class="part-machine">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
-                <span>Mazak Variaxis, DMG a kompatibilní</span>
+          <a href="dily/remen-450-5gt-40.html" class="part-card-link" data-category="remeny">
+            <article class="part-card">
+              <div class="part-img">
+                <img src="../Obr%C3%A1zky/%C5%98emen.jpg" alt="Ozubený řemen 450-5GT-40" loading="lazy">
               </div>
-              <div class="part-footer">
-                <div class="part-price-block">
-                  <span class="part-price">od 1 250 Kč</span>
+              <div class="part-body">
+                <div class="part-category">Ozubený řemen</div>
+                <h3>450-5GT-40</h3>
+                <p class="part-desc">Ozubený řemen profilu 5GT, šířka 40 mm, délka 450 mm. Pohon vřetene i posuvových os.</p>
+                <div class="part-machine">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+                  <span>Mazak Variaxis, DMG a kompatibilní</span>
                 </div>
-                <span class="part-delivery">skladem · do 24 h</span>
+                <div class="part-footer">
+                  <div class="part-price-block">
+                    <span class="part-price">od 1 250 Kč</span>
+                  </div>
+                  <span class="part-delivery">skladem · do 24 h</span>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </a>
 
           <!-- Repasování kuličkového šroubu -->
           <article class="part-card" data-category="srouby">
@@ -876,26 +900,28 @@
           </article>
 
           <!-- 8 — Dávkovací jednotka mazání CPV2 -->
-          <article class="part-card" data-category="mazani">
-            <div class="part-img">
-              <img src="../Obr%C3%A1zky/D%C3%A1vkova%C4%8D%20maz%C3%A1n%C3%AD%20CPV2.png" alt="Dávkovací jednotka centrálního mazání CPV2" loading="lazy">
-            </div>
-            <div class="part-body">
-              <div class="part-category">Mazání</div>
-              <h3>Dávkovací jednotka mazání CPV2</h3>
-              <p class="part-desc">Dávkovací jednotka centrálního mazání — řízené dávkování oleje do vedení a vřetena. Náhrada za opotřebovaný nebo netěsnící kus.</p>
-              <div class="part-machine">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
-                <span>stroje s centrálním mazáním · podle typu</span>
+          <a href="dily/davkovac-mazani-cpv2.html" class="part-card-link" data-category="mazani">
+            <article class="part-card">
+              <div class="part-img">
+                <img src="../Obr%C3%A1zky/D%C3%A1vkova%C4%8D%20maz%C3%A1n%C3%AD%20CPV2.png" alt="Dávkovací jednotka centrálního mazání CPV2" loading="lazy">
               </div>
-              <div class="part-footer">
-                <div class="part-price-block">
-                  <span class="part-price">od 240 Kč</span>
+              <div class="part-body">
+                <div class="part-category">Mazání</div>
+                <h3>Dávkovací jednotka mazání CPV2</h3>
+                <p class="part-desc">Dávkovací jednotka centrálního mazání — řízené dávkování oleje do vedení a vřetena. Náhrada za opotřebovaný nebo netěsnící kus.</p>
+                <div class="part-machine">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+                  <span>stroje s centrálním mazáním · podle typu</span>
                 </div>
-                <span class="part-delivery">skladem · do 24 h</span>
+                <div class="part-footer">
+                  <div class="part-price-block">
+                    <span class="part-price">od 240 Kč</span>
+                  </div>
+                  <span class="part-delivery">skladem · do 24 h</span>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </a>
 
           <!-- 9 — VF5120-3D-30 -->
           <article class="part-card" data-category="odepinani-upinani-nastroje">
@@ -1092,7 +1118,7 @@
 
     // filtr kategorií
     const pills = document.querySelectorAll('.filter-pill');
-    const cards = document.querySelectorAll('#parts-grid .part-card');
+    const cards = document.querySelectorAll('#parts-grid > [data-category]');
     const emptyMsg = document.getElementById('parts-empty');
     pills.forEach(function (pill) {
       pill.addEventListener('click', function () {

@@ -307,6 +307,17 @@
       background: rgba(255,255,255,0.06);
     }
 
+    .hero-card-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      border-radius: 10px;
+    }
+    .hero-card-link:focus-visible {
+      outline: 2px solid var(--accent-warm);
+      outline-offset: 2px;
+    }
+
     .hero-card-img {
       position: relative;
       width: 100%;
@@ -664,6 +675,17 @@
       transition: border-color .2s;
     }
     .part-card:hover { border-color: var(--brand-accent); }
+
+    .part-card-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      border-radius: var(--radius-card);
+    }
+    .part-card-link:focus-visible {
+      outline: 2px solid var(--accent-warm);
+      outline-offset: 2px;
+    }
 
     .part-img {
       width: 100%;
@@ -1047,65 +1069,73 @@
           <!-- Grid 2×2 produktových karet vpravo -->
           <div class="hero-cards-grid" aria-label="Vybrané díly skladem">
 
-            <article class="hero-card">
-              <div class="hero-card-img">
-                <img
-                  src="../Obr%C3%A1zky/Pneumatic%20boosting%20cylinder%203000kg%2013mm.jpeg"
-                  alt="Pneumatický odepínací válec"
-                  loading="eager"
-                >
-                <span class="hero-card-badge">skladem</span>
-              </div>
-              <div class="hero-card-body">
-                <div class="hero-card-name">Pneumatický odepínací válec</div>
-                <div class="hero-card-price">od 18 000 Kč</div>
-              </div>
-            </article>
+            <a href="dily/pneumaticky-valec-sun-3000kg.html" class="hero-card-link">
+              <article class="hero-card">
+                <div class="hero-card-img">
+                  <img
+                    src="../Obr%C3%A1zky/Pneumatic%20boosting%20cylinder%203000kg%2013mm.jpeg"
+                    alt="Pneumatický odepínací válec"
+                    loading="eager"
+                  >
+                  <span class="hero-card-badge">skladem</span>
+                </div>
+                <div class="hero-card-body">
+                  <div class="hero-card-name">Pneumatický odepínací válec</div>
+                  <div class="hero-card-price">od 18 000 Kč</div>
+                </div>
+              </article>
+            </a>
 
-            <article class="hero-card">
-              <div class="hero-card-img">
-                <img
-                  src="../Obr%C3%A1zky/YASKAWA%20HV-75AP4.jpeg"
-                  alt="YASKAWA HV-75AP4"
-                  loading="eager"
-                >
-                <span class="hero-card-badge">skladem</span>
-              </div>
-              <div class="hero-card-body">
-                <div class="hero-card-name">YASKAWA HV-75AP4</div>
-                <div class="hero-card-price">od 15 000 Kč</div>
-              </div>
-            </article>
+            <a href="dily/yaskawa-hv-75ap4.html" class="hero-card-link">
+              <article class="hero-card">
+                <div class="hero-card-img">
+                  <img
+                    src="../Obr%C3%A1zky/YASKAWA%20HV-75AP4.jpeg"
+                    alt="YASKAWA HV-75AP4"
+                    loading="eager"
+                  >
+                  <span class="hero-card-badge">skladem</span>
+                </div>
+                <div class="hero-card-body">
+                  <div class="hero-card-name">YASKAWA HV-75AP4</div>
+                  <div class="hero-card-price">od 15 000 Kč</div>
+                </div>
+              </article>
+            </a>
 
-            <article class="hero-card">
-              <div class="hero-card-img">
-                <img
-                  src="../Obr%C3%A1zky/Rotary%20Joint.png"
-                  alt="Rotary Joint KJC 6314-20"
-                  loading="eager"
-                >
-                <span class="hero-card-badge">skladem</span>
-              </div>
-              <div class="hero-card-body">
-                <div class="hero-card-name">Rotary Joint KJC 6314-20</div>
-                <div class="hero-card-price">od 19 650 Kč</div>
-              </div>
-            </article>
+            <a href="dily/rotacni-pruchodka-kjc-6314-20.html" class="hero-card-link">
+              <article class="hero-card">
+                <div class="hero-card-img">
+                  <img
+                    src="../Obr%C3%A1zky/Rotary%20Joint.png"
+                    alt="Rotary Joint KJC 6314-20"
+                    loading="eager"
+                  >
+                  <span class="hero-card-badge">skladem</span>
+                </div>
+                <div class="hero-card-body">
+                  <div class="hero-card-name">Rotary Joint KJC 6314-20</div>
+                  <div class="hero-card-price">od 19 650 Kč</div>
+                </div>
+              </article>
+            </a>
 
-            <article class="hero-card">
-              <div class="hero-card-img">
-                <img
-                  src="../Obr%C3%A1zky/Lo%C5%BEiska%20NSK.jpg"
-                  alt="Ložisko NSK 20TAC47CSUHPN7C"
-                  loading="eager"
-                >
-                <span class="hero-card-badge">skladem</span>
-              </div>
-              <div class="hero-card-body">
-                <div class="hero-card-name">Ložisko NSK 20TAC47CSUHPN7C</div>
-                <div class="hero-card-price">od 1 480 Kč</div>
-              </div>
-            </article>
+            <a href="dily/lozisko-20tac47csuhpn7c.html" class="hero-card-link">
+              <article class="hero-card">
+                <div class="hero-card-img">
+                  <img
+                    src="../Obr%C3%A1zky/Lo%C5%BEiska%20NSK.jpg"
+                    alt="Ložisko NSK 20TAC47CSUHPN7C"
+                    loading="eager"
+                  >
+                  <span class="hero-card-badge">skladem</span>
+                </div>
+                <div class="hero-card-body">
+                  <div class="hero-card-name">Ložisko NSK 20TAC47CSUHPN7C</div>
+                  <div class="hero-card-price">od 1 480 Kč</div>
+                </div>
+              </article>
+            </a>
 
           </div>
 
@@ -1425,64 +1455,70 @@
         <div class="parts-grid">
 
           <!-- Karta 1: Rotační průchodka -->
-          <article class="part-card">
-            <div class="part-img">
-              <img
-                src="../Obr%C3%A1zky/Rotary%20Joint.png"
-                alt="Rotační průchodka KJC 6314-20"
-                loading="lazy"
-              >
-            </div>
-            <div class="part-body">
-              <div class="part-category">Rotační průchodka</div>
-              <h3>KJC 6314-20</h3>
-              <div class="part-machine">DMG, Kovosvit MAS, Hurco a kompatibilní</div>
-              <div class="part-footer">
-                <div class="part-price">od 19 650 Kč</div>
-                <div class="part-delivery">skladem · do 24 h</div>
+          <a href="dily/rotacni-pruchodka-kjc-6314-20.html" class="part-card-link">
+            <article class="part-card">
+              <div class="part-img">
+                <img
+                  src="../Obr%C3%A1zky/Rotary%20Joint.png"
+                  alt="Rotační průchodka KJC 6314-20"
+                  loading="lazy"
+                >
               </div>
-            </div>
-          </article>
+              <div class="part-body">
+                <div class="part-category">Rotační průchodka</div>
+                <h3>KJC 6314-20</h3>
+                <div class="part-machine">DMG, Kovosvit MAS, Hurco a kompatibilní</div>
+                <div class="part-footer">
+                  <div class="part-price">od 19 650 Kč</div>
+                  <div class="part-delivery">skladem · do 24 h</div>
+                </div>
+              </div>
+            </article>
+          </a>
 
           <!-- Karta 2: Osové ložisko -->
-          <article class="part-card">
-            <div class="part-img">
-              <img
-                src="../Obr%C3%A1zky/Lo%C5%BEiska%20NSK.jpg"
-                alt="Osové ložisko 20TAC47CSUHPN7C"
-                loading="lazy"
-              >
-            </div>
-            <div class="part-body">
-              <div class="part-category">Osové ložisko</div>
-              <h3>20TAC47CSUHPN7C</h3>
-              <div class="part-machine">Kovosvit MAS, ZPS Tajmac a kompatibilní</div>
-              <div class="part-footer">
-                <div class="part-price">od 1 480 Kč</div>
-                <div class="part-delivery">skladem · do 24 h</div>
+          <a href="dily/lozisko-20tac47csuhpn7c.html" class="part-card-link">
+            <article class="part-card">
+              <div class="part-img">
+                <img
+                  src="../Obr%C3%A1zky/Lo%C5%BEiska%20NSK.jpg"
+                  alt="Osové ložisko 20TAC47CSUHPN7C"
+                  loading="lazy"
+                >
               </div>
-            </div>
-          </article>
+              <div class="part-body">
+                <div class="part-category">Osové ložisko</div>
+                <h3>20TAC47CSUHPN7C</h3>
+                <div class="part-machine">Kovosvit MAS, ZPS Tajmac a kompatibilní</div>
+                <div class="part-footer">
+                  <div class="part-price">od 1 480 Kč</div>
+                  <div class="part-delivery">skladem · do 24 h</div>
+                </div>
+              </div>
+            </article>
+          </a>
 
           <!-- Karta 3: Řemen -->
-          <article class="part-card">
-            <div class="part-img">
-              <img
-                src="../Obr%C3%A1zky/%C5%98emen.jpg"
-                alt="Ozubený řemen 420-5GT-40"
-                loading="lazy"
-              >
-            </div>
-            <div class="part-body">
-              <div class="part-category">Ozubený řemen</div>
-              <h3>420-5GT-40</h3>
-              <div class="part-machine">DMG, Hermle a kompatibilní</div>
-              <div class="part-footer">
-                <div class="part-price">od 1 150 Kč</div>
-                <div class="part-delivery">skladem · do 24 h</div>
+          <a href="dily/remen-420-5gt-40.html" class="part-card-link">
+            <article class="part-card">
+              <div class="part-img">
+                <img
+                  src="../Obr%C3%A1zky/%C5%98emen.jpg"
+                  alt="Ozubený řemen 420-5GT-40"
+                  loading="lazy"
+                >
               </div>
-            </div>
-          </article>
+              <div class="part-body">
+                <div class="part-category">Ozubený řemen</div>
+                <h3>420-5GT-40</h3>
+                <div class="part-machine">DMG, Hermle a kompatibilní</div>
+                <div class="part-footer">
+                  <div class="part-price">od 1 150 Kč</div>
+                  <div class="part-delivery">skladem · do 24 h</div>
+                </div>
+              </div>
+            </article>
+          </a>
 
         </div>
       </div>
