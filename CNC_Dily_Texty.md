@@ -570,7 +570,7 @@ Formuláře obsahují všechna pole potřebná pro přesnou výrobu — rozměry
 
 ### Cena a dodací doba
 
-**Od 19 800 Kč bez DPH** za střední velikost plechového krytu. Cena lamelových měchů začíná na nižších částkách v závislosti na rozměrech. **Přesnou cenu** stanovíme po obdržení vyplněného specifikačního formuláře. **Dodací doba** typicky 2–4 týdny od potvrzení objednávky.
+**Od 9 500 Kč bez DPH** pro menší kryt nebo měch. **Přesnou cenu** stanovíme po obdržení vyplněného specifikačního formuláře — podle rozměrů, materiálu a počtu kusů. **Dodací doba** typicky 2–4 týdny od potvrzení objednávky.
 
 ---
 
@@ -666,6 +666,6 @@ SMC VF5120-3D-03 se nasazuje v pneumatických systémech CNC strojů — typicky
 | 12 | Řemen 450-5GT-40 | od 1 250 Kč | 24 h |
 | 13 | Repasování vřetene | od 110 000 Kč | 2–3 týdny |
 | 14 | Repasování kuličkového šroubu | od 12 000 Kč | 2–3 týdny |
-| 15 | Krycí plechy a měchy na míru | od 19 800 Kč | 2–4 týdny |
+| 15 | Krycí plechy a měchy na míru | od 9 500 Kč | 2–4 týdny |
 | 16 | EUCHNER SN02D12-502-MC1688 | od 3 800 Kč | 24 h |
 | 17 | SMC VF5120-3D-03 | od 2 200 Kč | skladem / 1 týden |
