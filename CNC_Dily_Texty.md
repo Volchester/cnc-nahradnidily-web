@@ -268,7 +268,7 @@ Stykač HV-75AP4 se vyskytuje u CNC frézovacích center a soustruhů s dual-win
 
 ### Cena a dostupnost
 
-**Od 15 000 Kč bez DPH.** Doba dodání 1–3 týdny.
+**Od 15 000 Kč bez DPH.** Skladem, odeslání do 24 hodin.
 
 ---
 
@@ -298,7 +298,7 @@ Pneumatic boosting cylinder SUN se nasazuje jako upínací prvek pro CNC stroje 
 
 ### Cena a dostupnost
 
-**Od 18 000 Kč bez DPH.** Doba dodání 1–2 týdny.
+**Od 18 000 Kč bez DPH.** Skladem, odeslání do 24 hodin.
 
 ---
 
@@ -659,8 +659,8 @@ SMC VF5120-3D-03 se nasazuje v pneumatických systémech CNC strojů — typicky
 | 5 | Rotační průchodka KJC 6314-20 | od 19 650 Kč | 24 h |
 | 6 | Dávkovač mazání CPV2 | od 240 Kč | 24 h |
 | 7 | Indramat TDM 3.2-030-300-W1 | od 22 000 Kč | 1–2 týdny |
-| 8 | Yaskawa HV-75AP4 | od 15 000 Kč | 1–3 týdny |
-| 9 | Pneumatic cylinder SUN 3000kg-13mm | od 18 000 Kč | 1–2 týdny |
+| 8 | Yaskawa HV-75AP4 | od 15 000 Kč | 24 h |
+| 9 | Pneumatic cylinder SUN 3000kg-13mm | od 18 000 Kč | 24 h |
 | 10 | Řemen 400-5GT-40 | od 1 050 Kč | 24 h |
 | 11 | Řemen 420-5GT-40 | od 1 150 Kč | 24 h |
 | 12 | Řemen 450-5GT-40 | od 1 250 Kč | 24 h |
