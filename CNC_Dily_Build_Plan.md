@@ -302,7 +302,7 @@ Drž se brand identity webu: tmavá námořnická, krémová, oranžová akcent.
 - **Brand:** EUCHNER
 - **Struktura:** standardní DÍL (jako úkoly 1–12).
 
-### [ ] ÚKOL 17: SMC VF5120-3D-03
+### [x] ÚKOL 17: SMC VF5120-3D-03
 
 - **URL:** `HTML_V1/dily/smc-vf5120-3d-03.html`
 - **Text:** sekce 17 v `CNC_Dily_Texty.md`
