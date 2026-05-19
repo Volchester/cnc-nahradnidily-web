@@ -49,6 +49,9 @@
 | 12 | `remen-450-5gt-40.html` |
 | 13 | `repasovani-vretene.html` |
 | 14 | `repasovani-kulickoveho-sroubu.html` |
+| 15 | `kryci-plechy-a-mechy-na-miru.html` |
+| 16 | `euchner-sn02d12-502-mc1688.html` |
+| 17 | `smc-vf5120-3d-03.html` |
 
 ### Struktura HTML stránky DÍLU (sekce 1–12)
 
@@ -266,31 +269,78 @@ Drž se brand identity webu: tmavá námořnická, krémová, oranžová akcent.
 - **Cena:** `12000` CZK
 - **Struktura:** stejná jako u úkolu 13 (Service schema, 5 kroků procesu)
 
-### [ ] ÚKOL 15: FINAL — integrace rozcestníku a kontrola
+### [x] ÚKOL 15: Krycí plechy a měchy na míru (SERVISNĚ-PRODEJNÍ STRÁNKA — třetí typ)
+
+- **URL:** `HTML_V1/dily/kryci-plechy-a-mechy-na-miru.html`
+- **Text:** sekce 15 v `CNC_Dily_Texty.md`
+- **Obrázek:** ověř ve `/Obrázky/`. Vhodná je fotka lamelového měchu nebo plechového krytu — pokud máš teleskopické kryty z dřívějška (`teleskopické kryty.jpeg`), použij tu. Pokud chybí, napiš mi.
+- **PDF přílohy:** uživatel uploadnul 2 specifikační formuláře, které je třeba uložit do `HTML_V1/Dokumenty/` (vytvoř adresář):
+    - `Specifikace_krytu_lamelove.pdf`
+    - `Specifikace_krytu_plechove.pdf`
+- **Cena:** `od 19 800 Kč` (referenční pro střední plechový kryt — text vysvětluje, že přesná cena vždy podle rozměrů)
+- **Struktura:** **TŘETÍ TYP STRÁNKY** — ani Product ani standardní Service. Je to servisně-prodejní propagace s důrazem na **download PDF formulářů**:
+    1. Hlavička + navigace
+    2. Breadcrumb: `Úvod > Ukázky dílů > Krycí plechy a měchy na míru`
+    3. Hero — h1, lead, velký obrázek lamelového měchu nebo plechového krytu
+    4. Sekce „O službě" (2 odstavce textu)
+    5. Sekce „Co dodáváme" — bullet list (lamelové měchy, plechové kryty, pomocné komponenty)
+    6. Sekce „Materiály a provedení" — tabulka materiálových možností
+    7. Sekce „Jak proces probíhá" — 6 kroků
+    8. Sekce **„Ke stažení"** — 2 velká tlačítka pro download PDF formulářů (důležitá CTA, designově prominentní)
+    9. Sekce „Pro koho je služba určena" — bullet list
+    10. Sekce „Cena a dodací doba" + CTA „Poptat krycí plechy" → `../poptavka.html?dil=kryci-plechy-na-miru`
+    11. Patička
+- **JSON-LD:** Service schema (provider Šikl Servis, areaServed CZ/SK/EU, offers price 19800 CZK)
+- **POZN:** Záměrně NEzmiňovat konkrétní stroje (jako Okuma MU400VA) — text je univerzální, servisně-prodejní.
+
+### [ ] ÚKOL 16: EUCHNER SN02D12-502-MC1688
+
+- **URL:** `HTML_V1/dily/euchner-sn02d12-502-mc1688.html`
+- **Text:** sekce 16 v `CNC_Dily_Texty.md`
+- **Obrázek:** ověř ve `/Obrázky/` — fotka EUCHNER spínače. Pokud chybí, napiš mi a navrhni řešení (generický obrázek bezpečnostního spínače, placeholder).
+- **Cena:** `3800` CZK, `PreOrder` (1–2 týdny)
+- **Brand:** EUCHNER
+- **Struktura:** standardní DÍL (jako úkoly 1–12).
+
+### [ ] ÚKOL 17: SMC VF5120-3D-03
+
+- **URL:** `HTML_V1/dily/smc-vf5120-3d-03.html`
+- **Text:** sekce 17 v `CNC_Dily_Texty.md`
+- **Obrázek:** ověř ve `/Obrázky/` — fotka SMC ventilu. Pokud chybí, napiš mi.
+- **Cena:** `2200` CZK, `InStock` (skladem nebo 1 týden)
+- **Brand:** SMC
+- **Struktura:** standardní DÍL (jako úkoly 1–12).
+
+### [ ] ÚKOL 18: FINAL — integrace rozcestníku a kontrola
 
 **ČÁST 1 — Aktualizuj `ukazky-dilu.html` (rozcestník):**
 - Každá karta dílu má teď mít odkaz na detail stránku v `/dily/`
 - Přidej 2 nové karty pro služby (Repasování vřetene, Repasování kuličkového šroubu) — ideálně v samostatné sekci „Služby" nebo na konci seznamu
+- Přidej 1 kartu pro servisně-prodejní stránku **Krycí plechy a měchy na míru** — také do sekce „Služby"
+- Přidej karty pro **EUCHNER SN02D12** a **SMC VF5120-3D-03** mezi díly
 - Karty pneumatický válec, Yaskawa, Indramat — pokud na `ukazky-dilu.html` ještě nejsou, přidej je
 - Sjednoť ceny ve všech kartách s detail stránkami (zdroj pravdy je `CNC_Dily_Texty.md`)
 
 **ČÁST 2 — Aktualizuj `index.html`:**
 - 4 karty v hero sekci (Pneumatic, Yaskawa, Rotary Joint, NSK ložisko) — každá má teď odkaz na detail stránku v `/dily/`
 - Sekce „Co jsme nedávno řešili" — propoj s detail stránkami
+- Zvaž, jestli na index přidat zmínku o **službě výroby krytů na míru** — buď v sekci „Co dodáváme" nebo jako samostatnou marketingovou poznámku
 
 **ČÁST 3 — Kontrola konzistence:**
-- Ověř, že všech 14 nových stránek má identickou hlavičku a patičku
+- Ověř, že všech 17 nových stránek má identickou hlavičku a patičku
 - Ověř, že breadcrumb na všech stránkách funguje (linky)
 - Ověř hreflang cs ve `<head>` všech nových stránek
-- Ověř, že `sitemap.xml` obsahuje všech 14 nových URL
+- Ověř, že `sitemap.xml` obsahuje všech 17 nových URL
+- Ověř, že 2 PDF soubory jsou v `HTML_V1/Dokumenty/` a download tlačítka na úkolu 15 fungují
 
 **ČÁST 4 — Update `MIGRATION.md`:**
-- Přidej seznam všech 14 nových URL k přepsání domény při migraci na produkci.
+- Přidej seznam všech 17 nových URL k přepsání domény při migraci na produkci
+- Přidej i 2 PDF URL k migraci
 
 **ČÁST 5 — Vykaž statistiku:**
 - Kolik souborů přibylo
 - Kolik commitů celkem
-- Seznam všech 14 URL na GH Pages s cache-busterem pro finální ověření
+- Seznam všech 17 URL na GH Pages s cache-busterem pro finální ověření
 
 ---
 

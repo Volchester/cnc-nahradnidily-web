@@ -1,6 +1,6 @@
 # CNC Náhradní díly — Texty produktových stránek
 
-**Stav:** KOMPLETNÍ — všechny 4 dávky (14 dílů/služeb)  
+**Stav:** KOMPLETNÍ — všech 5 dávek (17 dílů/služeb)  
 **Datum:** 16. 5. 2026  
 **Společná poznámka:** Všechny uvedené ceny jsou bez DPH. Hodnoty technických parametrů odpovídají katalogovým hodnotám výrobce pro standardní variantu. Pro konkrétní aplikaci doporučujeme ověřit specifikaci ve výkresu stroje.
 
@@ -507,7 +507,146 @@ Výsledek: stroj získá zpět původní polohovou přesnost a vůli (často nam
 
 ---
 
-**KONEC DOKUMENTU.** Všech 14 dílů a služeb zpracováno.
+**KONEC DÁVKY 4.** Pokračování v dávce 5 (následně doplněno): Krycí plechy a měchy na míru, EUCHNER bezpečnostní spínač, SMC pneumatický ventil.
+
+---
+
+## DÁVKA 5 — DOPLNĚNÍ (servisní stránka + 2 díly)
+
+---
+
+## 15. Krycí plechy a měchy na míru
+
+> **POZNÁMKA PRO TVŮRCE STRÁNKY:** Tato stránka má jinou strukturu než ostatní díly — je to **servisně-prodejní propagace** schopnosti vyrobit krycí plechy a měchy na zakázku. Žádný konkrétní stroj ani konkrétní díl nezmiňovat. Cílem je, aby návštěvník stáhl PDF specifikační formulář, vyplnil ho a poslal.
+
+**Krátký lead:** Plechové a lamelové krycí měchy CNC strojů — výroba na míru přesně podle vašich rozměrů a podmínek provozu. Konkurenční cena, kvalita prověřená v praxi.
+
+### O službě
+
+Krycí měchy a plechové kryty chrání nejcitlivější části CNC stroje — vodicí kolejnice, kuličkové šrouby a teleskopické osy — před třískami, chladicí kapalinou, prachem a olejem. Po několika letech intenzivního provozu však krycí prvky stárnou: rozpadají se švy lamelových měchů, deformují se plechové kryty, opotřebovávají stěrače. Důsledkem je proniknutí nečistot k pohyblivým částem stroje a postupné poškození vedení nebo šroubů — opravy, které stojí desítky až stovky tisíc korun.
+
+Nabízíme **výrobu krytů přesně na míru vašeho stroje**, bez ohledu na výrobce nebo typ. Zákazníci jsou strojírenské firmy po celé České republice a Slovensku, kde se nám podařilo dodávat krycí prvky pro CNC frézky, soustruhy i obráběcí centra značek Kovosvit MAS, ZPS Tajmac, Hurco, Hermle, DMG, Okuma, Mazak a další. Cena je obvykle výrazně nižší než nákup originálního krytu od výrobce stroje, a dodací doba kratší.
+
+### Co dodáváme
+
+- **Lamelové měchy** (bellow type) — textilní měch s plastovými nebo kovovými lamelami, vhodný pro většinu rozsahů zdvihu
+- **Plechové kryty** (telescopic steel covers) — teleskopické plechové sekce, vhodné pro vyšší teplotní zatížení a agresivnější prostředí
+- **Pomocné komponenty** — stěrače, kluzáky, valečky, kluzné patky, příruby
+
+### Materiály a provedení
+
+| Komponenta | Možnosti |
+|---|---|
+| **Plech** | Uhlíková ocel / nerez 201 / nerez 304 |
+| **Tloušťka plechu** | dle požadavku (typicky 0,5 / 0,8 / 1,0 / 1,2 mm) |
+| **Textilní materiál (měchy)** | PLY / nylon / na míru |
+| **Povrchová úprava** | PVC / PU / na míru |
+| **Stěrače** | NBR / PU / mosaz |
+| **Kluzáky** | nylon / mosaz |
+| **Lamely** | 0,3 / 0,5 mm — pevné nebo kloubové |
+| **Spojení měchu** | lepené / svařované HF / šité |
+
+### Jak proces probíhá
+
+1. **Stáhněte specifikační formulář** (viz tlačítka níže). Vyberte typ — lamelový měch nebo plechový kryt — podle toho, co potřebujete vyměnit.
+2. **Vyplňte formulář** — rozměry, materiál, počet článků, podmínky provozu, osu (X/Y/Z) a další parametry. Čím přesnější specifikace, tím přesnější nabídka. Pokud něco nevíte, pole nechte prázdné — doplníme po konzultaci.
+3. **Pošlete formulář** na **info@cnc-nahradnidily.cz** nebo přes WhatsApp **+420 702 805 614**. Můžete přiložit fotky stávajícího krytu — pomáhá to při identifikaci.
+4. **Konzultace a kalkulace.** Do několika pracovních dnů obdržíte cenovou nabídku s rozsahem prací a dodací dobou.
+5. **Výroba** po vašem odsouhlasení.
+6. **Dodání** přímo k vám do dílny. Pokud chcete, zajistíme i montáž.
+
+### Ke stažení
+
+- **[📄 Specifikační formulář — lamelové měchy (PDF)](Specifikace_krytu_lamelove.pdf)**
+- **[📄 Specifikační formulář — plechové kryty (PDF)](Specifikace_krytu_plechove.pdf)**
+
+Formuláře obsahují všechna pole potřebná pro přesnou výrobu — rozměry, materiály, podmínky provozu i technické schéma.
+
+### Pro koho je služba určena
+
+- **Údržbáři a servisní technici** — výměna opotřebených krytů na strojích, které jsou stále v provozu
+- **Strojírenské firmy** — modernizace dílny, hromadná výměna krytů na více strojích
+- **Výrobci strojů** — sériové dodávky krytů pro vlastní produkci
+
+### Cena a dodací doba
+
+**Od 19 800 Kč bez DPH** za střední velikost plechového krytu. Cena lamelových měchů začíná na nižších částkách v závislosti na rozměrech. **Přesnou cenu** stanovíme po obdržení vyplněného specifikačního formuláře. **Dodací doba** typicky 2–4 týdny od potvrzení objednávky.
+
+---
+
+## 16. EUCHNER SN02D12-502-MC1688
+
+**Krátký lead:** Polohový bezpečnostní spínač EUCHNER řady SN s pružinovým ovládáním a kombinací 2 NO + 2 NC kontaktů — pro hlídání ochranných krytů CNC strojů.
+
+### Popis produktu
+
+Polohový bezpečnostní spínač EUCHNER SN02D12-502-MC1688 je elektromechanický spínač určený pro hlídání polohy ochranných dveří, krytů a bezpečnostních zábradlí na CNC obráběcích strojích. Otevření krytu mechanicky rozpojí kontakty NC a uzavře kontakty NO, čímž signalizuje řídicímu systému stroje stav „dveře otevřené" — řízení následně bezpečně zastaví pohyb os, vypne vřeteno nebo přepne stroj do servisního režimu podle bezpečnostní logiky.
+
+Označení **SN02D12-502** je standardní katalogové číslo EUCHNER — *SN* označuje řadu, *02D12* konkrétní provedení mechaniky a kontaktů (2 NO + 2 NC, ovládání pružinou, kovová hlava), *502* značí specifický typ ovládacího prvku. Suffix **MC1688** je interní zákaznický kód, který identifikuje konkrétní konfiguraci pro daného výrobce strojů. EUCHNER spínače mají dlouhou životnost (řádově miliony cyklů) a vyhovují bezpečnostním normám EN ISO 13849 a EN 60947.
+
+### Technické parametry
+
+| Parametr | Hodnota |
+|---|---|
+| Typ | Polohový bezpečnostní spínač |
+| Řada | EUCHNER SN |
+| Konfigurace kontaktů | 2 NO + 2 NC |
+| Ovládání | pružinové (snap-action) |
+| Jmenovitý proud | 6 A |
+| Jmenovité napětí | 230 V AC / 24 V DC |
+| Krytí | IP67 |
+| Pracovní teplota | −25 až +80 °C |
+| Životnost (mechanická) | typicky 1 milion cyklů |
+| Bezpečnostní kategorie | dle EN ISO 13849 |
+
+### Použití a kompatibilita
+
+Spínač SN02D12-502-MC1688 se používá v ochranných obvodech CNC frézovacích center, soustruhů a obráběcích center pro hlídání polohy ochranných krytů a servisních dveří. Vyskytuje se u značek **Kovosvit MAS, ZPS Tajmac, Hurco, Hermle, DMG, Okuma** a kompatibilních strojů. Spínače EUCHNER jsou v evropském strojírenství de facto standardem pro bezpečnostní aplikace — výměna 1:1 je obvykle bezproblémová, pokud zachováte stejné typové označení.
+
+### Cena a dostupnost
+
+**Od 3 800 Kč bez DPH.** Doba dodání 1–2 týdny (objednávkové).
+
+---
+
+## 17. SMC VF5120-3D-03
+
+**Krátký lead:** Pětiportový pneumatický elektromagnetický ventil SMC řady VF5000 s DIN konektorem — pro řízení pneumatických válců a upínacích systémů CNC strojů.
+
+### Popis produktu
+
+SMC VF5120-3D-03 je pětiportový pilotovaný elektromagnetický ventil řady VF5000, určený pro řízení pneumatických aktuátorů (válců, upínačů, manipulátorů) v průmyslových strojích. Funkčně se jedná o **2-polohový 5/2 ventil** — má 5 portů (1 přívodní, 2 výstupní, 2 odvětrávací) a 2 stabilní polohy řízené elektromagnetickou cívkou. Při neaktivovaném stavu drží polohu pružinou, při aktivaci cívky 24 V (nebo jiné napětí dle objednávky) přepne na druhou polohu.
+
+Označení dekóduje takto: **VF5120** = série VF5000 jednocívkový provedení, **3** = napěťová varianta (vyhřejte si na štítku — typicky 200 V AC / 110 V AC / 24 V DC), **D** = DIN konektor s ovládacím kabelem, **03** = velikost přípojek Rc 3/8". Ventil obsahuje **vestavěný usměrňovač** pro AC napětí a **vestavěný strainer** v pilotní části, který chrání před nečistotami ve stlačeném vzduchu.
+
+### Technické parametry
+
+| Parametr | Hodnota |
+|---|---|
+| Typ | 5/2 pilotovaný elektromagnetický ventil |
+| Řada | SMC VF5000 |
+| Velikost přípojek | Rc 3/8" (port size 03) |
+| Připojení | tělesově ported (body ported) |
+| Pracovní tlak | 0,15 – 0,7 MPa (1,5 – 7 bar) |
+| Spotřeba | 1,55 W (standard) / 0,5 W (energy-saving) |
+| Elektrické připojení | DIN konektor |
+| Napětí cívky | 24 V DC / 110 V AC / 200 V AC (dle objednávky — ověřit na štítku) |
+| Manuální override | netoaktivní (push-type) |
+| Krytí | IP65 |
+
+### Použití a kompatibilita
+
+SMC VF5120-3D-03 se nasazuje v pneumatických systémech CNC strojů — typicky pro řízení upínacích válců, manipulátorů automatické výměny nástrojů (ATC), dveřních pneumatických mechanismů a dalších pomocných pneumatických funkcí. Vyskytuje se u širokého spektra značek strojů — **Kovosvit MAS, ZPS Tajmac, Hurco, Hermle, DMG, Okuma, Mazak** a kompatibilních. SMC je v průmyslové pneumatice de facto standardem — výměna 1:1 je obvykle bezproblémová.
+
+**POZOR:** Před objednávkou doporučujeme ověřit napěťovou variantu (24 V DC vs. 110 V AC vs. 200 V AC) podle štítku stávajícího ventilu — záměna povede k poškození cívky. Pokud si nejste jistí, pošlete nám fotku štítku.
+
+### Cena a dostupnost
+
+**Od 2 200 Kč bez DPH.** Skladem nebo do 1 týdne (běžně dostupné u dovozců).
+
+---
+
+**KONEC DOKUMENTU.** Všech 17 dílů a služeb zpracováno.
 
 ## Souhrnný přehled cen
 
@@ -527,3 +666,6 @@ Výsledek: stroj získá zpět původní polohovou přesnost a vůli (často nam
 | 12 | Řemen 450-5GT-40 | od 1 250 Kč | 24 h |
 | 13 | Repasování vřetene | od 110 000 Kč | 2–3 týdny |
 | 14 | Repasování kuličkového šroubu | od 12 000 Kč | 2–3 týdny |
+| 15 | Krycí plechy a měchy na míru | od 19 800 Kč | 2–4 týdny |
+| 16 | EUCHNER SN02D12-502-MC1688 | od 3 800 Kč | 1–2 týdny |
+| 17 | SMC VF5120-3D-03 | od 2 200 Kč | skladem / 1 týden |
