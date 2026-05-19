@@ -605,7 +605,7 @@ Spínač SN02D12-502-MC1688 se používá v ochranných obvodech CNC frézovací
 
 ### Cena a dostupnost
 
-**Od 3 800 Kč bez DPH.** Doba dodání 1–2 týdny (objednávkové).
+**Od 3 800 Kč bez DPH.** Skladem, odeslání do 24 hodin.
 
 ---
 
@@ -667,5 +667,5 @@ SMC VF5120-3D-03 se nasazuje v pneumatických systémech CNC strojů — typicky
 | 13 | Repasování vřetene | od 110 000 Kč | 2–3 týdny |
 | 14 | Repasování kuličkového šroubu | od 12 000 Kč | 2–3 týdny |
 | 15 | Krycí plechy a měchy na míru | od 19 800 Kč | 2–4 týdny |
-| 16 | EUCHNER SN02D12-502-MC1688 | od 3 800 Kč | 1–2 týdny |
+| 16 | EUCHNER SN02D12-502-MC1688 | od 3 800 Kč | 24 h |
 | 17 | SMC VF5120-3D-03 | od 2 200 Kč | skladem / 1 týden |
