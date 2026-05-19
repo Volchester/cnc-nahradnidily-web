@@ -293,7 +293,7 @@ Drž se brand identity webu: tmavá námořnická, krémová, oranžová akcent.
 - **JSON-LD:** Service schema (provider Šikl Servis, areaServed CZ/SK/EU, offers price 19800 CZK)
 - **POZN:** Záměrně NEzmiňovat konkrétní stroje (jako Okuma MU400VA) — text je univerzální, servisně-prodejní.
 
-### [ ] ÚKOL 16: EUCHNER SN02D12-502-MC1688
+### [x] ÚKOL 16: EUCHNER SN02D12-502-MC1688
 
 - **URL:** `HTML_V1/dily/euchner-sn02d12-502-mc1688.html`
 - **Text:** sekce 16 v `CNC_Dily_Texty.md`

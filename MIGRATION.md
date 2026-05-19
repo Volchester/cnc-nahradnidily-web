@@ -20,7 +20,7 @@ Hromadně nahradit (zachovat URL-encoding tam, kde je):
   - `<meta property="og:url" content="...">`
   - `<meta property="og:image" content="...">`
   - `<meta name="twitter:image" content="...">`
-- **15 detail stránek v `HTML_V1/dily/`** (stejná pole jako výše, plus JSON-LD URL):
+- **16 detail stránek v `HTML_V1/dily/`** (stejná pole jako výše, plus JSON-LD URL):
   - `dily/lozisko-20tac47csuhpn7c.html`
   - `dily/lozisko-30tac62csuhpn7c.html`
   - `dily/lozisko-35tac72bsu-c10.html`
@@ -36,10 +36,11 @@ Hromadně nahradit (zachovat URL-encoding tam, kde je):
   - `dily/repasovani-vretene.html`
   - `dily/repasovani-kulickoveho-sroubu.html`
   - `dily/kryci-plechy-a-mechy-na-miru.html`
+  - `dily/euchner-sn02d12-502-mc1688.html`
 - **PDF přílohy v `HTML_V1/Dokumenty/`** (interní odkazy v `kryci-plechy-a-mechy-na-miru.html` — relativní `../Dokumenty/...`, žádné absolutní URL k přepsání. Po migraci dostupné na `https://cnc-nahradnidily.cz/Dokumenty/...`):
   - `Dokumenty/Specifikace_krytu_lamelove.pdf`
   - `Dokumenty/Specifikace_krytu_plechove.pdf`
-- `HTML_V1/sitemap.xml` — `<loc>` URL všech 22 stránek (7 hlavních + 15 dily)
+- `HTML_V1/sitemap.xml` — `<loc>` URL všech 23 stránek (7 hlavních + 16 dily)
 - `HTML_V1/robots.txt`:
   - `Sitemap:` direktiva
   - **přepnout `Disallow: /` zpět na `Allow: /`** (staging blokuje indexaci, produkce povoluje)
