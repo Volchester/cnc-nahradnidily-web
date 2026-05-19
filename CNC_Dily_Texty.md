@@ -642,7 +642,7 @@ SMC VF5120-3D-03 se nasazuje v pneumatických systémech CNC strojů — typicky
 
 ### Cena a dostupnost
 
-**Od 2 200 Kč bez DPH.** Skladem nebo do 1 týdne (běžně dostupné u dovozců).
+**Od 2 200 Kč bez DPH.** Skladem, odeslání do 24 hodin.
 
 ---
 
@@ -668,4 +668,4 @@ SMC VF5120-3D-03 se nasazuje v pneumatických systémech CNC strojů — typicky
 | 14 | Repasování kuličkového šroubu | od 12 000 Kč | 2–3 týdny |
 | 15 | Krycí plechy a měchy na míru | od 9 500 Kč | 2–4 týdny |
 | 16 | EUCHNER SN02D12-502-MC1688 | od 3 800 Kč | 24 h |
-| 17 | SMC VF5120-3D-03 | od 2 200 Kč | skladem / 1 týden |
+| 17 | SMC VF5120-3D-03 | od 2 200 Kč | 24 h |
