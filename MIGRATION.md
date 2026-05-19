@@ -46,11 +46,11 @@ Hromadně nahradit (zachovat URL-encoding tam, kde je):
   - `Sitemap:` direktiva
   - **přepnout `Disallow: /` zpět na `Allow: /`** (staging blokuje indexaci, produkce povoluje)
   - smazat komentář o staging na prvních 3 řádcích
-- JSON-LD strukturovaná data (ve všech 14 dily/ stránkách):
+- JSON-LD strukturovaná data (ve všech 17 dily/ stránkách):
   - `Organization.url` / `Service.provider.url`
   - `Product.image` / `Service.image`
   - `Product.offers.url` / `Service.offers.url`
-  - `BreadcrumbList.itemListElement[*].item` (3 položky × 14 stránek)
+  - `BreadcrumbList.itemListElement[*].item` (3 položky × 17 stránek)
 
 ## 2. Netlify: kam s `/Obrázky/`
 

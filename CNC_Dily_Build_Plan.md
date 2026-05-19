@@ -311,7 +311,7 @@ Drž se brand identity webu: tmavá námořnická, krémová, oranžová akcent.
 - **Brand:** SMC
 - **Struktura:** standardní DÍL (jako úkoly 1–12).
 
-### [ ] ÚKOL 18: FINAL — integrace rozcestníku a kontrola
+### [x] ÚKOL 18: FINAL — integrace rozcestníku a kontrola
 
 **ČÁST 1 — Aktualizuj `ukazky-dilu.html` (rozcestník):**
 - Každá karta dílu má teď mít odkaz na detail stránku v `/dily/`
