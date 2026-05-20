@@ -83,6 +83,27 @@ Tento soubor Claude Code automaticky načítá při každém startu sezení v ad
 - **Při migraci** hromadný find & replace URL napříč HTML + sitemap.xml + robots.txt + JSON-LD — viz `MIGRATION.md`
 - **404.html:** na GH Pages není auto-discovered (GitHub hledá v rootu repa, ne v `HTML_V1/`); po migraci na Netlify s `publish="HTML_V1"` bude `/404.html` aktivní automaticky
 
+## Stav nasazení — živý checklist
+
+> **Claude: tenhle seznam udržuj aktuální.** Když nějaký bod dokončíme, přepiš `[ ]` na `[x]` a doplň datum/poznámku. Při startu sezení podle něj uživateli připomeň, co zbývá. Detailní kontext je v projektové paměti (`web-cnc-nahradnidily-projekt.md`).
+
+**Hotovo:**
+- [x] Web nasazen na Netlify — `https://magenta-sorbet-f1a326.netlify.app/` (2026-05-20)
+- [x] Migrace URL staging→produkce, přesun `Obrázky/` do `HTML_V1/`, `robots.txt` na `Allow: /` (2026-05-20)
+- [x] Poptávkový formulář ověřeně funguje (deploy „without cache" → Netlify detekoval `poptavka`, odeslání projde) (2026-05-20)
+- [x] Netlify Forms notifikace nastavena na `cncnahradnidily@gmail.com`, notifikační e-mail dorazil (2026-05-20)
+
+**Zbývá (vše manuální, mimo kód):**
+- [ ] Připojit doménu `cnc-nahradnidily.cz` v Netlify dashboardu (DNS / nameservery)
+- [ ] **E-mail domény u Vedos** (info@ nefunguje od přechodu z Webnode):
+  - [ ] zřídit u Vedos schránku/přesměrování `info@cnc-nahradnidily.cz` → `cncnahradnidily@gmail.com` + správné MX záznamy
+  - [ ] Gmail „Odesílat jako" `info@` přes SMTP Vedos (port 587 TLS; ověřovací mail dorazí přes forwarding)
+  - [ ] SPF / DKIM / DMARC v DNS, ať pošta nepadá do spamu
+  - [ ] (volitelně) přepnout Netlify Forms notifikaci z gmailu zpět na `info@`, až bude funkční
+- [ ] Google Search Console: přidat property pro `cnc-nahradnidily.cz`, ověřit, submit `sitemap.xml`
+- [ ] Vypnout starý GitHub Pages staging (Settings → Pages → Source: None)
+- [ ] Ověřit placeholdery v `ochrana-osobnich-udaju.html` (doba uchování 24 měsíců, datum účinnosti 11.5.2026)
+
 ## Tooling (Windows + PowerShell + Git Bash)
 
 **Pro batch operace přes víc souborů:**
