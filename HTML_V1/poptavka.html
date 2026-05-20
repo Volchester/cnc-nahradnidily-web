@@ -731,6 +731,41 @@
     try {
       if (localStorage.getItem('cookies_accepted')) cookieBanner.style.display = 'none';
     } catch (e) {}
+
+    // předvyplnění pole dílu z URL parametru ?dil=
+    (function () {
+      var dily = {
+        'lozisko-20tac47csuhpn7c':          'Ložisko 20TAC47CSUHPN7C',
+        'lozisko-30tac62csuhpn7c':          'Ložisko 30TAC62CSUHPN7C',
+        'lozisko-35tac72bsu-c10':           'Ložisko 35TAC72BSU-C10',
+        'lozisko-zarn-2557-tn':             'Ložisko ZARN 2557 TN',
+        'remen-400-5gt-40':                 'Řemen 400-5GT-40',
+        'remen-420-5gt-40':                 'Řemen 420-5GT-40',
+        'remen-450-5gt-40':                 'Řemen 450-5GT-40',
+        'pneumaticky-valec-sun-3000kg':     'Pneumatický odepínací válec SUN 3000 kg – 13 mm',
+        'rotacni-pruchodka-kjc-6314-20':    'Rotační průchodka KJC 6314-20',
+        'euchner-sn02d12-502-mc1688':       'Euchner SN02D12-502-MC1688',
+        'smc-vf5120-3d-03':                 'SMC VF5120-3D-03',
+        'indramat-tdm-3-2-030-300-w1':      'Indramat TDM 3.2-030-300-W1',
+        'yaskawa-hv-75ap4':                 'Yaskawa HV-75AP4',
+        'davkovac-mazani-cpv2':             'Dávkovač mazání CPV2',
+        'kryci-plechy-a-mechy-na-miru':     'Krycí plechy a měchy na míru',
+        'repasovani-vretene':               'Repasování vřetene',
+        'repasovani-kulickoveho-sroubu':    'Repasování kuličkového šroubu'
+      };
+      var slug = new URLSearchParams(window.location.search).get('dil');
+      if (!slug) return;
+      var label = dily[slug] || slug;
+      var input = document.getElementById('dil');
+      if (!input) return;
+      input.value = label;
+      input.style.transition = 'background 0s';
+      input.style.background = '#fffbeb';
+      setTimeout(function () {
+        input.style.transition = 'background 1.2s ease';
+        input.style.background = '';
+      }, 50);
+    })();
   </script>
 
 </body>
