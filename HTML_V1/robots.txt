@@ -1,8 +1,4 @@
-# Staging na GitHub Pages — zamezit indexaci, dokud není web na produkční doméně.
-# Po migraci na cnc-nahradnidily.cz (Netlify, publish="HTML_V1") přepsat
-# Disallow: / zpět na Allow: /. Viz MIGRATION.md, sekce 1.
-
 User-agent: *
-Disallow: /
+Allow: /
 
-Sitemap: https://volchester.github.io/cnc-nahradnidily-web/HTML_V1/sitemap.xml
+Sitemap: https://cnc-nahradnidily.cz/sitemap.xml
