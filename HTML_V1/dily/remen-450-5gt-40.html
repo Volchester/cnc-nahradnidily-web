@@ -405,8 +405,21 @@
     ]
   }
   </script>
+  <style>
+    /* language picker (Část 3) */
+    .lang-picker{display:inline-flex;align-items:center;gap:2px}
+    .nav-inner .lang-picker{margin-left:10px}
+    .lang-opt{display:inline-flex;align-items:center;gap:5px;font:600 13px/1 'Archivo',sans-serif;text-decoration:none;color:rgba(255,255,255,.72);padding:6px 7px;border-radius:6px;transition:color .15s,background .15s;cursor:pointer}
+    a.lang-opt:hover{color:#fff;background:rgba(255,255,255,.08)}
+    .lang-opt.is-active{color:var(--accent-warm)}
+    .lang-opt .flag{width:18px;height:12px;border-radius:2px;box-shadow:0 0 0 1px rgba(255,255,255,.25);display:block}
+    @media (max-width:768px){.nav-inner .lang-picker{display:none}}
+    .mobile-menu .lang-picker{margin-top:10px;padding-top:12px;border-top:1px solid rgba(255,255,255,.12);gap:8px}
+    .mobile-menu .lang-opt{display:inline-flex;color:rgba(255,255,255,.8)}
+  </style>
 </head>
 <body>
+  <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden"><defs><path id="eu-star" d="M0,-2 0.47,-0.65 1.9,-0.62 0.76,0.25 1.18,1.62 0,0.8 -1.18,1.62 -0.76,0.25 -1.9,-0.62 -0.47,-0.65Z"/></defs><symbol id="flag-cz" viewBox="0 0 36 24"><rect width="36" height="12" fill="#fff"/><rect y="12" width="36" height="12" fill="#D7141A"/><path d="M0 0 18 12 0 24Z" fill="#11457E"/></symbol><symbol id="flag-eu" viewBox="0 0 36 24"><rect width="36" height="24" fill="#039"/><g fill="#FC0"><use href="#eu-star" transform="translate(18 5)"/><use href="#eu-star" transform="translate(21.5 5.94)"/><use href="#eu-star" transform="translate(24.06 8.5)"/><use href="#eu-star" transform="translate(25 12)"/><use href="#eu-star" transform="translate(24.06 15.5)"/><use href="#eu-star" transform="translate(21.5 18.06)"/><use href="#eu-star" transform="translate(18 19)"/><use href="#eu-star" transform="translate(14.5 18.06)"/><use href="#eu-star" transform="translate(11.94 15.5)"/><use href="#eu-star" transform="translate(11 12)"/><use href="#eu-star" transform="translate(11.94 8.5)"/><use href="#eu-star" transform="translate(14.5 5.94)"/></g></symbol></svg>
 
   <!-- HEADER -->
   <header class="site-header">
@@ -424,6 +437,7 @@
         <li><a href="../ukazky-dilu.html" aria-current="page">Ukázky dílů</a></li>
         <li><a href="../kontakty.html">Kontakt</a></li>
       </ul>
+        <div class="lang-picker" role="group" aria-label="Jazyk / Language"><span class="lang-opt is-active" aria-current="true"><svg class="flag" aria-hidden="true"><use href="#flag-cz"></use></svg>CZ</span><a class="lang-opt" href="../en/dily/belt-450-5gt-40.html" hreflang="en" data-lang="en"><svg class="flag" aria-hidden="true"><use href="#flag-eu"></use></svg>EN</a></div>
       <a href="../poptavka.html" class="nav-cta">Poslat poptávku</a>
       <button class="hamburger" aria-label="Otevřít menu" aria-expanded="false" id="hamburger">
         <span></span><span></span><span></span>
@@ -436,6 +450,8 @@
       <a href="../ukazky-dilu.html" aria-current="page">Ukázky dílů</a>
       <a href="../kontakty.html">Kontakt</a>
       <a href="../poptavka.html" class="nav-cta">Poslat poptávku</a>
+    
+      <div class="lang-picker" role="group" aria-label="Jazyk / Language"><span class="lang-opt is-active" aria-current="true"><svg class="flag" aria-hidden="true"><use href="#flag-cz"></use></svg>CZ</span><a class="lang-opt" href="../en/dily/belt-450-5gt-40.html" hreflang="en" data-lang="en"><svg class="flag" aria-hidden="true"><use href="#flag-eu"></use></svg>EN</a></div>
     </nav>
   </header>
 
@@ -880,5 +896,6 @@
     } catch (e) {}
   </script>
 
+  <script>(function(){var o=document.querySelectorAll('.lang-opt[data-lang]');for(var i=0;i<o.length;i++){o[i].addEventListener('click',function(){try{localStorage.setItem('lang',this.getAttribute('data-lang'));}catch(e){}});}})();</script>
 </body>
 </html>
