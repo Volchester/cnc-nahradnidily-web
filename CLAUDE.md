@@ -83,6 +83,20 @@ Tento soubor Claude Code automaticky načítá při každém startu sezení v ad
 - **Při migraci** hromadný find & replace URL napříč HTML + sitemap.xml + robots.txt + JSON-LD — viz `MIGRATION.md`
 - **404.html:** na GH Pages není auto-discovered (GitHub hledá v rootu repa, ne v `HTML_V1/`); po migraci na Netlify s `publish="HTML_V1"` bude `/404.html` aktivní automaticky
 
+## Vícejazyčné verze (EN/DE/PL) — živý checklist
+
+> Plán: `CNC_Web_Vicejazycne_Verze.md`. Realizace EN jako první. Slugy: hlavní stránky lokalizované (co-dodavame→what-we-supply…), detaily lozisko→bearing, remen→belt, davkovac→lubrication-restrictor, repasovani→…-refurbishment, kryci-plechy→telescopic-covers-and-bellows; značky/modely (indramat, yaskawa, euchner, smc) beze změny. Terminologie: „řemen" = **belt** (ne timing belt), „dávkovač mazání" = **lubrication restrictor**. Ceny CZK→EUR kurz 25, zaokrouhlit na desítky, „from €X". Telefon +420, e-mail info@.
+
+**EN verze (`HTML_V1/en/` + `en/dily/`, 24 stránek):**
+- [x] Část 1 — struktura, EN slugy, přepis cest (en/→`../`, en/dily/→`../../`) — commit f3ff4dd
+- [x] Část 2 — hreflang (cs/en/x-default→en) na všech 48 stránkách, EN absolutní URL na /en/, og:locale en_US, html lang en — commit 183f380
+- [x] Část 3 — language picker CZ|EN se SVG vlajkami (symbol/use), localStorage, bez auto-redirectu — commit e4c1f26
+- [ ] Část 4 — překlad obsahu 24 EN stránek (vč. meta title/description, JSON-LD textů, alt, ?dil mapy v inquiry.html, cen na EUR). Obsah je zatím česky.
+- [ ] Část 5 — EN URL do sitemap.xml, ověřit robots.txt /en/, validace hreflang
+- [ ] Vizuálně ověřit picker na Netlify preview (layout hlavičky, mobilní menu, render SVG vlajek) — Claude nevidí render
+
+**DE a PL verze:** až po vyhodnocení EN (viz plán fáze 3–4).
+
 ## Stav nasazení — živý checklist
 
 > **Claude: tenhle seznam udržuj aktuální.** Když nějaký bod dokončíme, přepiš `[ ]` na `[x]` a doplň datum/poznámku. Při startu sezení podle něj uživateli připomeň, co zbývá. Detailní kontext je v projektové paměti (`web-cnc-nahradnidily-projekt.md`).
