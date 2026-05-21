@@ -109,10 +109,10 @@ Tento soubor Claude Code automaticky načítá při každém startu sezení v ad
 - [x] Netlify Forms notifikace nastavena na `cncnahradnidily@gmail.com`, notifikační e-mail dorazil (2026-05-20)
 
 **Zbývá (vše manuální, mimo kód):**
-- [ ] **OPRAVA DNS DELEGACE (blokátor webu i pošty) — probíhá od 2026-05-20:** Doména je registrovaná u WEDOS (registrátor REG-WEDOS), ale nameservery (`ns1/ns2.register.it`) i DNSSEC keyset zůstaly u Webnode → Webnode NS odmítají zónu + starý DNSSEC klíč (KeyTag 4789) → doména je SERVFAIL/nedostupná (proto web jede jen přes `magenta-sorbet-f1a326.netlify.app` a `info@` nefunguje). Provedeno ve WEDOS 2026-05-20: [x] NSSET → „Výchozí NSSET WEDOS", [x] DNSSEC → „použít DNSSEC WEDOS" + automatická správa. **Čeká se na propagaci u CZ.NIC (až 6 h).** Ověřit: `nslookup -type=NS cnc-nahradnidily.cz a.ns.nic.cz` (má ukázat WEDOS NS místo register.it) + `Resolve-DnsName cnc-nahradnidily.cz -Server 8.8.8.8` (nesmí být SERVFAIL).
+- [x] **OPRAVA DNS DELEGACE (blokátor webu i pošty) — HOTOVO, ověřeno 2026-05-21:** Doména registrovaná u WEDOS (REG-WEDOS), nameservery (`ns1/ns2.register.it`) i DNSSEC keyset zůstaly u Webnode → SERVFAIL. Provedeno ve WEDOS 2026-05-20: NSSET → „Výchozí NSSET WEDOS", DNSSEC → „použít DNSSEC WEDOS". **Propagace u CZ.NIC dokončena.** Ověřeno 2026-05-21: `nslookup -type=NS … a.ns.nic.cz` → vrací `ns.wedos.cz/eu/com/net` (už ne register.it); `nslookup cnc-nahradnidily.cz 8.8.8.8` → resolvuje na `185.8.237.22` (+ IPv6 `2a0e:acc0::d22`), žádný SERVFAIL. POZN.: `185.8.237.22` je WEDOS parking/hosting, NE Netlify — A záznam se přesměruje na Netlify až v dalším bodě.
 - [ ] Připojit doménu `cnc-nahradnidily.cz` v Netlify dashboardu (DNS / nameservery) — A/CNAME se přidávají ve WEDOS DNS až po propagaci výše
-- [ ] **E-mail domény u WEDOS** (info@ nefunguje od přechodu z Webnode):
-  - [ ] zřídit u Vedos schránku/přesměrování `info@cnc-nahradnidily.cz` → `cncnahradnidily@gmail.com` + správné MX záznamy
+- [ ] **E-mail domény u WEDOS** (info@ nefunguje — ověřeno 2026-05-21: doména už resolvuje, ale **MX záznam vůbec neexistuje** → pošta pro `@cnc-nahradnidily.cz` nemá kam dorazit):
+  - [ ] zřídit u WEDOS schránku/přesměrování `info@cnc-nahradnidily.cz` → `cncnahradnidily@gmail.com` + správné MX záznamy
   - [ ] Gmail „Odesílat jako" `info@` přes SMTP Vedos (port 587 TLS; ověřovací mail dorazí přes forwarding)
   - [ ] SPF / DKIM / DMARC v DNS, ať pošta nepadá do spamu
   - [ ] (volitelně) přepnout Netlify Forms notifikaci z gmailu zpět na `info@`, až bude funkční
