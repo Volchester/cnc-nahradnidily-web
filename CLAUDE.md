@@ -91,7 +91,7 @@ Tento soubor Claude Code automaticky načítá při každém startu sezení v ad
 - [x] Část 1 — struktura, EN slugy, přepis cest (en/→`../`, en/dily/→`../../`) — commit f3ff4dd
 - [x] Část 2 — hreflang (cs/en/x-default→en) na všech 48 stránkách, EN absolutní URL na /en/, og:locale en_US, html lang en — commit 183f380
 - [x] Část 3 — language picker CZ|EN se SVG vlajkami (symbol/use), localStorage, bez auto-redirectu — commit e4c1f26
-- [ ] Část 4 — překlad obsahu 24 EN stránek (vč. meta title/description, JSON-LD textů, alt, ?dil mapy v inquiry.html, cen na EUR). Obsah je zatím česky.
+- [~] Část 4 — překlad obsahu 24 EN stránek. Ceny CZK→EUR kurz 25 **dolů na desítky** (např. 1480→€50, 19650→€780; sub-€10 case 240→€9). HOTOVO: base kit chrome (vše), **7/7 hlavních stránek** (index, what-we-supply, how-to-inquire, parts-examples, contact, inquiry vč. ?dil mapy+JS, privacy), sdílený chrome 17 detailů + **bearing-20** (vzor). ZBÝVÁ: 16 detailních stránek (bearing-30/35/zarn, belt-400/420/450, rotary-joint, lubrication-restrictor, pneumatic-cylinder, indramat, yaskawa, euchner, smc, spindle-refurbishment, ballscrew-refurbishment, telescopic-covers-and-bellows). Pozn.: dily JSON-LD má `"name": "X"`/`"price"`/`"priceCurrency"` (1 mezera) — přepsat na EUR; mailto subject přepsat na "Inquiry - ...". Bare-replace pozor na JSON-LD/komentáře. HTML komentáře česky = OK (neviditelné).
 - [ ] Část 5 — EN URL do sitemap.xml, ověřit robots.txt /en/, validace hreflang
 - [ ] Vizuálně ověřit picker na Netlify preview (layout hlavičky, mobilní menu, render SVG vlajek) — Claude nevidí render
 
