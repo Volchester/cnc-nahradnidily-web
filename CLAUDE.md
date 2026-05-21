@@ -7,7 +7,8 @@ Tento soubor Claude Code automaticky načítá při každém startu sezení v ad
 ## Workflow
 
 - **Před každým úkolem napiš plán a počkej na výslovný souhlas** uživatele. Nezačínej implementaci, dokud souhlas nezazní (typicky „ano" / „souhlas" / „pokračuj").
-- **Po každém schváleném úkolu udělej commit + push na `origin/main` ihned**, nebatchuj víc úkolů do jednoho commitu.
+- **Po každém schváleném úkolu commitni + pushni na `origin/main` ihned, ale commit message MUSÍ obsahovat `[skip ci]`** — tím Netlify deploy přeskočí. Důvod: Netlify účtuje **~15 kreditů za každý production deploy**, free plán má jen 300 kreditů/měsíc (= strop ~20 deploys), a auto-deploy po každém pushi kredity rychle vyčerpá (20.5.2026 takhle 20 deploys = celý měsíční limit → web SERVFAIL/503). GitHub push je zdarma, účtuje jen Netlify build.
+- **Deployuj dávkově, jen na výslovnou žádost uživatele.** Když má jít sada změn živě, uděláš jeden „ostrý" commit/push **bez** `[skip ci]` → 1 deploy. Nikdy nedeployuj automaticky po každém dílčím úkolu.
 - Commit message piš v HEREDOC formátu, ať se nepokazí CR/LF a české znaky:
   ```bash
   git commit -m "$(cat <<'EOF'
