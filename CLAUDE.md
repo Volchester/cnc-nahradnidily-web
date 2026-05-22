@@ -93,8 +93,8 @@ Tento soubor Claude Code automaticky načítá při každém startu sezení v ad
 - [x] Část 2 — hreflang (cs/en/x-default→en) na všech 48 stránkách, EN absolutní URL na /en/, og:locale en_US, html lang en — commit 183f380
 - [x] Část 3 — language picker CZ|EN se SVG vlajkami (symbol/use), localStorage, bez auto-redirectu — commit e4c1f26
 - [x] Část 4 — překlad obsahu 24 EN stránek HOTOVÁ (2026-05-22). Ceny CZK→EUR kurz 25 **dolů na desítky** (1480→€50, 19650→€780, 110000→€4400; sub-€10 case 240→€9). Přeloženo: base kit chrome, 7/7 hlavních stránek, **všech 16 detailů** (4× bearing, 3× belt, rotary-joint, lubrication-restrictor, smc, yaskawa, euchner, pneumatic-cylinder, indramat, telescopic-covers-and-bellows, ballscrew-refurbishment, spindle-refurbishment). JSON-LD price/priceCurrency→EUR, mailto subject→"Inquiry - …". HTML/CSS komentáře zůstaly česky = OK (neviditelné). **Pozn.: CS originály detailů obsahují copy-paste artefakty z ložiskové šablony** (h2 „K čemu ložisko slouží", „Katalogové hodnoty NSK", inq „uspořádání DB/DF/DT", mailto „Ložisko") u smc/yaskawa/pneumatic/indramat — v EN přeloženo kontextově správně, ale **CS verze to mají pořád a měly by se opravit**.
-- [ ] Část 5 — EN URL do sitemap.xml, ověřit robots.txt /en/, validace hreflang
-- [ ] Vizuálně ověřit picker na Netlify preview (layout hlavičky, mobilní menu, render SVG vlajek) — Claude nevidí render
+- [x] Část 5 — HOTOVÁ (2026-05-22): 24 EN URL přidáno do `sitemap.xml` (celkem 48 `<loc>`, XML validní, všechny EN cíle existují); `robots.txt` `Allow: /` pokrývá `/en/` (beze změny); hreflang ověřen — všech 48 obsahových stránek má 3 tagy (cs/en/x-default→en), obousměrné páry sedí, žádný cíl nechybí (404.html bez hreflang = záměr).
+- [ ] Vizuálně ověřit picker na Netlify preview (layout hlavičky, mobilní menu, render SVG vlajek) — Claude nevidí render; navíc Netlify pozastaven (kredity) → ověřit po obnovení
 
 **DE a PL verze:** až po vyhodnocení EN (viz plán fáze 3–4).
 
