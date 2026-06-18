@@ -9,13 +9,13 @@
   <meta property="og:description" content="Vysokotlaká rotační průchodka pro přivádění chladicí kapaliny skrz rotující vřeteno CNC stroje (CTS). Cenově dostupná náhrada za Deublin.">
   <meta property="og:type" content="product">
   <meta property="og:url" content="https://cnc-nahradnidily.cz/dily/rotacni-pruchodka-kjc-6314-20.html">
-  <meta property="og:image" content="https://cnc-nahradnidily.cz/Obr%C3%A1zky/Rotary%20Joint.png">
+  <meta property="og:image" content="https://cnc-nahradnidily.cz/Obr%C3%A1zky/foto-rotacni-pruchodka-01.jpg">
   <meta property="og:locale" content="cs_CZ">
   <meta property="og:site_name" content="cnc-nahradnidily.cz">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Rotační průchodka KJC 6314-20 — CTS rotační průchodka">
   <meta name="twitter:description" content="Vysokotlaká rotační průchodka pro přivádění chladicí kapaliny skrz rotující vřeteno CNC stroje (CTS). Cenově dostupná náhrada za Deublin.">
-  <meta name="twitter:image" content="https://cnc-nahradnidily.cz/Obr%C3%A1zky/Rotary%20Joint.png">
+  <meta name="twitter:image" content="https://cnc-nahradnidily.cz/Obr%C3%A1zky/foto-rotacni-pruchodka-01.jpg">
   <link rel="canonical" href="https://cnc-nahradnidily.cz/dily/rotacni-pruchodka-kjc-6314-20.html">
   <link rel="alternate" hreflang="cs" href="https://cnc-nahradnidily.cz/dily/rotacni-pruchodka-kjc-6314-20.html">
   <link rel="alternate" hreflang="en" href="https://cnc-nahradnidily.cz/en/dily/rotary-joint-kjc-6314-20.html">
@@ -382,7 +382,7 @@
       {
         "@type": "Product",
         "name": "Rotační průchodka KJC 6314-20",
-        "image": "https://cnc-nahradnidily.cz/Obr%C3%A1zky/Rotary%20Joint.png",
+        "image": "https://cnc-nahradnidily.cz/Obr%C3%A1zky/foto-rotacni-pruchodka-01.jpg",
         "description": "Vysokotlaká rotační průchodka pro přivádění chladicí kapaliny skrz rotující vřeteno CNC stroje (CTS). Cenově dostupná náhrada za Deublin.",
         "brand": { "@type": "Brand", "name": "KJC" },
         "sku": "KJC 6314-20",
@@ -479,16 +479,21 @@
           <span class="chip">KJC · originál</span>
         </div>
         <div class="gallery-img" id="galleryView">
-          <img src="../Obr%C3%A1zky/Rotary%20Joint.png" alt="Rotační průchodka KJC 6314-20" loading="eager" width="800" height="600">
+          <img src="../Obr%C3%A1zky/foto-rotacni-pruchodka-01.jpg" alt="Rotační průchodka KJC 6314-20" loading="eager" width="800" height="800">
         </div>
       </div>
       <div class="gallery-thumbs" role="tablist" aria-label="Náhledy">
-        <button class="thumb active" data-view="photo" aria-label="Fotografie">
-          <img class="thumb-photo" src="../Obr%C3%A1zky/Rotary%20Joint.png" alt="" aria-hidden="true">
+        <button class="thumb active" data-src="../Obr%C3%A1zky/foto-rotacni-pruchodka-01.jpg" aria-label="Fotografie 1">
+          <img class="thumb-photo" src="../Obr%C3%A1zky/foto-rotacni-pruchodka-01.jpg" alt="" aria-hidden="true">
           <span class="thumb-label">01 · foto</span>
         </button>
-        <button class="thumb box" data-view="package" aria-label="Balení">
-          <span class="thumb-label">02 · bal.</span>
+        <button class="thumb" data-src="../Obr%C3%A1zky/foto-rotacni-pruchodka-02.jpg" aria-label="Fotografie 2">
+          <img class="thumb-photo" src="../Obr%C3%A1zky/foto-rotacni-pruchodka-02.jpg" alt="" aria-hidden="true">
+          <span class="thumb-label">02 · foto</span>
+        </button>
+        <button class="thumb" data-src="../Obr%C3%A1zky/foto-rotacni-pruchodka-03.jpg" aria-label="Fotografie 3">
+          <img class="thumb-photo" src="../Obr%C3%A1zky/foto-rotacni-pruchodka-03.jpg" alt="" aria-hidden="true">
+          <span class="thumb-label">03 · foto</span>
         </button>
       </div>
     </div>
@@ -876,9 +881,9 @@
       t.addEventListener('click', function () {
         document.querySelectorAll('.thumb').forEach(function (x) { x.classList.remove('active'); });
         t.classList.add('active');
-        const v = t.dataset.view;
-        if (v === 'photo') {
-          view.innerHTML = '<img src="' + photoSrc + '" alt="Rotační průchodka KJC 6314-20" loading="eager" width="800" height="600">';
+        const s = t.dataset.src;
+        if (s) {
+          view.innerHTML = '<img src="' + s + '" alt="Rotační průchodka KJC 6314-20" loading="eager" width="800" height="800">';
         } else {
           view.innerHTML = '<div style="width:55%;aspect-ratio:1.1/1;background:#f0e9d9;border:1px solid #d6cfc1;border-radius:8px;box-shadow:inset 0 -8px 18px rgba(0,0,0,.06), 0 10px 24px rgba(20,16,8,.12);display:flex;align-items:center;justify-content:center;color:#3a3b3f;font-family:\'JetBrains Mono\',monospace;font-weight:600;letter-spacing:.08em;font-size:14px;text-align:center;padding:18px"><span>KJC<br>6314-20</span></div>';
         }
