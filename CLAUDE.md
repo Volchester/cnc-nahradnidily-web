@@ -110,12 +110,15 @@ Tento soubor Claude Code automaticky načítá při každém startu sezení v ad
 
 **Zbývá (vše manuální, mimo kód):**
 - [x] **OPRAVA DNS DELEGACE (blokátor webu i pošty) — HOTOVO, ověřeno 2026-05-21:** Doména registrovaná u WEDOS (REG-WEDOS), nameservery (`ns1/ns2.register.it`) i DNSSEC keyset zůstaly u Webnode → SERVFAIL. Provedeno ve WEDOS 2026-05-20: NSSET → „Výchozí NSSET WEDOS", DNSSEC → „použít DNSSEC WEDOS". **Propagace u CZ.NIC dokončena.** Ověřeno 2026-05-21: `nslookup -type=NS … a.ns.nic.cz` → vrací `ns.wedos.cz/eu/com/net` (už ne register.it); `nslookup cnc-nahradnidily.cz 8.8.8.8` → resolvuje na `185.8.237.22` (+ IPv6 `2a0e:acc0::d22`), žádný SERVFAIL. POZN.: `185.8.237.22` je WEDOS parking/hosting, NE Netlify — A záznam se přesměruje na Netlify až v dalším bodě.
-- [ ] Připojit doménu `cnc-nahradnidily.cz` v Netlify dashboardu (DNS / nameservery) — A/CNAME se přidávají ve WEDOS DNS až po propagaci výše
-- [ ] **E-mail domény u WEDOS** (info@ nefunguje — ověřeno 2026-05-21: doména už resolvuje, ale **MX záznam vůbec neexistuje** → pošta pro `@cnc-nahradnidily.cz` nemá kam dorazit):
-  - [ ] zřídit u WEDOS schránku/přesměrování `info@cnc-nahradnidily.cz` → `cncnahradnidily@gmail.com` + správné MX záznamy
-  - [ ] Gmail „Odesílat jako" `info@` přes SMTP Vedos (port 587 TLS; ověřovací mail dorazí přes forwarding)
-  - [ ] SPF / DKIM / DMARC v DNS, ať pošta nepadá do spamu
-  - [ ] (volitelně) přepnout Netlify Forms notifikaci z gmailu zpět na `info@`, až bude funkční
+- [x] **Doména `cnc-nahradnidily.cz` připojena k Netlify + HTTPS — HOTOVO, ověřeno 2026-06-28:** WEDOS DNS apex A→`75.2.60.5`, www CNAME→netlify, smazán AAAA/IPv6 na parking (blokoval cert); Let's Encrypt cert (CN apex + SAN www), http→https 301. `https://cnc-nahradnidily.cz` živé.
+- [x] **E-mail `info@cnc-nahradnidily.cz` — HOTOVO, ověřeno 2026-06-29: Zoho Mail Forever Free (EU datacentrum).** Schránka funguje, příjem otestován (maily dorazily).
+  - [x] Registrace Zoho free (firemní e-mail, EU region), doména ověřena přes TXT `zoho-verification=zb57075331.zmverify.zoho.eu`, vytvořena schránka `info@cnc-nahradnidily.cz` (= super-admin účet; login = registrační soukromý e-mail NEBO info@, heslo z registrace)
+  - [x] DNS u WEDOS: MX `mx.zoho.eu`(10)/`mx2`(20)/`mx3`(50), SPF `v=spf1 include:zoho.eu ~all`, DKIM `zmail._domainkey` (1024-bit, vejde se do 1 řetězce). Vše propagováno (ověřeno nslookupem) + Verify v Zoho zelené (MX i DKIM)
+  - [x] Čtení/odesílání přes Zoho webmail **`mail.zoho.eu`** + iOS appka „Zoho Mail" (login `info@…`, region **EU**). POZOR: login na `.eu`, ne `.com`. Z Admin konzole lze do pošty přes mřížku/app launcher → Mail (bez nového loginu)
+  - [ ] (volitelně) **DMARC** — zatím NEpřidán; lze doplnit TXT `_dmarc` → `v=DMARC1; p=none; rua=mailto:info@cnc-nahradnidily.cz`
+  - [ ] (volitelně) později **Zoho Mail Lite** (~$0.90/uživatel/měs) odemkne IMAP/SMTP/forwarding → jeden inbox v Gmailu („Odesílat jako" info@). **DNS zůstává STEJNÉ, jen přepnout plán** — žádná změna MX
+  - [ ] (volitelně) přepnout Netlify Forms notifikaci z `cncnahradnidily@gmail.com` na `info@`
+  - [ ] (volitelně) opravit kontaktní číslo uživatele v Zoho z `+1` na `+420`; smazat ověřovací TXT `zoho-verification` (lze i nechat)
 - [ ] Google Search Console: přidat property pro `cnc-nahradnidily.cz`, ověřit, submit `sitemap.xml`
 - [ ] Vypnout starý GitHub Pages staging (Settings → Pages → Source: None)
 - [ ] Ověřit placeholdery v `ochrana-osobnich-udaju.html` (doba uchování 24 měsíců, datum účinnosti 11.5.2026)
