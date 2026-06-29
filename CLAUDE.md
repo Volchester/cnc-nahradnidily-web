@@ -115,9 +115,9 @@ Tento soubor Claude Code automaticky načítá při každém startu sezení v ad
   - [x] Registrace Zoho free (firemní e-mail, EU region), doména ověřena přes TXT `zoho-verification=zb57075331.zmverify.zoho.eu`, vytvořena schránka `info@cnc-nahradnidily.cz` (= super-admin účet; login = registrační soukromý e-mail NEBO info@, heslo z registrace)
   - [x] DNS u WEDOS: MX `mx.zoho.eu`(10)/`mx2`(20)/`mx3`(50), SPF `v=spf1 include:zoho.eu ~all`, DKIM `zmail._domainkey` (1024-bit, vejde se do 1 řetězce). Vše propagováno (ověřeno nslookupem) + Verify v Zoho zelené (MX i DKIM)
   - [x] Čtení/odesílání přes Zoho webmail **`mail.zoho.eu`** + iOS appka „Zoho Mail" (login `info@…`, region **EU**). POZOR: login na `.eu`, ne `.com`. Z Admin konzole lze do pošty přes mřížku/app launcher → Mail (bez nového loginu)
-  - [ ] (volitelně) **DMARC** — zatím NEpřidán; lze doplnit TXT `_dmarc` → `v=DMARC1; p=none; rua=mailto:info@cnc-nahradnidily.cz`
+  - [x] **DMARC** — HOTOVO 2026-06-29, TXT `_dmarc` → `v=DMARC1; p=none; rua=mailto:info@cnc-nahradnidily.cz` (propagováno, ověřeno nslookupem)
+  - [x] **Netlify Forms notifikace → `info@`** — HOTOVO 2026-06-29: form notification přepnuta na `info@cnc-nahradnidily.cz` (+ ponechán i gmail jako záloha). Otestováno, poptávka dorazí na obě. POZN.: 1. test na info@ nedorazil ani do spamu, ale po 2. testu už chodí na obě — timing
   - [ ] (volitelně) později **Zoho Mail Lite** (~$0.90/uživatel/měs) odemkne IMAP/SMTP/forwarding → jeden inbox v Gmailu („Odesílat jako" info@). **DNS zůstává STEJNÉ, jen přepnout plán** — žádná změna MX
-  - [ ] (volitelně) přepnout Netlify Forms notifikaci z `cncnahradnidily@gmail.com` na `info@`
   - [ ] (volitelně) opravit kontaktní číslo uživatele v Zoho z `+1` na `+420`; smazat ověřovací TXT `zoho-verification` (lze i nechat)
 - [ ] Google Search Console: přidat property pro `cnc-nahradnidily.cz`, ověřit, submit `sitemap.xml`
 - [ ] Vypnout starý GitHub Pages staging (Settings → Pages → Source: None)
